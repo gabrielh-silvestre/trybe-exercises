@@ -30,3 +30,25 @@ ul:first-of-type li:nth-child(-n + 3){
 li[value="Java"] {
     background-color: #ffc0cb;
 }
+
+li a[href="https://pt.stackoverflow.com/"]:hover {
+    background-color: #ffa500;
+    font-weight: bolder;
+}
+li a[href="https://www.w3schools.com/"]:hover {
+    background-color: #008000;
+    font-weight: bolder;
+}
+li a[href="https://developer.mozilla.org/pt-BR/"]:hover {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bolder;
+}
+li a[href="https://devdocs.io/"]:hover {
+    background-color: #ffff00;
+    font-weight: bolder;
+}
+li a[href="https://app.betrybe.com/"]:hover {
+    background-color: #adff2f;
+    font-weight: bolder;
+}
