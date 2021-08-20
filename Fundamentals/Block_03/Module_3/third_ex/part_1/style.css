@@ -7,3 +7,6 @@ li:hover {
 a:active {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+ul, ol {
+    list-style: none;
+}
