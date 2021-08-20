@@ -1,0 +1,8 @@
+div:hover {
+    border: 2px solid rgb(99, 3, 128);
+}
+.primary {background-color: #05ee5f;}
+.secondary {background-color: #0b58cc;}
+.complementary {background-color: #cbee05;}
+.dark {background-color: #012c12;}
+.light {background-color: #a6ffcb;}
