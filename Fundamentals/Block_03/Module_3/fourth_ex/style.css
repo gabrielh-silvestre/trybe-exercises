@@ -23,3 +23,10 @@ li {
 li em {
     font-weight: bold;
 }
+
+ul:first-of-type li:nth-child(-n + 3){
+    color: #0000ff;
+}
+li[value="Java"] {
+    background-color: #ffc0cb;
+}
