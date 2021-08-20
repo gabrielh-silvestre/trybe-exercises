@@ -8,3 +8,11 @@
     color: #008000;
 }
 
+.titles {
+    color: red;
+}
+.titles em {
+    font-size: 40px;
+
+    border: 1px solid black;
+}
