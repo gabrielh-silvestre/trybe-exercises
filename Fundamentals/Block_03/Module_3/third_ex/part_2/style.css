@@ -1,8 +1,21 @@
 div:hover {
     border: 2px solid rgb(99, 3, 128);
 }
+
 .primary {background-color: #05ee5f;}
 .secondary {background-color: #0b58cc;}
-.complementary {background-color: #cbee05;}
+.complementary {background-color: #cbee05;  padding: 5rem 0;}
 .dark {background-color: #012c12;}
 .light {background-color: #a6ffcb;}
+
+h3 {color: red;}
+
+master:nth-child(2) {
+    text-decoration-style: solid;
+
+    background-color: wheat;
+}
+
+div:nth-child(2n + 1) {
+    font-style: italic;
+}
