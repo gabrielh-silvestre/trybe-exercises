@@ -53,3 +53,38 @@ const isTriangle = (a, b, c) => {
         return "Invalid angle";
     }
 }
+
+const chesSPieces = (piece) => {
+    piece = piece.toLowerCase();
+    const allPieces = {
+        "peao": "frontal",
+        "torre": "horizontal e vertial",
+        "bispo": "diagonal",
+        "cavalo": "L",
+        "rainha": "horizontal, vertical e diagnol",
+        "rei": "horizontal, vertical e diagnol"
+    }
+
+    switch(piece) {
+        case ("peao"):
+            console.log(`O ${piece} se move na ${allPieces[piece]}`)
+            break;
+        case ("torre"):
+            console.log(`A ${piece} se move na ${allPieces[piece]}`)
+            break;
+        case ("bispo"):
+            console.log(`O ${piece} se move na ${allPieces[piece]}`)
+            break;
+        case ("cavalo"):
+            console.log(`O ${piece} se move em ${allPieces[piece]}`)
+            break;
+        case ("rainha"):
+            console.log(`A ${piece} se move na ${allPieces[piece]}`)
+            break;
+        case ("rei"):
+            console.log(`O ${piece} se move na ${allPieces[piece]}`)
+            break;
+        default:
+            console.log("Peça inválida.")
+    }   
+}
