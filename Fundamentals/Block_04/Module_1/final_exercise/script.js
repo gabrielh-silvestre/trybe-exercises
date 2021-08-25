@@ -20,4 +20,14 @@ const matOperations = (a, b, operation) => {
     }
 }
 
+const biggerOne = (a, b) => {
+    if (a > b) {
+        console.log(`${a} is greater than ${b}.`);
+    } else if (a === b) {
+        console.log(`${a} and ${b} are egual.`);
+    } else {
+        console.log(`${b} is greater than ${a}.`);
+    }
+}
+
 
