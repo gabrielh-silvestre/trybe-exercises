@@ -14,3 +14,11 @@ if (currentHour >= 22) {
 }
 
 console.log(message);
+
+let weekDay = "sabado";
+
+if (weekDay === "sabado" || weekDay === "domingo") {
+    console.log("FINALMENTE, descando merecido UwU");
+} else {
+    console.log("Oba, mais um dia de aprendizado na Trybe >:D");
+}
