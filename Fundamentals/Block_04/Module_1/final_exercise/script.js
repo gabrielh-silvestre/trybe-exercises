@@ -140,3 +140,34 @@ const profit = (sell_price, cost_price) => {
         return "Invalid values.";
     }
 }
+
+const taxesPayment = (salary) => {
+    let salaryINSS = 0;
+    let finalSalary = 0;
+
+    if (salary <= 1556.94) {
+        salaryINSS = salary - (salary * 0.08);
+    } else if (salary >= 1556.95 && salary <= 2594.92) {
+        salaryINSS = salary - (salary * 0.09);
+    } else if (salary >= 2594.93 && salary <= 5189.82){
+        salaryINSS = salary - (salary * 0.11);
+    } else {
+        salaryINSS = salary - 570.88;
+    }
+
+    if (salaryINSS <= 1903.98) {
+        return finalSalary;
+    } else if (salaryINSS >= 1903.99 && salaryINSS <= 2826.65) {
+        finalSalary = salaryINSS - ((salaryINSS * 0.075) - 142.80);
+    } else if (salaryINSS >= 2826.66 && salaryINSS <= 3751.05) {
+        finalSalary = salaryINSS - ((salaryINSS * 0.15) - 354.80);
+    } else if (salaryINSS >= 3751.06 && salaryINSS <= 4664.68) {
+        finalSalary = salaryINSS - ((salaryINSS * 0.225) - 636.80);
+    } else {
+        finalSalary = salaryINSS - ((salaryINSS * 0.275) - 869.36);
+    }
+
+    return `O salário liquido após o INSS e IR será de R$ ${finalSalary}`;
+}
+
+console.log(taxesPayment(3000));
