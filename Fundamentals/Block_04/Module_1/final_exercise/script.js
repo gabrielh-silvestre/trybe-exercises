@@ -130,3 +130,13 @@ const atLeastOneIsOdd = (a, b, c) => {
     }
     return (number % 2 !== 0)
 }
+
+const profit = (sell_price, cost_price) => {
+    if (sell_price > 0 && cost_price > 0) {
+        let totalCost = cost_price + cost_price * (0.2);
+        let totalProfit = (sell_price * 1000) - (totalCost * 1000);
+        return `The profit will be ${totalProfit}.00`;
+    } else {
+        return "Invalid values.";
+    }
+}
