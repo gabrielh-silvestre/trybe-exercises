@@ -30,4 +30,14 @@ const biggerOne = (a, b) => {
     }
 }
 
-
+const biggerOneOfThree = (a, b, c) => {
+    if (a > b && a > c) {
+        console.log(`${a} is greater than ${b} and ${c}.`);
+    } else if (a === b && b === c) {
+        console.log(`${a}, ${b} and ${c} are egual.`);
+    } else if (b > a && b > c) {
+        console.log(`${b} is greater than ${a} and ${c}.`);
+    } else {
+        console.log(`${C} is greater than ${a} and ${b}.`);
+    }
+}
