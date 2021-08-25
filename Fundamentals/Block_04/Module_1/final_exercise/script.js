@@ -41,3 +41,7 @@ const biggerOneOfThree = (a, b, c) => {
         console.log(`${C} is greater than ${a} and ${b}.`);
     }
 }
+
+const isPositive = (a) => {
+    return (a >= 0);
+}
