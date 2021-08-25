@@ -119,3 +119,14 @@ const atLeastOneIsEven = (a, b, c) => {
     }
     return (number % 2 === 0)
 }
+
+const atLeastOneIsOdd = (a, b, c) => {
+    const numbers = [a, b, c];
+
+    for (number of numbers) {
+        if (number % 2 !== 0) {
+            return (number % 2 !== 0);
+        }
+    }
+    return (number % 2 !== 0)
+}
