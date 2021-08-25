@@ -88,3 +88,19 @@ const chesSPieces = (piece) => {
             console.log("Peça inválida.")
     }   
 }
+
+const notePorcentage = (note) => {
+    if (note < 50 ) {
+        return "F"
+    } else if (note >= 50 && note < 60) {
+        return "E"
+    } else if (note >= 60 && note < 70) {
+        return "D"
+    } else if (note >= 70 && note < 80) {
+        return "C"
+    } else if (note >= 80 && note < 90) {
+        return "B"
+    } else {
+        return "A"
+    }
+}
