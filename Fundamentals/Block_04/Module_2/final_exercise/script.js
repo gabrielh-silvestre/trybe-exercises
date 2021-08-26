@@ -82,3 +82,9 @@ const ex8 = () => {
     // console.log(myArray);
     return myArray;
 }
+
+const ex9 = (array) => {
+    for (value of array) {
+        console.log(value / 2);
+    }
+}
