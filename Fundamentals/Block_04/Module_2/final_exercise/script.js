@@ -57,3 +57,17 @@ const ex6 = (array) => {
 
     console.log(oddNumbers);
 }
+
+const ex7 = (array) => {
+    let smallestValue = array[0];
+
+    for (fixCompare of array) {
+        for (eachCompare of array) {
+            if (eachCompare <= smallestValue) {
+                smallestValue = eachCompare;
+            }
+        }
+    }
+
+    console.log(smallestValue);
+}
