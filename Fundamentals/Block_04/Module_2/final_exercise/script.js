@@ -6,3 +6,10 @@ const ex1 = (array) => {
     }
 }
 
+const ex2 = (array) => {
+    let sum = 0;
+    for (values of array) {
+        sum += values;
+    }
+    console.log(sum);
+}
