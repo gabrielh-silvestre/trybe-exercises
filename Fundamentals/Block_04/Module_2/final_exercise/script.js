@@ -13,3 +13,11 @@ const ex2 = (array) => {
     }
     console.log(sum);
 }
+
+const ex3 = (array) => {
+    let sum = 0;
+    for (values of array) {
+        sum += values;
+    }
+    console.log(sum/array.length);
+}
