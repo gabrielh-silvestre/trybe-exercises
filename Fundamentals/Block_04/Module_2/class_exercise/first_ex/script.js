@@ -11,3 +11,10 @@ const ex2 = () => {
 
     console.log(indexOfPortfolio);
 }
+
+const ex3 = () => {
+    let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+    menu.push('Contato');
+
+    console.log(menu);
+}
