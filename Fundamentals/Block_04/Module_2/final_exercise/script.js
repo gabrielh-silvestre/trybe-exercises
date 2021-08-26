@@ -31,3 +31,17 @@ const ex4 = (array) => {
         console.log("Menor ou igual a 20");
     }
 }
+
+const ex5 = (array) => {
+    let greaterValue = array[0];
+
+    for (fixCompare of array) {
+        for (eachCompare of array) {
+            if (eachCompare >= greaterValue) {
+                greaterValue = eachCompare;
+            }
+        }
+    }
+
+    console.log(greaterValue);
+}
