@@ -45,3 +45,15 @@ const ex5 = (array) => {
 
     console.log(greaterValue);
 }
+
+const ex6 = (array) => {
+    const oddNumbers = [];
+
+    for (value of array) {
+        if (value % 2 !== 0) {
+            oddNumbers.push(value);
+        }
+    }
+
+    console.log(oddNumbers);
+}
