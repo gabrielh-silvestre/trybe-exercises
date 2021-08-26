@@ -1,4 +1,5 @@
 const numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+const justEven = [2, 4, 6, 14 ,12];
 
 const ex1 = (array) => {
     for (values of array) {
@@ -48,10 +49,16 @@ const ex5 = (array) => {
 
 const ex6 = (array) => {
     const oddNumbers = [];
+    let oddControl = 0;
 
     for (value of array) {
         if (value % 2 !== 0) {
             oddNumbers.push(value);
+        } else {
+            oddControl += 1;
+            if (oddControl == array.length) {
+                console.log("Sem Ímpares aqui");
+            }
         }
     }
 
