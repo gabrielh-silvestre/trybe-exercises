@@ -21,3 +21,13 @@ const ex3 = (array) => {
     }
     console.log(sum/array.length);
 }
+
+const ex4 = (array) => {
+    const finalSum = ex3(array);
+
+    if (finalSum > 20) {
+        console.log("Maior que 20");
+    } else {
+        console.log("Menor ou igual a 20");
+    }
+}
