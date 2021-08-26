@@ -71,3 +71,14 @@ const ex7 = (array) => {
 
     console.log(smallestValue);
 }
+
+const ex8 = () => {
+    const myArray = [];
+
+    for (let i = 1; i <= 25; i++) {
+        myArray.push(i);
+    }
+
+    // console.log(myArray);
+    return myArray;
+}
