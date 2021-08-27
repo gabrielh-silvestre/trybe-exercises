@@ -33,13 +33,8 @@ const multNext = (array) => {
     let size = array.length - 1;
 
     for (let i = 0; i <= size; i++) {
-        myArray.push(array[i + 1] * array[i]);
+        myArray.push((array[i + 1] || 2) * array[i]);
     }
-
-    myArray.pop();
-    myArray.push(array[array.length - 1] * 2);
 
     return myArray;
 }
-
-console.log(multNext(numbers));
