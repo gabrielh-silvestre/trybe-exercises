@@ -53,3 +53,23 @@ function greaterName(arr) {
 
     return greaterWord;
 }
+
+function moreRepeats(arr) {
+    let repeats = 0;
+    let moreRepeater = 0;
+    const objCompare = {};
+
+    for (key of arr) {
+        objCompare[key] = 0;
+    }
+
+    const objKeys = Object.keys(objCompare);
+    for (let number = 0; number < arr.length; number++) {
+        for (key of objKeys) {
+            // if (key == arr[])
+        }
+    }
+
+    console.log(objCompare);
+}
+moreRepeats([2, 3, 2, 5, 8, 2, 3])
