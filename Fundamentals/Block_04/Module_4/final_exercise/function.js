@@ -29,3 +29,16 @@ function greaterValue(arr) {
     
     return greaterIndex;
 }
+
+function smallerValue(arr) {
+    let smallerIndex = 0;
+    let smallerNumber = 0;
+    for (value in arr) {
+        if (arr[value] <= smallerNumber) {
+            smallerIndex = value;
+            smallerNumber = arr[value];
+        }
+    }
+    
+    return smallerIndex;
+}
