@@ -4,6 +4,13 @@ const info = {
     nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
 };
 
+const infoPatinhas = {
+    personagem: 'Tio Patinhas',
+    origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
+    nota: 'O último MacPatinhas',
+    recorrente: "Sim"
+};
+
 function ex1() {
     console.log(`Bem-vinda, ${info.personagem}`);
 }
@@ -26,3 +33,15 @@ function ex4() {
         console.log(info[i]);
     }
 }
+
+function ex5() {
+    ex2();
+    for (i in info) {
+        if (info[i] === infoPatinhas[i]) {
+            console.log("Ambos recorrentes");
+        } else {
+            console.log(`${info[i]} e ${infoPatinhas[i]}`);
+        }
+    }
+}
+ex5()
