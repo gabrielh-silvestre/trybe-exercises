@@ -7,3 +7,8 @@ const info = {
 function ex1() {
     console.log(`Bem-vinda, ${info.personagem}`);
 }
+
+function ex2 () {
+    info.recorrente = "Sim";
+    console.log(info);
+}
