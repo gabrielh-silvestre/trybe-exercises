@@ -19,3 +19,10 @@ function ex3() {
         console.log(i);
     }
 }
+
+function ex4() {
+    ex2();
+    for (i in info) {
+        console.log(info[i]);
+    }
+}
