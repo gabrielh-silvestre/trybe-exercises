@@ -42,3 +42,14 @@ function smallerValue(arr) {
     
     return smallerIndex;
 }
+
+function greaterName(arr) {
+    let greaterWord = "";
+    for (n of arr) {
+        if (n.length >= greaterWord.length) {
+            greaterWord = n;
+        }
+    }
+
+    return greaterWord;
+}
