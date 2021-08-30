@@ -8,7 +8,14 @@ function ex1() {
     console.log(`Bem-vinda, ${info.personagem}`);
 }
 
-function ex2 () {
+function ex2() {
     info.recorrente = "Sim";
-    console.log(info);
+    // console.log(info);
+}
+
+function ex3() {
+    ex2();
+    for (i in info) {
+        console.log(i);
+    }
 }
