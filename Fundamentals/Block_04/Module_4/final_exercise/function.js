@@ -55,8 +55,8 @@ function greaterName(arr) {
 }
 
 function moreRepeats(arr) {
-    let repeats = 0;
-    let moreRepeater = 0;
+    let repeater = 0;
+    let returnable = "";
     const objCompare = {};
 
     for (key of arr) {
@@ -66,11 +66,20 @@ function moreRepeats(arr) {
     const objKeys = Object.keys(objCompare);
     for (let number = 0; number < arr.length; number++) {
         for (key of objKeys) {
-            // if (key == arr[])
+            if (key == arr[number]) {
+                objCompare[key] += 1;
+            }
         }
     }
 
-    console.log(objCompare);
+    for (i in objCompare) {
+        if (objCompare[i] > repeater) {
+            repeater = objCompare[i];
+            returnable = i;
+        }
+    }
+
+    console.log(returnable);
 }
 
 function sum(number) {
