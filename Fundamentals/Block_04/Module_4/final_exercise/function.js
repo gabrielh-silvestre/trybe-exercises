@@ -81,3 +81,17 @@ function sum(number) {
 
     return finalSum;
 }
+
+function compareFinalStrings(str1, str2) {
+    let expectedScore = str2.length;
+    let score = 0;
+    for (let i1 = str1.length - str2.length; i1 < str1.length; i1++) {
+        for (let i2 = 0; i2 < str2.length; i2++) {
+            if (str1[i1] === str2[i]) {
+                score += 1;
+            }
+        }
+    }
+
+    return score === expectedScore;
+}
