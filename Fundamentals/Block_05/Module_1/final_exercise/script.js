@@ -15,3 +15,8 @@ function textChanging(element, text) {
     const elementChange = document.getElementsByTagName(element)[1];
     elementChange.innerText = text;
 }
+
+function backgroundColorChanger(element, color)  {
+    const elementChange = document.getElementsByClassName(element)[0];
+    elementChange.style.backgroundColor = color;
+}
