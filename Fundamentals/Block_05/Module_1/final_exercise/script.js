@@ -20,3 +20,8 @@ function backgroundColorChanger(element, color)  {
     const elementChange = document.getElementsByClassName(element)[0];
     elementChange.style.backgroundColor = color;
 }
+
+function h1Changing(element, text) {
+    const elementChange = document.getElementsByTagName(element)[1];
+    elementChange.innerHTML = `<h1>${text}</h1>`;
+}
