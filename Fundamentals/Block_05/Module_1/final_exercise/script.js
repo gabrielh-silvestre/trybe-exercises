@@ -30,3 +30,8 @@ function textUpperCase(element) {
     const elementChange = document.getElementsByTagName(element);
     for (let i of elementChange) { i.style.textTransform = 'uppercase'; }
 }
+
+function contentPrint(element) {
+    const elementChange = document.getElementsByTagName(element);
+    for (let i of elementChange) { console.log(i.innerText); }
+}
