@@ -22,6 +22,11 @@ function backgroundColorChanger(element, color)  {
 }
 
 function h1Changing(element, text) {
-    const elementChange = document.getElementsByTagName(element)[1];
+    const elementChange = document.getElementsByTagName(element)[0];
     elementChange.innerHTML = `<h1>${text}</h1>`;
+}
+
+function textUpperCase(element) {
+    const elementChange = document.getElementsByTagName(element);
+    for (let i of elementChange) { i.style.textTransform = 'uppercase'; }
 }
