@@ -1,23 +1,17 @@
-function getById(id) {
-    return document.getElementById(id);
+const bigFather = document.getElementById('pai');
+const bigFatherChildren = bigFather.childNodes;
+
+for (let i = bigFatherChildren.length - 1; i >= 0; i -= 1) {
+
+    if (bigFatherChildren[i].id !== 'elementoOndeVoceEsta') {
+        bigFather.removeChild(bigFatherChildren[i]);
+    }
 }
 
-function getFatherElement(element) {
-    return element.parentElement;
-}
+let ondeEstouControl = bigFatherChildren[0].childNodes;
 
-function getSonElement(element) {
-    return element.children;
+for (let i = ondeEstouControl.length -1; i >= 0; i -= 1) {
+    if (ondeEstouControl[i].id !== 'primeiroFilhoDoFilho') {
+        ondeEstouControl[i].remove();
+    }
 }
-
-function getPreviousElement(element) {
-    return element.previousElementSibling;
-}
-
-function getNextNode(element) {
-    return element.nextElementSibling;
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    
-})
