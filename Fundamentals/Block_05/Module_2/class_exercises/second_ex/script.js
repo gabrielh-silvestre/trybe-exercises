@@ -1,4 +1,4 @@
-function accessById(id) {
+function getById(id) {
     return document.getElementById(id);
 }
 
@@ -20,6 +20,12 @@ function getNextNode(element) {
 
 document.addEventListener('DOMContentLoaded', () => {
     // req 1
-    const newElement = document.createElement('div');
-    getFatherElement(accessById('elementoOndeVoceEsta')).appendChild(newElement);
+    // const newElement = document.createElement('div');
+    // getFatherElement(getById('elementoOndeVoceEsta')).appendChild(newElement);
+
+    // req 2
+    const ondeEstou = getById('elementoOndeVoceEsta');
+    const newElement = document.createElement('p');
+    ondeEstou.appendChild(newElement);
+    
 })
