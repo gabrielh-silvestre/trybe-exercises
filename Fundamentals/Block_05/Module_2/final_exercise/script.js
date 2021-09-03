@@ -16,6 +16,11 @@ function addClassInElements(htmlElement, classes) {
     return true;
 }
 
+function addAttributes(htmlElement, attribute, value) {
+    htmlElement.setAttribute(attribute, value);
+    return true;
+}
+
 function plugInHtml(fatherElement, newElement) {
     fatherElement.appendChild(newElement);
     return true;
