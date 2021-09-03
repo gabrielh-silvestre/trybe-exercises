@@ -19,5 +19,7 @@ function getNextNode(element) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+    // req 1
+    const newElement = document.createElement('div');
+    getFatherElement(accessById('elementoOndeVoceEsta')).appendChild(newElement);
 })
