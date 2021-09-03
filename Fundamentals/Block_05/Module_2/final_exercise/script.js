@@ -28,7 +28,7 @@ function addingH1InBody() {
     plugInHtml(body, h1);
     return true;
 }
-addingH1InBody();
+addingH1InBody(); // ex 1
 
 function addingMainInBody() {
     const body = getFirstByTagName('body');
@@ -37,7 +37,7 @@ function addingMainInBody() {
     plugInHtml(body, main);
     return true;
 }
-addingMainInBody();
+addingMainInBody(); // ex 2
 
 function addingSectionInMain() {
     const main = getFirstByTagName('main');
@@ -45,4 +45,4 @@ function addingSectionInMain() {
     addClassInElements(section, 'center-content');
     plugInHtml(main, section);
 }
-addingSectionInMain();
+addingSectionInMain(); // ex 3
