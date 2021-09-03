@@ -61,4 +61,12 @@ function addingLeftSectionInMain() {
     addClassInElements(section, 'left-content');
     plugInHtml(main, section);
 }
-addingLeftSectionInMain();
+addingLeftSectionInMain(); // ex 5
+
+function addingRightSectionInMain() {
+    const main = getFirstByTagName('main');
+    const section = elementCreation('section');
+    addClassInElements(section, 'right-content');
+    plugInHtml(main, section);
+}
+addingRightSectionInMain(); // ex 6
