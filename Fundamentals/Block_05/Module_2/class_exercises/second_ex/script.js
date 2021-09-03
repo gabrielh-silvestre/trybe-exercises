@@ -24,8 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // getFatherElement(getById('elementoOndeVoceEsta')).appendChild(newElement);
 
     // req 2
-    const ondeEstou = getById('elementoOndeVoceEsta');
-    const newElement = document.createElement('p');
-    ondeEstou.appendChild(newElement);
+    // const ondeEstou = getById('elementoOndeVoceEsta');
+    // const newElement = document.createElement('p');
+    // ondeEstou.appendChild(newElement);
     
+    // req 3
+    const primeiroFilhoFilho = getById('primeiroFilhoDoFilho');
+    const newElement = document.createElement('h1');
+    primeiroFilhoFilho.append(newElement);
 })
