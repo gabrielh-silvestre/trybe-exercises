@@ -12,7 +12,10 @@ function plugInHtml(fatherElement, newElement) {
     return true;
 }
 
-const body = document.getElementsByTagName('body')[0];
-const h1 = elementCreation('h1');
-addContent(h1, 'Exercício 5.2 - JavaScript DOM');
-plugInHtml(body, h1);
+function addingH1InBody() {
+    const body = document.getElementsByTagName('body')[0];
+    const h1 = elementCreation('h1');
+    addContent(h1, 'Exercício 5.2 - JavaScript DOM');
+    plugInHtml(body, h1);
+    return true;
+}
