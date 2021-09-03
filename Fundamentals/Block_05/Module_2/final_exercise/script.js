@@ -46,3 +46,11 @@ function addingSectionInMain() {
     plugInHtml(main, section);
 }
 addingSectionInMain(); // ex 3
+
+function addingParagraphInSection() {
+    const section = getFirstByTagName('section');
+    const p = elementCreation('p');
+    addContent(p, 'Sextou, sextando na sexta!');
+    plugInHtml(section, p);
+}
+addingParagraphInSection(); // ex 4
