@@ -1,9 +1,5 @@
-function getFirstByTagName(tag) {
-    return document.getElementsByTagName(tag)[0];
-}
-
-function getFirstByClassName(clas) {
-    return document.getElementsByClassName(clas)[0];
+function getFirstElement(tag) {
+    return document.querySelector(tag);
 }
 
 function elementCreation(tag) {
@@ -31,7 +27,7 @@ function plugInHtml(fatherElement, newElement) {
 }
 
 function addingH1InBody() {
-    const body = getFirstByTagName('body');
+    const body = getFirstElement('body');
     const h1 = elementCreation('h1');
     addContent(h1, 'Exercício 5.2 - JavaScript DOM');
     plugInHtml(body, h1);
@@ -40,7 +36,7 @@ function addingH1InBody() {
 addingH1InBody(); // ex 1
 
 function addingMainInBody() {
-    const body = getFirstByTagName('body');
+    const body = getFirstElement('body');
     const main = elementCreation('main');
     addClassInElements(main, 'main-content');
     plugInHtml(body, main);
@@ -49,7 +45,7 @@ function addingMainInBody() {
 addingMainInBody(); // ex 2
 
 function addingSectionInMain() {
-    const main = getFirstByTagName('main');
+    const main = getFirstElement('main');
     const section = elementCreation('section');
     addClassInElements(section, 'center-content');
     plugInHtml(main, section);
@@ -57,7 +53,7 @@ function addingSectionInMain() {
 addingSectionInMain(); // ex 3
 
 function addingParagraphInSection() {
-    const section = getFirstByTagName('section');
+    const section = getFirstElement('section');
     const p = elementCreation('p');
     addContent(p, 'Sextou, sextando na sexta!');
     plugInHtml(section, p);
@@ -65,7 +61,7 @@ function addingParagraphInSection() {
 addingParagraphInSection(); // ex 4
 
 function addingLeftSectionInMain() {
-    const main = getFirstByTagName('main');
+    const main = getFirstElement('main');
     const section = elementCreation('section');
     addClassInElements(section, 'left-content');
     plugInHtml(main, section);
@@ -73,7 +69,7 @@ function addingLeftSectionInMain() {
 addingLeftSectionInMain(); // ex 5
 
 function addingRightSectionInMain() {
-    const main = getFirstByTagName('main');
+    const main = getFirstElement('main');
     const section = elementCreation('section');
     addClassInElements(section, 'right-content');
     plugInHtml(main, section);
