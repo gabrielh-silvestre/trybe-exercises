@@ -21,7 +21,7 @@ function getNextNode(element) {
 document.addEventListener('DOMContentLoaded', () => {
     // req 2
     const ondeEstou = accessById('elementoOndeVoceEsta');
-    // const elementoPai = getFatherElement(ondeEstou);
+    const elementoPai = getFatherElement(ondeEstou);
     // elementoPai.style.color = 'blue';
     
     // req 3
@@ -39,5 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // const atencao = getFatherElement(ondeEstou).innerText;
     
     // req 7
-    const terceiroFilho = getNextNode(ondeEstou);
+    // const terceiroFilho = getNextNode(ondeEstou);
+
+    // req 8
+    const terceiroFilho = getSonElement(elementoPai)[2];
 })
