@@ -14,6 +14,10 @@ function getPreviousElement(element) {
     return element.previousElementSibling;
 }
 
+function getNextNode(element) {
+    return element.nextElementSibling;
+}
+
 // req 2
 const ondeEstou = accessById('elementoOndeVoceEsta');
 // const elementoPai = getFatherElement(ondeEstou);
@@ -28,4 +32,7 @@ const ondeEstou = accessById('elementoOndeVoceEsta');
 // const primeiroFilho = getSonElement(pai)[0];
 
 // req 5
-const primeiroFilho = getPreviousElement(ondeEstou);
+// const primeiroFilho = getPreviousElement(ondeEstou);
+
+// req 6
+const atencao = getFatherElement(ondeEstou).innerText;
