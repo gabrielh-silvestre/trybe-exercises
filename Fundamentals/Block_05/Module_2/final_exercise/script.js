@@ -2,6 +2,10 @@ function getFirstByTagName(tag) {
     return document.getElementsByTagName(tag)[0];
 }
 
+function getFirstByClassName(clas) {
+    return document.getElementsByClassName(clas)[0];
+}
+
 function elementCreation(tag) {
     const tempElement = document.createElement(tag);
     return tempElement;
