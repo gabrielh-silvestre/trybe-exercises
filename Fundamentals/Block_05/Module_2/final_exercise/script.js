@@ -11,3 +11,8 @@ function plugInHtml(fatherElement, newElement) {
     fatherElement.appendChild(newElement);
     return true;
 }
+
+const body = document.getElementsByTagName('body')[0];
+const h1 = elementCreation('h1');
+addContent(h1, 'Exercício 5.2 - JavaScript DOM');
+plugInHtml(body, h1);
