@@ -19,28 +19,5 @@ function getNextNode(element) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // req 2
-    const ondeEstou = accessById('elementoOndeVoceEsta');
-    const elementoPai = getFatherElement(ondeEstou);
-    // elementoPai.style.color = 'blue';
     
-    // req 3
-    // const primeiroFilhoFilho = accessById('primeiroFilhoDoFilho');
-    // primeiroFilhoFilho.innerText = 'Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem'
-    
-    // req 4
-    // const pai = accessById('pai');
-    // const primeiroFilho = getSonElement(pai)[0];
-    
-    // req 5
-    // const primeiroFilho = getPreviousElement(ondeEstou);
-    
-    // req 6
-    // const atencao = getFatherElement(ondeEstou).innerText;
-    
-    // req 7
-    // const terceiroFilho = getNextNode(ondeEstou);
-
-    // req 8
-    const terceiroFilho = getSonElement(elementoPai)[2];
 })
