@@ -1,5 +1,5 @@
-function getFirstElement(tag) {
-    return document.querySelector(tag);
+function getFirstElement(element) {
+    return document.querySelector(element);
 }
 
 function elementCreation(tag) {
@@ -75,3 +75,12 @@ function addingRightSectionInMain() {
     plugInHtml(main, section);
 }
 addingRightSectionInMain(); // ex 6
+
+function addingImgInLeftSection() {
+    const sectionLeft = getFirstElement('.left-content');
+    const img = elementCreation('img');
+    addAttributes(img, 'src', 'https://picsum.photos/200');
+    addAttributes(img, 'alt', 'várias fotos');
+    plugInHtml(sectionLeft, img);
+}
+addingImgInLeftSection(); // ex 7
