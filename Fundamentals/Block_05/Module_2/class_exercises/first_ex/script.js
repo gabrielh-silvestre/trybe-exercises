@@ -15,7 +15,7 @@ function getPreviousElement(element) {
 }
 
 // req 2
-// const ondeEstou = accessById('elementoOndeVoceEsta');
+const ondeEstou = accessById('elementoOndeVoceEsta');
 // const elementoPai = getFatherElement(ondeEstou);
 // elementoPai.style.color = 'blue';
 
@@ -27,6 +27,5 @@ function getPreviousElement(element) {
 // const pai = accessById('pai');
 // const primeiroFilho = getSonElement(pai)[0];
 
-//req 5
-const ondeEstou = accessById('elementoOndeVoceEsta');
+// req 5
 const primeiroFilho = getPreviousElement(ondeEstou);
