@@ -11,14 +11,17 @@ function getSonElement(element) {
 }
 
 // req 2
-const ondeEstou = accessById('elementoOndeVoceEsta');
-const elementoPai = getFatherElement(ondeEstou);
-elementoPai.style.color = 'blue';
+// const ondeEstou = accessById('elementoOndeVoceEsta');
+// const elementoPai = getFatherElement(ondeEstou);
+// elementoPai.style.color = 'blue';
 
 // req 3
-const primeiroFilhoFilho = accessById('primeiroFilhoDoFilho');
-primeiroFilhoFilho.innerText = 'Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem'
+// const primeiroFilhoFilho = accessById('primeiroFilhoDoFilho');
+// primeiroFilhoFilho.innerText = 'Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem'
 
 // req 4
-const pai = accessById('pai');
-const primeiroFilho = getSonElement(pai)[0];
+// const pai = accessById('pai');
+// const primeiroFilho = getSonElement(pai)[0];
+
+//req 5
+
