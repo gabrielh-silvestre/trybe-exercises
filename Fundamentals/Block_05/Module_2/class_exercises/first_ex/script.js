@@ -10,6 +10,10 @@ function getSonElement(element) {
     return element.children;
 }
 
+function getPreviousElement(element) {
+    return element.previousElementSibling;
+}
+
 // req 2
 // const ondeEstou = accessById('elementoOndeVoceEsta');
 // const elementoPai = getFatherElement(ondeEstou);
@@ -24,4 +28,5 @@ function getSonElement(element) {
 // const primeiroFilho = getSonElement(pai)[0];
 
 //req 5
-
+const ondeEstou = accessById('elementoOndeVoceEsta');
+const primeiroFilho = getPreviousElement(ondeEstou);
