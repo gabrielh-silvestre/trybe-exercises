@@ -7,6 +7,11 @@ function addContent(htmlElement, content) {
     return htmlElement.innerText = content;
 }
 
+function addClassInElements(htmlElement, classes) {
+    htmlElement.className = classes;
+    return true;
+}
+
 function plugInHtml(fatherElement, newElement) {
     fatherElement.appendChild(newElement);
     return true;
@@ -19,3 +24,4 @@ function addingH1InBody() {
     plugInHtml(body, h1);
     return true;
 }
+addingH1InBody();
