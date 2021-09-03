@@ -25,3 +25,12 @@ function addingH1InBody() {
     return true;
 }
 addingH1InBody();
+
+function addingMainInBody() {
+    const body = document.getElementsByTagName('body')[0];
+    const main = elementCreation('main');
+    addClassInElements(main, 'main-content');
+    plugInHtml(body, main);
+    return true;
+}
+addingMainInBody();
