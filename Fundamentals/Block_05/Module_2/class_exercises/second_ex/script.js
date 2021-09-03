@@ -3,7 +3,7 @@ function getById(id) {
 }
 
 function getFatherElement(element) {
-    return element.parentNode;
+    return element.parentElement;
 }
 
 function getSonElement(element) {
@@ -31,5 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // req 3
     const primeiroFilhoFilho = getById('primeiroFilhoDoFilho');
     const newElement = document.createElement('h1');
+    newElement.id = 'filhoJunior';
     primeiroFilhoFilho.append(newElement);
+
+    // req 4
+    const filhoJunior = getById('filhoJunior');
+    const paizao = filhoJunior.parentElement.parentElement.parentElement;
+    const terceiroFilho = paizao.children[2];
 })
