@@ -9,3 +9,6 @@ function getFatherElement(element) {
 const ondeEstou = accessById('elementoOndeVoceEsta');
 const elementoPai = getFatherElement(ondeEstou);
 elementoPai.style.color = 'blue';
+
+const primeiroFilhoFilho = accessById('primeiroFilhoDoFilho');
+primeiroFilhoFilho.innerText = 'Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem'
