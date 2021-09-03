@@ -54,3 +54,11 @@ function addingParagraphInSection() {
     plugInHtml(section, p);
 }
 addingParagraphInSection(); // ex 4
+
+function addingLeftSectionInMain() {
+    const main = getFirstByTagName('main');
+    const section = elementCreation('section');
+    addClassInElements(section, 'left-content');
+    plugInHtml(main, section);
+}
+addingLeftSectionInMain();
