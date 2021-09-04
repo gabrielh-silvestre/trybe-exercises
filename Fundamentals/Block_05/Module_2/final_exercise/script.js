@@ -2,6 +2,10 @@ function getFirstElement(element) {
     return document.querySelector(element);
 }
 
+function getAllElements(element) {
+    return document.querySelectorAll(element);
+}
+
 function elementCreation(tag) {
     const tempElement = document.createElement(tag);
     return tempElement;
