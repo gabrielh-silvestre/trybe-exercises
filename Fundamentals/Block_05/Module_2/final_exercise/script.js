@@ -146,3 +146,12 @@ function changeBgColor() {
     father.style.backgroundColor = 'green';
 }
 changeBgColor(); // ex 5 pt 2
+
+function deletingLastTwoNumbers() {
+    const ul = getFirstElement('ul');
+    const li = getAllElements('li');
+    for (let i = li.length - 1; i > li.length - 3; i -= 1) {
+        deleteElement(ul, li[i]);
+    }
+}
+deletingLastTwoNumbers(); // ex 6 pt 2
