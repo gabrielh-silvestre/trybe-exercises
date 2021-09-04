@@ -97,3 +97,12 @@ function addingUlInRightSection() {
     }
 }
 addingUlInRightSection(); // ex 8
+
+function addingH3InMain() {
+    const main = getFirstElement('main');
+    for (let i = 0; i < 3; i += 1) {
+        const h3 = elementCreation('h3');
+        plugInHtml(main, h3);
+    }
+}
+addingH3InMain(); // ex 9
