@@ -134,3 +134,9 @@ function deletingLeftSection() {
     deleteElement(father, sectionLeft);
 }
 deletingLeftSection(); // ex 3 pt 2
+
+function centerRightSection() {
+    const sectionRight = getFirstElement('.right-content');
+    sectionRight.style.marginRight = 'auto'
+}
+centerRightSection(); // ex 4 pt 2
