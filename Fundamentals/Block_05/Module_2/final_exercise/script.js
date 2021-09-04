@@ -127,3 +127,10 @@ function addingClassH3() {
     }
 }
 addingClassH3(); // ex 2 pt 2
+
+function deletingLeftSection() {
+    const sectionLeft = getFirstElement('.left-content');
+    const father = sectionLeft.parentElement;
+    deleteElement(father, sectionLeft);
+}
+deletingLeftSection(); // ex 3 pt 2
