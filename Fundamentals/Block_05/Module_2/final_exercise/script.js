@@ -113,3 +113,12 @@ function addingClassInH1() {
     const h1 = getFirstElement('h1');
     addClassesInElement(h1, 'title');
 }
+addingClassInH1() // ex 1 pt 2
+
+function addingClassH3() {
+    const h3 = getAllElements('h3');
+    for (let tag of h3) {
+        addClassesInElement(tag, 'description');
+    }
+}
+addingClassH3(); // ex 2 pt 2
