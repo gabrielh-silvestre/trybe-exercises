@@ -84,3 +84,16 @@ function addingImgInLeftSection() {
     plugInHtml(sectionLeft, img);
 }
 addingImgInLeftSection(); // ex 7
+
+function addingUlInRightSection() {
+    const sectionRight = getFirstElement('.right-content');
+    const ul = elementCreation('ul');
+    const numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+    plugInHtml(sectionRight, ul);
+    for (let n of numbers) {
+        const li = elementCreation('li');
+        li.innerText = n;
+        plugInHtml(ul, li);
+    }
+}
+addingUlInRightSection(); // ex 8
