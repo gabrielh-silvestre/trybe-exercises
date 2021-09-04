@@ -30,6 +30,11 @@ function plugInHtml(fatherElement, newElement) {
     return true;
 }
 
+function deleteElement(fatherElement, delElement) {
+    fatherElement.removeChild(delElement);
+    return true;
+}
+
 function addingH1InBody() {
     const body = getFirstElement('body');
     const h1 = elementCreation('h1');
