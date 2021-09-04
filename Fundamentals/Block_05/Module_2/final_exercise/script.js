@@ -140,3 +140,9 @@ function centerRightSection() {
     sectionRight.style.marginRight = 'auto'
 }
 centerRightSection(); // ex 4 pt 2
+
+function changeBgColor() {
+    const father = getFirstElement('.center-content');
+    father.style.backgroundColor = 'green';
+}
+changeBgColor(); // ex 5 pt 2
