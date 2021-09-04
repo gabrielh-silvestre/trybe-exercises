@@ -11,7 +11,7 @@ function addContent(htmlElement, content) {
     return htmlElement.innerText = content;
 }
 
-function addClassInElements(htmlElement, classes) {
+function addClassesInElement(htmlElement, classes) {
     htmlElement.className = classes;
     return true;
 }
@@ -31,23 +31,21 @@ function addingH1InBody() {
     const h1 = elementCreation('h1');
     addContent(h1, 'Exercício 5.2 - JavaScript DOM');
     plugInHtml(body, h1);
-    return true;
 }
 addingH1InBody(); // ex 1
 
 function addingMainInBody() {
     const body = getFirstElement('body');
     const main = elementCreation('main');
-    addClassInElements(main, 'main-content');
+    addClassesInElement(main, 'main-content');
     plugInHtml(body, main);
-    return true;
 }
 addingMainInBody(); // ex 2
 
 function addingSectionInMain() {
     const main = getFirstElement('main');
     const section = elementCreation('section');
-    addClassInElements(section, 'center-content');
+    addClassesInElement(section, 'center-content');
     plugInHtml(main, section);
 }
 addingSectionInMain(); // ex 3
@@ -63,7 +61,7 @@ addingParagraphInSection(); // ex 4
 function addingLeftSectionInMain() {
     const main = getFirstElement('main');
     const section = elementCreation('section');
-    addClassInElements(section, 'left-content');
+    addClassesInElement(section, 'left-content');
     plugInHtml(main, section);
 }
 addingLeftSectionInMain(); // ex 5
@@ -71,7 +69,7 @@ addingLeftSectionInMain(); // ex 5
 function addingRightSectionInMain() {
     const main = getFirstElement('main');
     const section = elementCreation('section');
-    addClassInElements(section, 'right-content');
+    addClassesInElement(section, 'right-content');
     plugInHtml(main, section);
 }
 addingRightSectionInMain(); // ex 6
@@ -106,3 +104,8 @@ function addingH3InMain() {
     }
 }
 addingH3InMain(); // ex 9
+
+function addingClassInH1() {
+    const h1 = getFirstElement('h1');
+    addClassesInElement(h1, 'title');
+}
