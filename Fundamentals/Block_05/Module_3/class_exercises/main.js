@@ -20,6 +20,9 @@ window.onload = () => {
 
     const textBox = document.querySelector('#input');
     textBox.addEventListener('change', changeText);
+
+    const subTitle = document.querySelector('#my-spotrybefy');
+    subTitle.addEventListener('dblclick', toPortfolio);
 }
 
 // 1. Copie esse arquivo e edite apenas ele;
