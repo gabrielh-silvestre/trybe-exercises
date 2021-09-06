@@ -56,6 +56,14 @@ function toPortfolio(event) {
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 
+function changeColor(event) {
+    event.target.style.color = '#2fc18c';
+}
+
+function resetColor(event) {
+    event.target.style.color = 'white';
+}
+
 // Segue abaixo um exemplo do uso de event.target:
 
 
