@@ -4,6 +4,14 @@ const thirdLi = document.getElementById('third-li');
 const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
 
+function verifierTech(arr) {
+    for (let item of arr) {
+        if (item.className === 'tech') {
+            item.className = '';
+        }
+    }
+}
+
 window.onload = () => {
     const tecs = document.querySelectorAll('li');
     tecs.forEach((tec)=> {
