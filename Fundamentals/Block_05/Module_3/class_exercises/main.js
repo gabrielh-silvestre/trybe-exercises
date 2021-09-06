@@ -4,6 +4,12 @@ const thirdLi = document.getElementById('third-li');
 const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
 
+window.onload = () => {
+    const tecs = document.querySelectorAll('li');
+    tecs.forEach((tec)=> {
+        tec.addEventListener('click', inFocus);
+    })
+}
 
 // 1. Copie esse arquivo e edite apenas ele;
 
