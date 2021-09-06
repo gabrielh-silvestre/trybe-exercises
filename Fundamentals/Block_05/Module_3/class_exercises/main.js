@@ -47,6 +47,10 @@ function changeText(event) {
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portifólio?
 
+function toPortfolio(event) {
+    window.location.assign('https://github.com/gabrielh-silvestre'); // função retirada do site https://love2dev.com/blog/ways-to-use-javascript-redirect-to-another-page/
+}
+
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 
