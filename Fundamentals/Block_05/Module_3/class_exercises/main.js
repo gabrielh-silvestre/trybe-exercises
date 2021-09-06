@@ -23,6 +23,8 @@ window.onload = () => {
 
     const subTitle = document.querySelector('#my-spotrybefy');
     subTitle.addEventListener('dblclick', toPortfolio);
+    subTitle.addEventListener('mouseover', changeColor);
+    subTitle.addEventListener('mouseleave', resetColor);
 }
 
 // 1. Copie esse arquivo e edite apenas ele;
