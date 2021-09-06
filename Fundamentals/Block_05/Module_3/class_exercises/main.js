@@ -17,6 +17,9 @@ window.onload = () => {
     tecs.forEach((tec)=> {
         tec.addEventListener('click', inFocus);
     })
+
+    const textBox = document.querySelector('#input');
+    textBox.addEventListener('change', changeText);
 }
 
 // 1. Copie esse arquivo e edite apenas ele;
