@@ -86,16 +86,31 @@ createHolidaysButton('Feriados');
 
   // Exercício 3
 
-function highlightHolidays() {
-  const allHolidays = selectingAll('.holiday');
-
-  allHolidays.forEach((holiday) => {
+function highlightHolidays(arr) {
+  arr.forEach((holiday) => {
     holiday.style.backgroundColor = 'green';
     holiday.style.color = 'white';
   });
 }
 
-selectingOne('#btn-holiday').addEventListener('click', () => {
-  highlightHolidays();
-})
+function normalizeHolidays(arr) {
 
+  arr.forEach((holiday) => {
+    holiday.style.backgroundColor = 'rgb(238,238,238)';
+    holiday.style.color = '#777';
+  });
+}
+
+function highlightChecker() {
+  const allHolidays = selectingAll('.holiday');
+
+  if (allHolidays[0].style.backgroundColor === 'green') {
+    normalizeHolidays(allHolidays);
+  } else {
+    highlightHolidays(allHolidays);
+  }
+}
+
+selectingOne('#btn-holiday').addEventListener('click', () => {
+  highlightChecker();
+})
