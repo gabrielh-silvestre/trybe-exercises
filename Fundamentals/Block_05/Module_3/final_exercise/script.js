@@ -184,9 +184,14 @@ function createTask(str) {
   let newTask = elementCreate('span');
 
   newTask.innerText= str;
+  classAdd(newTask, 'task');
   htmlPlug(dadOfTasks, newTask);
 }
 
-function customTask() {
-  // createTask();
-}
+const getTask = selectingOne('#btn-add');
+
+getTask.addEventListener('click', () => {
+  let taskContent = selectingOne('#task-input').value;
+
+  createTask(taskContent);
+});
