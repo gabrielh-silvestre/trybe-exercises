@@ -184,7 +184,6 @@ function createTask(str) {
   let newTask = elementCreate('span');
 
   newTask.innerText= str;
-  classAdd(newTask, 'task');
   htmlPlug(dadOfTasks, newTask);
 }
 
@@ -194,4 +193,20 @@ getTask.addEventListener('click', () => {
   let taskContent = selectingOne('#task-input').value;
 
   createTask(taskContent);
+  createSubtitle();
 });
+
+  // Exercício 8
+
+function colorRandomizer() {
+  return `rgb(${Math.random() * 200}, ${Math.random() * 200}, ${Math.random() * 200})`
+}
+
+function createSubtitle() {
+  const dadSub = selectingOne('.my-tasks');
+  let newSub = elementCreate('div');
+
+  classAdd(newSub, 'task');
+  newSub.style.backgroundColor = colorRandomizer();
+  htmlPlug(dadSub, newSub);
+}
