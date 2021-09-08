@@ -43,21 +43,23 @@ function createDaysOfDezember() {
   const dezHolidays = [24, 25, 31];
 
   dezDaysList.forEach((date) => {
-    let newDay = isHoliday(date, dezHolidays);
-    // let newDay = elementCreate('li');
-    newDay.innerText = date;
-    classAdd(newDay, 'day');
+    let newDay = createDay(date, dezHolidays);
     htmlPlug(daysContainer, newDay);
   });
 }
 createDaysOfDezember();
 
-function isHoliday(date, holidays) {
+function createDay(date, holidays) {
   let newDay = elementCreate('li');
-
-  if (holidays.includes(date)) {
-    classAdd(newDay, 'holiday');
-  }
+  newDay.innerText = date;
+  classAdd(newDay, 'day');
+  isHoliday(newDay, date, holidays);
 
   return newDay;
+}
+
+function isHoliday(dayElement ,date, holidays) {
+  if (holidays.includes(date)) {
+    classAdd(dayElement, 'holiday');
+  }
 }
