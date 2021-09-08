@@ -83,3 +83,19 @@ function createHolidaysButton(str) {
   htmlPlug(dadButtons, newButton);
 }
 createHolidaysButton('Feriados');
+
+  // Exercício 3
+
+function highlightHolidays() {
+  const allHolidays = selectingAll('.holiday');
+
+  allHolidays.forEach((holiday) => {
+    holiday.style.backgroundColor = 'green';
+    holiday.style.color = 'white';
+  });
+}
+
+selectingOne('#btn-holiday').addEventListener('click', () => {
+  highlightHolidays();
+})
+
