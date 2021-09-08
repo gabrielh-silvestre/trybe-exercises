@@ -41,18 +41,20 @@ function createDaysOfDezember() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   const daysContainer = selectingOne('#days');
   const dezHolidays = [24, 25, 31];
+  const dezFridays = [4, 11, 18, 25];
 
   dezDaysList.forEach((date) => {
-    let newDay = createDay(date, dezHolidays);
+    let newDay = createDay(date, dezHolidays, dezFridays);
     htmlPlug(daysContainer, newDay);
   });
 }
 createDaysOfDezember();
 
-function createDay(date, holidays) {
+function createDay(date, holidays, fridays) {
   let newDay = elementCreate('li');
   newDay.innerText = date;
   classAdd(newDay, 'day');
+  isFriday(newDay, date, fridays)
   isHoliday(newDay, date, holidays);
 
   return newDay;
@@ -61,5 +63,11 @@ function createDay(date, holidays) {
 function isHoliday(dayElement ,date, holidays) {
   if (holidays.includes(date)) {
     classAdd(dayElement, 'holiday');
+  }
+}
+
+function isFriday(dayElement ,date, fridays) {
+  if (fridays.includes(date)) {
+    classAdd(dayElement, 'friday');
   }
 }
