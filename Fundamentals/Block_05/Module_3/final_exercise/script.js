@@ -94,7 +94,6 @@ function highlightHolidays(arr) {
 }
 
 function normalizeHolidays(arr) {
-
   arr.forEach((holiday) => {
     holiday.style.backgroundColor = 'rgb(238,238,238)';
     holiday.style.color = '#777';
@@ -114,3 +113,15 @@ function highlightChecker() {
 selectingOne('#btn-holiday').addEventListener('click', () => {
   highlightChecker();
 })
+
+  // Exercício 4
+
+function createFridaysButton(str) {
+  const dadButtons = selectingOne('.buttons-container');
+  let newButton = elementCreate('button');
+
+  newButton.innerText = str;
+  newButton.id = 'btn-friday';
+  htmlPlug(dadButtons, newButton);
+}
+createFridaysButton('Sexta-feira');
