@@ -176,3 +176,17 @@ calendarDates.forEach((date) => {
     zoomOut(event.target);
   })
 })
+
+  // Exercício 7
+
+function createTask(str) {
+  const dadOfTasks = selectingOne('.my-tasks');
+  let newTask = elementCreate('span');
+
+  newTask.innerText= str;
+  htmlPlug(dadOfTasks, newTask);
+}
+
+function customTask() {
+  // createTask();
+}
