@@ -71,3 +71,15 @@ function isFriday(dayElement ,date, fridays) {
     classAdd(dayElement, 'friday');
   }
 }
+
+  // Exercício 2
+
+function createHolidaysButton(str) {
+  const dadButtons = selectingOne('.buttons-container');
+  let newButton = elementCreate('button');
+
+  newButton.innerText = str;
+  newButton.id = 'btn-holiday';
+  htmlPlug(dadButtons, newButton);
+}
+createHolidaysButton('Feriados');
