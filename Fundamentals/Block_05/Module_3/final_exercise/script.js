@@ -100,7 +100,7 @@ function normalizeHolidays(arr) {
   });
 }
 
-function highlightChecker() {
+function highlightCheckerHoliday() {
   const allHolidays = selectingAll('.holiday');
 
   if (allHolidays[0].style.backgroundColor === 'green') {
@@ -111,7 +111,7 @@ function highlightChecker() {
 }
 
 selectingOne('#btn-holiday').addEventListener('click', () => {
-  highlightChecker();
+  highlightCheckerHoliday();
 })
 
   // Exercício 4
@@ -125,3 +125,33 @@ function createFridaysButton(str) {
   htmlPlug(dadButtons, newButton);
 }
 createFridaysButton('Sexta-feira');
+
+  // Exercício 5
+
+function highlightFridays(arr) {
+  arr.forEach((friday) => {
+    friday.style.backgroundColor = 'green';
+    friday.style.color = 'white';
+  });
+}
+
+function normalizeFridays(arr) {
+  arr.forEach((friday) => {
+    friday.style.backgroundColor = 'rgb(238,238,238)';
+    friday.style.color = '#777';
+  });
+}
+
+function highlightCheckerFriday() {
+  const allFridays = selectingAll('.friday');
+
+  if (allFridays[0].style.backgroundColor === 'green') {
+    normalizeFridays(allFridays);
+  } else {
+    highlightFridays(allFridays);
+  }
+}
+
+selectingOne('#btn-friday').addEventListener('click', () => {
+  highlightCheckerFriday();
+})
