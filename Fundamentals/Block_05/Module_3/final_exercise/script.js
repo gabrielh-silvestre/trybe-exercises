@@ -28,7 +28,7 @@ function elementCreate(tag) {
 }
 
 function classAdd(element, newClass) {
-  return element.className = newClass;
+  return element.className += `${newClass} `;
 }
 
 function htmlPlug(dadElement, newElement) {
@@ -40,12 +40,24 @@ function htmlPlug(dadElement, newElement) {
 function createDaysOfDezember() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   const daysContainer = selectingOne('#days');
+  const dezHolidays = [24, 25, 31];
 
   dezDaysList.forEach((date) => {
-    let newDay = elementCreate('li');
+    let newDay = isHoliday(date, dezHolidays);
+    // let newDay = elementCreate('li');
     newDay.innerText = date;
     classAdd(newDay, 'day');
     htmlPlug(daysContainer, newDay);
   });
 }
 createDaysOfDezember();
+
+function isHoliday(date, holidays) {
+  let newDay = elementCreate('li');
+
+  if (holidays.includes(date)) {
+    classAdd(newDay, 'holiday');
+  }
+
+  return newDay;
+}
