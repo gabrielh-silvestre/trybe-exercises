@@ -164,3 +164,15 @@ function zoomIn(element) {
 function zoomOut(element) {
   element.style.fontSize = `20px`;
 }
+
+const calendarDates = selectingAll('.day');
+
+calendarDates.forEach((date) => {
+  date.addEventListener('mouseover', (event) => {
+    zoomIn(event.target);
+  });
+
+  date.addEventListener('mouseout', (event) => {
+    zoomOut(event.target);
+  })
+})
