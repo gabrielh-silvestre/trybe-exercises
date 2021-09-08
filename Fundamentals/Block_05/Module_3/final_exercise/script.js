@@ -14,3 +14,25 @@ function createDaysOfTheWeek() {
   createDaysOfTheWeek();
   
   // Escreva seu código abaixo.
+
+function selectingOne(node) {
+  return document.querySelector(node);
+}
+
+function selectingAll(node) {
+  return document.querySelectorAll(node);
+}
+  
+function elementCreate(tag) {
+  return document.createElement(tag);
+}
+
+function classAdd(element, newClass) {
+  return element.className = newClass;
+}
+
+function htmlPlug(dadElement, newElement) {
+  dadElement.appendChild(newElement);
+}
+
+  // Exercício 1
