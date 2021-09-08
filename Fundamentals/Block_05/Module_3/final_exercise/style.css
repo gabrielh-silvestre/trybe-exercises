@@ -103,10 +103,6 @@
     padding-bottom: 10px;
     vertical-align: middle;
   }
-  
-  .task {
-      display: block;
-  }
 
   .tasks-container {
     height: 130px;
