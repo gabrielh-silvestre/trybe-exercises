@@ -10,7 +10,6 @@ function createDaysOfTheWeek() {
     weekDaysList.appendChild(dayListItem);
   };
 };
-  
 createDaysOfTheWeek();
   
   // Escreva seu código abaixo.
@@ -155,3 +154,13 @@ function highlightCheckerFriday() {
 selectingOne('#btn-friday').addEventListener('click', () => {
   highlightCheckerFriday();
 })
+
+  // Exercício 6
+
+function zoomIn(element) {
+  element.style.fontSize = `40px`;
+}
+
+function zoomOut(element) {
+  element.style.fontSize = `20px`;
+}
