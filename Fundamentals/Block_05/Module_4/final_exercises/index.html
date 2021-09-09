@@ -8,15 +8,15 @@
 </head>
 <body>
     <header>
-        <div>
+        <div class="container">
             <Section><h1>Leitor</h1></Section>
 
             <section>
-                <nav>
-                    <ul>
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                        <li><a href="#">Link 3</a></li>
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li class="nav-list-item"><a href="#">Link 1</a></li>
+                        <li class="nav-list-item"><a href="#">Link 2</a></li>
+                        <li class="nav-list-item"><a href="#">Link 3</a></li>
                     </ul>
                 </nav>
             </section>
@@ -25,8 +25,8 @@
 
     <main>
         <article>
-            <div>
-                <section>
+            <div class="container">
+                <section id="customize-color">
                     <div>
                         <input type="color" name="backgorundColor" id="bg-color-selector">
                         <label for="bg-color-selector">Cor de Fundo</label>
@@ -38,7 +38,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section id="customize-text">
                     <div>
                         <input type="number" name="fontSize" id="font-size-selector">
                         <label for="font-size-selector">Tamanho do Texto</label>
@@ -50,7 +50,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section id="customize-font">
                     <div>
                         <button>Fonte 1</button>
                         <button>Fonte 2</button>
@@ -61,7 +61,7 @@
         </article>
 
         <article>
-            <div>
+            <div class="container">
                 <section></section>
                 <section></section>
                 <section></section>
