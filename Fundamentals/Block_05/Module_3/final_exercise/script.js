@@ -179,12 +179,12 @@ calendarDates.forEach((date) => {
 
   // Exercício 7
 
-function createTask(str) {
-  const dadOfTasks = selectingOne('.my-tasks');
+function createTask(dadElement, str) {
+  // const dadOfTasks = selectingOne('.my-tasks');
   let newTask = elementCreate('span');
 
   newTask.innerText= str;
-  htmlPlug(dadOfTasks, newTask);
+  htmlPlug(dadElement, newTask);
 }
 
 const getTask = selectingOne('#btn-add');
@@ -192,8 +192,8 @@ const getTask = selectingOne('#btn-add');
 getTask.addEventListener('click', () => {
   let taskContent = selectingOne('#task-input').value;
 
-  createTask(taskContent);
-  createSubtitle();
+  createMyTaskContainer();
+  putInMyTaskContainer(taskContent);
 });
 
   // Exercício 8
@@ -202,11 +202,27 @@ function colorRandomizer() {
   return `rgb(${Math.random() * 200}, ${Math.random() * 200}, ${Math.random() * 200})`
 }
 
-function createSubtitle() {
-  const dadSub = selectingOne('.my-tasks');
+function createSubtitle(dadElement) {
+  // const dadSub = selectingOne('.my-tasks');
   let newSub = elementCreate('div');
 
   classAdd(newSub, 'task');
   newSub.style.backgroundColor = colorRandomizer();
-  htmlPlug(dadSub, newSub);
+  htmlPlug(dadElement, newSub);
+}
+
+function createMyTaskContainer() {
+  const dadDiv = selectingOne('.my-tasks');
+  let newContainer = elementCreate('div');
+  
+  classAdd(newContainer, 'my-task-container');
+  htmlPlug(dadDiv, newContainer);
+}
+
+function putInMyTaskContainer(str) {
+  const allDivs = selectingAll('.my-task-container');
+  const lastDiv = allDivs[allDivs.length - 1];
+
+  createTask(lastDiv, str);
+  createSubtitle(lastDiv);
 }
