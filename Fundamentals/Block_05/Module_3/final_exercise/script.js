@@ -263,15 +263,23 @@ function taskColor() {
 }
 
 function applyColor(day, targetColor) {
-  day.style.backgroundColor = taskColor(targetColor);
+  day.style.color = targetColor;
+}
+
+function checkColor(day ,dayColor ,taskColor) {
+  if (dayColor === taskColor) {
+    applyColor(day, 'rgb(119,119,119)');
+  } else {
+    applyColor(day, taskColor);
+  }
 }
 
 const selectedDay = selectingAll('.day');
 selectedDay.forEach((date) => {
   date.addEventListener('click', (event)=> {
-    console.log(event.target);
     let taskDay = event.target;
+    let taskDayColor = taskDay.style.color;
 
-    applyColor(taskDay, taskColor());
+    checkColor(taskDay, taskDayColor, taskColor());
   })
 });
