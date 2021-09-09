@@ -256,3 +256,8 @@ function refreshTasks() {
   implementSelection();
 }
 
+  // Exercício 10
+
+function taskColor() {
+  return selectingOne('.selected').style.backgroundColor;
+}
