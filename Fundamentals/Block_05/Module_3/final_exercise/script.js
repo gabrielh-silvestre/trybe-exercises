@@ -129,23 +129,22 @@ createFridaysButton('Sexta-feira');
 
 function highlightFridays(arr) {
   arr.forEach((friday) => {
-    friday.style.backgroundColor = 'green';
-    friday.style.color = 'white';
+    friday.innerText = 'Sexta';
   });
 }
 
-function normalizeFridays(arr) {
-  arr.forEach((friday) => {
-    friday.style.backgroundColor = 'rgb(238,238,238)';
-    friday.style.color = '#777';
-  });
+function normalizeFridays(arr, fridays) {
+  for (let i in arr) {
+    arr[i].innerText = fridays[i];
+  }
 }
 
 function highlightCheckerFriday() {
+  const dezFridays = [4, 11, 18, 25];
   const allFridays = selectingAll('.friday');
 
-  if (allFridays[0].style.backgroundColor === 'green') {
-    normalizeFridays(allFridays);
+  if (allFridays[0].innerText === 'Sexta') {
+    normalizeFridays(allFridays, dezFridays);
   } else {
     highlightFridays(allFridays);
   }
@@ -180,7 +179,6 @@ calendarDates.forEach((date) => {
   // Exercício 7
 
 function createTask(dadElement, str) {
-  // const dadOfTasks = selectingOne('.my-tasks');
   let newTask = elementCreate('span');
 
   newTask.innerText= str;
