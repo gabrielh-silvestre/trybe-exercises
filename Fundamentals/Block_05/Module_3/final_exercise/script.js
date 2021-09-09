@@ -265,3 +265,13 @@ function taskColor() {
 function applyColor(day, targetColor) {
   day.style.backgroundColor = taskColor(targetColor);
 }
+
+const selectedDay = selectingAll('.day');
+selectedDay.forEach((date) => {
+  date.addEventListener('click', (event)=> {
+    console.log(event.target);
+    let taskDay = event.target;
+
+    applyColor(taskDay, taskColor());
+  })
+});
