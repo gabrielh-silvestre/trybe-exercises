@@ -261,3 +261,7 @@ function refreshTasks() {
 function taskColor() {
   return selectingOne('.selected').style.backgroundColor;
 }
+
+function applyColor(day, targetColor) {
+  day.style.backgroundColor = taskColor(targetColor);
+}
