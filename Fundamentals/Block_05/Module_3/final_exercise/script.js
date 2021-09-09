@@ -185,9 +185,20 @@ function createTask(dadElement, str) {
   htmlPlug(dadElement, newTask);
 }
 
-const getTask = selectingOne('#btn-add');
+const getTaskByKeyboard = selectingOne('#task-input');
+const getTaskByButton = selectingOne('#btn-add');
 
-getTask.addEventListener('click', () => {
+getTaskByKeyboard.addEventListener('keyup', (event) => {
+  if (event.which === 13) {
+    let taskContent = selectingOne('#task-input').value;
+  
+    createMyTaskContainer();
+    putInMyTaskContainer(taskContent);
+    refreshTasks();
+  }
+});
+
+getTaskByButton.addEventListener('click', () => {
   let taskContent = selectingOne('#task-input').value;
 
   createMyTaskContainer();
@@ -283,3 +294,5 @@ selectedDay.forEach((date) => {
     checkColor(taskDay, taskDayColor, taskColor());
   })
 });
+
+  // Exercício Bônus. Feito nas funções getTaskByKeyboard() e getTaskByButton(), nas linhas 188 até 207.
