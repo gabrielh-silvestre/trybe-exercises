@@ -79,7 +79,7 @@
     width: 49%;
   }
   
-  .my-tasks div {
+  .task {
     border: 1px solid black;
     border-radius: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -90,7 +90,7 @@
     width: 35px;
   }
   
-  .my-tasks div:hover {
+  .task:hover {
     height: 45px;
     width: 45px;
   }
@@ -102,6 +102,10 @@
     letter-spacing: 3px;
     padding-bottom: 10px;
     vertical-align: middle;
+  }
+
+  .my-task-container {
+      padding: 8px 0;
   }
 
   .tasks-container {
