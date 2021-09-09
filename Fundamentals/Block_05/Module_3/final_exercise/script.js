@@ -192,6 +192,7 @@ getTask.addEventListener('click', () => {
 
   createMyTaskContainer();
   putInMyTaskContainer(taskContent);
+  refreshTasks();
 });
 
   // Exercício 8
@@ -224,3 +225,34 @@ function putInMyTaskContainer(str) {
   createTask(lastDiv, str);
   createSubtitle(lastDiv);
 }
+
+  // Exercício 9
+
+function checkTasks() {
+  return selectingAll('.task');
+}
+
+function resetTasksClass() {
+  checkTasks().forEach((task) => {
+    task.className = 'task';
+  })
+}
+
+function selectTask(target) {
+  target.classList.add('selected');
+}
+
+function implementSelection() {
+  checkTasks().forEach((task) => {
+    task.addEventListener('click', (event) => {
+      resetTasksClass();
+      selectTask(event.target);
+    })
+  })
+}
+
+function refreshTasks() {
+  checkTasks();
+  implementSelection();
+}
+
