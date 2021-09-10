@@ -36,7 +36,7 @@ window.onload = () => {
         resetingPage: selectAll('.btn')
     }
 
-    function dataPersistence() {
+    function applyingSavedData() {
         body.backgroundColor = localStorage.backgroundColor;
         body.color = localStorage.color;
         body.fontSize = localStorage.fontSize;
@@ -44,29 +44,37 @@ window.onload = () => {
         body.lineHeight = localStorage.lineHeight;
     }
 
-    dataPersistence();
+    function savingData() {
+        localStorage.backgroundColor = body.backgroundColor;
+        localStorage.color = body.color;
+        localStorage.fontSize = body.fontSize;
+        localStorage.fontFamily = body.fontFamily; 
+        localStorage.lineHeight = body.lineHeight; 
+    }
+
+    applyingSavedData();
 
     changeElements.changeBgColor.addEventListener('input', (event) => {
         body.backgroundColor = `${event.target.value}`;
-        localStorage.setItem('backgroundColor', body.backgroundColor);
+        savingData();
     });
 
     changeElements.changeTextColor.addEventListener('input', (event) => {
         body.color = `${event.target.value}`;
-        localStorage.setItem('color', body.color);
+        savingData();
     });
 
     changeElements.changeFontSize.addEventListener('keyup', (event) => {
         if (event.which === 13) {
             body.fontSize = `${event.target.value}px`;
-            localStorage.setItem('fontSize', body.fontSize);
+            savingData();
         }
     });
 
     changeElements.changeLineHeight.addEventListener('keyup', (event) => {
         if (event.which === 13) {
             body.lineHeight = `${event.target.value}px`;
-            localStorage.setItem('lineHeight', body.lineHeight);
+            savingData();
         }
     });
 
@@ -75,20 +83,20 @@ window.onload = () => {
             switch(event.target.innerText) {
                 case 'Arial':
                     body.fontFamily = 'Arial';
-                    localStorage.setItem('fontFamily', body.fontFamily);
+                    savingData();
                     break
                 case 'Georgia':
                     body.fontFamily = 'Georgia';
-                    localStorage.setItem('fontFamily', body.fontFamily);
+                    savingData();
                     break
                 case 'monospace':
                     body.fontFamily = 'monospace';
-                    localStorage.setItem('fontFamily', body.fontFamily);                    
+                    savingData();
                     break
                 default:
                     body.fontFamily = '"Times New Roman"';
-                    localStorage.setItem('fontFamily', body.fontFamily);
-            }
+                    savingData();
+                }
         })
     })
 
@@ -98,16 +106,13 @@ window.onload = () => {
                 case 'reset de cor':
                     body.backgroundColor = '#FFFFFF';
                     body.color = '#000000';
-                    localStorage.backgroundColor = body.backgroundColor;
-                    localStorage.color = body.color;
+                    savingData();
                     break
                 case 'reset de texto':
                     body.fontFamily = '"Times New Roman"';
                     body.fontSize = '16px';
                     body.lineHeight = 'normal';
-                    localStorage.fontFamily = body.fontFamily;
-                    localStorage.fontSize = body.fontSize;
-                    localStorage.lineHeight = body.lineHeightal;
+                    savingData();
                     break
                 default:
                     body.backgroundColor = '#FFFFFF';
@@ -115,11 +120,7 @@ window.onload = () => {
                     body.fontSize = '16px';
                     body.fontFamily = '"Times New Roman"';
                     body.lineHeight = 'normal';
-                    localStorage.backgroundColor = body.backgroundColor;
-                    localStorage.color = body.color;
-                    localStorage.fontSize = body.fontSize;
-                    localStorage.fontFamily = body.fontFamily; 
-                    localStorage.lineHeight = body.lineHeight; 
+                    savingData();
             }
         })
     })
