@@ -49,13 +49,14 @@ main #customize-article {
 .navbar .nav-list {
   list-style: none;
 }
-.navbar .nav-list .nav-list-item a {
+.navbar .nav-list .nav-list-item button {
+  border-style: none;
   color: #000;
   margin: 0 5px;
   padding: 5px 25px;
   text-decoration: none;
 }
-.navbar .nav-list .nav-list-item a:hover {
+.navbar .nav-list .nav-list-item button:hover {
   background-color: #008000;
 }
 header article {
