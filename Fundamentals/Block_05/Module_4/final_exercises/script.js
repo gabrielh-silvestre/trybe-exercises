@@ -26,32 +26,33 @@ function removeClass(element, classe) {
 
 window.onload = () => {
     // load HTML elements
-    const body = selectOne('body');
+    const body = selectOne('body').style;
     const changeElements = {
         changeBgColor: selectOne('#bg-color-selector'),
         changeTextColor: selectOne('#text-color-selector'),
         changeFontSize: selectOne('#font-size-selector'),
         changeLineHeight: selectOne('#line-height-selector'),
-        changeFont: selectAll('.btn-customize')
+        changeFont: selectAll('.btn-customize'),
+        resetingPage: selectAll('.btn')
     }
 
     changeElements.changeBgColor.addEventListener('input', (event) => {
-        body.style.backgroundColor = `${event.target.value}`;
+        body.backgroundColor = `${event.target.value}`;
     });
 
     changeElements.changeTextColor.addEventListener('input', (event) => {
-        body.style.color = `${event.target.value}`;
+        body.color = `${event.target.value}`;
     });
 
     changeElements.changeFontSize.addEventListener('keyup', (event) => {
         if (event.which === 13) {
-            body.style.fontSize = `${event.target.value}px`;
+            body.fontSize = `${event.target.value}px`;
         }
     });
 
     changeElements.changeLineHeight.addEventListener('keyup', (event) => {
         if (event.which === 13) {
-            body.style.lineHeight = `${event.target.value}px`;
+            body.lineHeight = `${event.target.value}px`;
         }
     });
 
@@ -59,16 +60,38 @@ window.onload = () => {
         fontOption.addEventListener('click', (event) => {
             switch(event.target.innerText) {
                 case 'Arial':
-                    body.style.fontFamily = 'Arial';
+                    body.fontFamily = 'Arial';
                     break
                 case 'Georgia':
-                    body.style.fontFamily = 'Georgia';
+                    body.fontFamily = 'Georgia';
                     break
                 case 'monospace':
-                    body.style.fontFamily = 'monospace';
+                    body.fontFamily = 'monospace';
                     break
                 default:
-                    body.style.fontFamily = '"Times New Roman"';
+                    body.fontFamily = '"Times New Roman"';
+            }
+        })
+    })
+
+    changeElements.resetingPage.forEach((resetOption) => {
+        resetOption.addEventListener('click', (event) => {
+            switch(event.target.innerText) {
+                case 'reset de cor':
+                    body.backgroundColor = '#FFFFFF';
+                    body.color = '#000000';
+                    break
+                case 'reset de texto':
+                    body.fontFamily = '"Times New Roman"';
+                    body.fontSize = '16px';
+                    body.lineHeight = 'normal';
+                    break
+                default:
+                    body.backgroundColor = '#FFFFFF';
+                    body.color = '#000000';
+                    body.fontSize = '16px';
+                    body.fontFamily = '"Times New Roman"';
+                    body.lineHeight = 'normal';
             }
         })
     })
