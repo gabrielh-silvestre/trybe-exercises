@@ -5,36 +5,77 @@ default-font = 16px
     padding: 0
     margin: 0
 
+.align-items-center
+    align-items: center
+
+.btn
+    background-color: purple
+    border-radius: 5px
+
+.btn-customize
+    background-color: green
+    border-radius: 5px
+    border-style: none
+    padding: 5px 20px
+    &:hover
+        background-color: purple
+
 .container 
     margin: auto
     width: calc(80% - 100px)
 
-.btn
-    background-color: purple
-    border-radius: 10px
+.d-flex
+    display: flex
 
 .hero-title
     font-size: 2 * default-font;
 
+.justify-content-around
+    justify-content: space-around
+
+.justify-content-between
+    justify-content: space-between
+
+.justify-content-center
+    justify-content: center
+
 .navbar 
     width: 100%
     .nav-list
-        display: flex
-        justify-content: space-between
+        @extend .d-flex
         list-style: none
         .nav-list-item a
+            color: black
             margin: 0 5px
             padding: 5px 25px
             text-decoration: none
             &:hover
-                background-color: red
+                background-color: green
 
 header
     // background-color: gray
     article
-        display: flex;
         padding: 30px 0
-        justify-content: space-between
+
+main
+    background-color: yellow
+    #customize-article
+        @extend .d-flex
+        @extend .justify-content-between
+        min-height: 100px
         section
-            display: flex
-            align-items: center
+            flex-direction: column
+            width: 33%
+            div
+                padding: 15px 30px
+                input[type='color']
+                    background-color: transparent
+                    border-style: none
+                    height: 25px
+                    width: @height
+    #customize-font
+        div
+            flex-direction: column
+            height: 100%
+            button
+                @extend .container
