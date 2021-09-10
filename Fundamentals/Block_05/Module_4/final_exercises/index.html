@@ -10,10 +10,10 @@
 <body>
     <header>
         <div class="container">
-            <article>
-                <Section><h1 class="hero-title">Leitor</h1></Section>
+            <article class="d-flex justify-content-between">
+                <Section class="d-flex align-items-center"><h1 class="hero-title">Leitor</h1></Section>
     
-                <section>
+                <section class="d-flex align-items-center">
                     <nav class="navbar">
                         <ul class="nav-list">
                             <li class="nav-list-item"><a class="btn" href="#">Link 1</a></li>
@@ -27,50 +27,50 @@
     </header>
 
     <main>
-        <article>
-            <div class="container">
-                <section id="customize-color">
-                    <div>
-                        <input type="color" name="backgorundColor" id="bg-color-selector">
+        <div class="container">
+            <article id="customize-article">
+                <section id="customize-color" class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center justify-content-around">
                         <label for="bg-color-selector">Cor de Fundo</label>
+                        <input type="color" name="backgorundColor" id="bg-color-selector">
                     </div>
 
-                    <div>
-                        <input type="color" name="textColor" id="text-color-selector">
+                    <div class="d-flex align-items-center justify-content-around">
                         <label for="text-color-selector">Cor do Texto</label>
+                        <input type="color" name="textColor" id="text-color-selector">
                     </div>
                 </section>
 
-                <section id="customize-text">
-                    <div>
-                        <input type="number" name="fontSize" id="font-size-selector">
+                <section id="customize-text" class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
                         <label for="font-size-selector">Tamanho do Texto</label>
+                        <input type="number" name="fontSize" placeholder="Nº em px" id="font-size-selector">
                     </div>
 
-                    <div>
-                        <input type="number" name="lineHeight" id="line-height-selector">
-                        <label for="line-height-selector">Espaçamento entre Linhas</label>
-                    </div>
-                </section>
-
-                <section id="customize-font">
-                    <div>
-                        <button>Fonte 1</button>
-                        <button>Fonte 2</button>
-                        <button>Fonte 3</button>
+                    <div class="d-flex align-items-center">
+                        <label for="line-height-selector">Espaço entre Linhas</label>
+                        <input type="number" name="lineHeight" placeholder="Nº em px" id="line-height-selector">
                     </div>
                 </section>
-            </div>
-        </article>
 
-        <article>
-            <div class="container">
+                <section id="customize-font" class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <button class="btn-customize">Fonte 1</button>
+                        <button class="btn-customize">Fonte 2</button>
+                        <button class="btn-customize">Fonte 3</button>
+                    </div>
+                </section>
+            </article>
+        </div>
+
+        <div class="container">
+            <article>
                 <section></section>
                 <section></section>
                 <section></section>
                 <section></section>
-            </div>
-        </article>
+            </article>
+        </div>
     </main>
 </body>
 </html>
