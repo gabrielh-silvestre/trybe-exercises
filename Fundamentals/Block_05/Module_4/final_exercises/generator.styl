@@ -1,0 +1,94 @@
+default-font = 16px
+
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+.align-items-center
+    align-items: center
+
+.btn
+    background-color: purple
+    border-radius: 5px
+
+.btn-customize
+    background-color: green
+    border-radius: 5px
+    border-style: none
+    padding: 5px 20px
+    text-align: center
+    width: 70%
+    &:hover
+        background-color: purple
+
+.container 
+    margin: auto
+    width: calc(80% - 100px)
+
+.d-flex
+    display: flex
+
+.hero-title
+    font-size: 2 * default-font;
+
+.justify-content-around
+    justify-content: space-around
+
+.justify-content-between
+    justify-content: space-between
+
+.justify-content-center
+    justify-content: center
+
+.navbar 
+    width: 100%
+    .nav-list
+        @extend .d-flex
+        list-style: none
+        .nav-list-item *
+            border-style: none 
+            color: black
+            margin: 0 5px
+            padding: 5px 25px
+            text-decoration: none
+            &:hover
+                background-color: green
+
+header
+    // background-color: gray
+    article
+        padding: 30px 0
+
+main
+    // background-color: yellow
+    #customize-article
+        @extend .d-flex
+        @extend .justify-content-between
+        min-height: 100px
+        section
+            flex-direction: column
+            width: 33%
+            div
+                padding: 15px 30px
+                input[type='color']
+                    background-color: transparent
+                    border-style: none
+                    height: 25px
+                    width: @height
+                input[type='number']
+                    border-style: solid
+                    border-radius: 5px
+                    padding: 5px 0
+    #customize-text
+        label
+            text-align: center
+    #customize-font
+        div
+            flex-direction: column
+            height: 100%
+    #text-content
+        section
+            display: inline-block
+            margin: 75px 15px 0
+            width: 45%

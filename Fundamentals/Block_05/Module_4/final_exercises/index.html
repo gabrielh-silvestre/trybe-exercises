@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./generator.css">
+    <title>Final Ex | Day 5.4</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <article class="d-flex justify-content-between">
+                <Section class="d-flex align-items-center"><h1 class="hero-title">Leitor</h1></Section>
+    
+                <section class="d-flex align-items-center">
+                    <div class="navbar">
+                        <ul class="nav-list">
+                            <li class="nav-list-item"><button class="btn" href="#">reset de cor</button></li>
+                            <li class="nav-list-item"><button class="btn" href="#">reset de texto</button></li>
+                            <li class="nav-list-item"><button class="btn" href="#">reset total</button></li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <article id="customize-article">
+                <section id="customize-color" class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center justify-content-around">
+                        <label for="bg-color-selector">Cor de Fundo</label>
+                        <input type="color" name="backgorundColor" id="bg-color-selector">
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-around">
+                        <label for="text-color-selector">Cor do Texto</label>
+                        <input type="color" name="textColor" id="text-color-selector">
+                    </div>
+                </section>
+
+                <section id="customize-text" class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <label for="font-size-selector">Tamanho do Texto</label>
+                        <input type="number" name="fontSize" placeholder="Nº em px" id="font-size-selector">
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <label for="line-height-selector">Espaço entre Linhas</label>
+                        <input type="number" name="lineHeight" placeholder="Nº em px" id="line-height-selector">
+                    </div>
+                </section>
+
+                <section id="customize-font" class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <button class="btn-customize">Arial</button>
+                        <button class="btn-customize">Georgia</button>
+                        <button class="btn-customize">monospace</button>
+                    </div>
+                </section>
+            </article>
+        </div>
+
+        <div class="container">
+            <article id="text-content">
+                <section><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat qui blanditiis quibusdam reprehenderit assumenda dolorem illo quos quis modi, perspiciatis maiores facilis impedit aspernatur? Quam commodi necessitatibus provident sint dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi reprehenderit animi iste incidunt ratione magni cupiditate, nam hic, expedita tempora quidem earum ab, iusto in. Ducimus voluptas similique debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio veniam sint cumque deleniti, quisquam minima expedita, placeat excepturi laboriosam totam nesciunt corporis. Doloremque suscipit labore aspernatur rem quas. Obcaecati, fugit.</p></section>
+                <section><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat qui blanditiis quibusdam reprehenderit assumenda dolorem illo quos quis modi, perspiciatis maiores facilis impedit aspernatur? Quam commodi necessitatibus provident sint dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi reprehenderit animi iste incidunt ratione magni cupiditate, nam hic, expedita tempora quidem earum ab, iusto in. Ducimus voluptas similique debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio veniam sint cumque deleniti, quisquam minima expedita, placeat excepturi laboriosam totam nesciunt corporis. Doloremque suscipit labore aspernatur rem quas. Obcaecati, fugit.</p></section>
+                <section><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat qui blanditiis quibusdam reprehenderit assumenda dolorem illo quos quis modi, perspiciatis maiores facilis impedit aspernatur? Quam commodi necessitatibus provident sint dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi reprehenderit animi iste incidunt ratione magni cupiditate, nam hic, expedita tempora quidem earum ab, iusto in. Ducimus voluptas similique debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio veniam sint cumque deleniti, quisquam minima expedita, placeat excepturi laboriosam totam nesciunt corporis. Doloremque suscipit labore aspernatur rem quas. Obcaecati, fugit.</p></section>
+                <section><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat qui blanditiis quibusdam reprehenderit assumenda dolorem illo quos quis modi, perspiciatis maiores facilis impedit aspernatur? Quam commodi necessitatibus provident sint dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sequi reprehenderit animi iste incidunt ratione magni cupiditate, nam hic, expedita tempora quidem earum ab, iusto in. Ducimus voluptas similique debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio veniam sint cumque deleniti, quisquam minima expedita, placeat excepturi laboriosam totam nesciunt corporis. Doloremque suscipit labore aspernatur rem quas. Obcaecati, fugit.</p></section>
+            </article>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
