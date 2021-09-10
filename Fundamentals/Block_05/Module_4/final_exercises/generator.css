@@ -15,12 +15,13 @@
   border-radius: 5px;
   border-style: none;
   padding: 5px 20px;
+  text-align: center;
+  width: 70%;
 }
 .btn-customize:hover {
   background-color: #800080;
 }
-.container,
-main #customize-font div button {
+.container {
   margin: auto;
   width: calc(80% - 100px);
 }
