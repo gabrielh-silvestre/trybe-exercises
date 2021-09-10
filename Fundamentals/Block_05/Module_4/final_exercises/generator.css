@@ -60,9 +60,6 @@ main #customize-article {
 header article {
   padding: 30px 0;
 }
-main {
-  background-color: #ff0;
-}
 main #customize-article {
   min-height: 100px;
 }
@@ -79,7 +76,20 @@ main #customize-article section div input[type='color'] {
   height: 25px;
   width: 25px;
 }
+main #customize-article section div input[type='number'] {
+  border-style: solid;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+main #customize-text label {
+  text-align: center;
+}
 main #customize-font div {
   flex-direction: column;
   height: 100%;
+}
+main #text-content section {
+  display: inline-block;
+  margin: 75px 15px 0;
+  width: 45%;
 }

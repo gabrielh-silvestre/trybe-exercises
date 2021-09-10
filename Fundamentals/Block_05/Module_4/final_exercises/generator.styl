@@ -58,7 +58,7 @@ header
         padding: 30px 0
 
 main
-    background-color: yellow
+    // background-color: yellow
     #customize-article
         @extend .d-flex
         @extend .justify-content-between
@@ -73,9 +73,21 @@ main
                     border-style: none
                     height: 25px
                     width: @height
+                input[type='number']
+                    border-style: solid
+                    border-radius: 5px
+                    padding: 5px 0
+    #customize-text
+        label
+            text-align: center
     #customize-font
         div
             flex-direction: column
             height: 100%
             button
                 @extend .container
+    #text-content
+        section
+            display: inline-block
+            margin: 75px 15px 0
+            width: 45%
