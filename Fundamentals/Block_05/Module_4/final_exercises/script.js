@@ -27,19 +27,22 @@ function removeClass(element, classe) {
 window.onload = () => {
     // load HTML elements
     const body = selectOne('body');
-    const changeBgColor = selectOne('#bg-color-selector');
-    const changeTextColor = selectOne('#text-color-selector');
-    const changeFontSize = selectOne('#font-size-selector');
+    const changeElements = {
+        changeBgColor: selectOne('#bg-color-selector'),
+        changeTextColor: selectOne('#text-color-selector'),
+        changeFontSize: selectOne('#font-size-selector'),
+        changeLineHeight: selectOne('#line-height-selector')
+    }
 
-    changeBgColor.addEventListener('input', (event => {
+    changeElements.changeBgColor.addEventListener('input', (event => {
         body.style.backgroundColor = `${event.target.value}`  ;      
     }))
 
-    changeTextColor.addEventListener('input', (event) => {
+    changeElements.changeTextColor.addEventListener('input', (event) => {
         body.style.color = `${event.target.value}`;
     })
 
-    changeFontSize.addEventListener('keyup', (event) => {
+    changeElements.changeFontSize.addEventListener('keyup', (event) => {
         if (event.which === 13) {
             body.style.fontSize = `${event.target.value}px`;
         }
