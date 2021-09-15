@@ -10,6 +10,7 @@
   <main>
     <form action="#" method="get">
       <fieldset>
+        <legend>Personal Info</legend>
         <label for="input-name">
           <input type="text" name="user-name" maxlength="40" id="input-name" required>
         </label>
@@ -33,6 +34,23 @@
             <input type="radio" name="user-home" id="input-apartment">Apartamento
           </label>
         </fieldset>
+      </fieldset>
+      <fieldset>
+        <legend>Professional Info</legend>
+        <label for="input-resume">
+          <textarea name="user-resume" maxlength="1000" id="input-resume" cols="30" rows="10" required></textarea>
+        </label>
+        <label for="input-job">
+          <input type="text" name="user-job" maxlength="40" id="input-job" required>
+        </label>
+        <label for="input-job-desciption">
+          <input type="text" name="user-job-description" maxlength="500" id="input-job-desciption" required>
+        </label>
+        <label for="input-start-date">
+          <input type="datetime" name="user-start-date" id="input-start-date" required>
+        </label>
+        <button type="submit">Enviar</button>
+        <button type="reset">Reset</button>
       </fieldset>
     </form>
   </main>
