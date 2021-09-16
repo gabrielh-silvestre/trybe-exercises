@@ -100,7 +100,24 @@ function checkRadio(event) {
 }
 
 function checkDate(event) {
-  console.log(event.target.value);
+  console.log('date');
+
+  if(!event.target.value) {
+    return 'Data não preenchida';
+  }
+
+  const regex = /^\d\d\d\d\-\d\d\-\d\d$/;
+  
+  if(!regex.test(event.target.value)){
+    return 'Data: Formato inválido';
+  }
+
+  const splitedDate = event.target.value.split('-');
+  const year = splitedDate[0];
+  const month = splitedDate[1];
+  const day = splitedDate[2];
+
+  return [day, month, year];
 }
 
 function checkText(event) {
