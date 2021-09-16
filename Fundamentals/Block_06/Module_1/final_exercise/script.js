@@ -8,8 +8,6 @@ Caso todos os dados sejam válidos, monte uma <div> com o consolidado dos dados 
 
 Caso haja algum dado inválido, mostre em uma <div> uma mensagem de erro. Se o erro for na Data de Início , a mensagem deve ser contextualizada. */
 
-// http://127.0.0.1:5500/index.html?user-name=Ga&user-email=E%40E&user-cpf=33388811100&user-city=Cidade&user-home=on&user-resume=abalacabaca+abalacabaca+abalacabaca+abalacabaca+abalacabaca+abalacabaca+&user-job=foda&user-job-description=muito+foda&user-start-date=26%2F08%2F2010#
-
 const user = {
   userName: '',
   userEmail: '',
@@ -71,6 +69,7 @@ const inputsRules = {
 };
 
 const staticElement = {
+  allInputText: getAll('[type="text"]'),
   inputState: getOne('#input-state'),
 }
 
@@ -86,6 +85,26 @@ function generateStates(stateInitialsArray, stateArray) {
   });
 }
 
+function getInputRule(inputElement) {
+  return inputsRules[inputElement];
+}
+
+function filterInputRule(inputElement) {
+  switch (getInputRule(inputElement)) {
+    case ('state'):
+      checkSelected();
+      break;
+    case ('houseStype'):
+      checkRadio();
+      break;
+    case ('date'):
+      checkDate();
+      break;
+    default:
+      checkText();
+  }
+}
+
 window.onload = () => {
-  generateStates(stateInitials, brazilStates);
+  generateStates(stateInitials, brazilStates); 
 };
