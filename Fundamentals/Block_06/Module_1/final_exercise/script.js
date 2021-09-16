@@ -9,16 +9,29 @@ Caso todos os dados sejam válidos, monte uma <div> com o consolidado dos dados 
 Caso haja algum dado inválido, mostre em uma <div> uma mensagem de erro. Se o erro for na Data de Início , a mensagem deve ser contextualizada. */
 
 const user = {
-  userName: '',
-  userEmail: '',
-  userCpf: '',
-  userCity: '',
-  userState: '',
-  userHome: '',
-  userResume: '',
-  userJob: '',
-  userJobDesction: '',
-  userStartDate: '',
+  name: '',
+  email: '',
+  cpf: '',
+  city: '',
+  state: '',
+  houseType: '',
+  resume: '',
+  role: '',
+  roleDescription: '',
+  startDate: '',
+}
+
+const inputErrors = {
+  name: '',
+  email: '',
+  cpf: '',
+  city: '',
+  state: '',
+  houseType: '',
+  resume: '',
+  role: '',
+  roleDescription: '',
+  startDate: '',
 }
 
 const inputsRules = {
@@ -71,6 +84,8 @@ const inputsRules = {
 const staticElement = {
   allInputs: getAll('input'),
   inputState: getOne('#input-state'),
+  errorSection: getOne('#error-section'),
+  userSection: getOne('#user-section'),
 }
 
 const brazilStates = ['Acre','Alagoas','Amazonas','Amapa','Bahia','Ceará','Distrito Federal','Espírito Santo','Goiás','Maranhão','Minas Gerais','Mato Grosso do Sul','Mato Grosso','Pará','Paraíba','Pernambuco','Piauí','Paraná','Rio de Janeiro','Rio Grande do Norte','Rondônia','Roraima','Rio Grande do Sul','Santa Catarina','Sergipe','São Paulo','Tocantins'];
@@ -95,25 +110,25 @@ function getInputTextValues() {
 function checkSelected(event) {
   // console.log('state');
 
-  return !event.target.value ? 'Estado não selecionado' : event.target.value;
+  !event.target.value ? inputErrors.state = 'Estado não selecionado' : user.state = event.target.value;
 }
 
 function checkRadio(event) {
   // console.log('radio');
-  return event.target.value;
+  user.houseType = event.target.value;
 }
 
 function checkDate(event) {
-  console.log('date');
+  // console.log('date');
 
   if(!event.target.value) {
-    return 'Data não preenchida';
+    inputErrors.startDate = 'Data não preenchida';
   }
 
   const regex = /^\d\d\d\d\-\d\d\-\d\d$/;
   
   if(!regex.test(event.target.value)){
-    return 'Data: Formato inválido';
+    inputErrors.startDate = 'Data: Formato inválido';
   }
 
   const splitedDate = event.target.value.split('-');
@@ -121,24 +136,20 @@ function checkDate(event) {
   const month = splitedDate[1];
   const day = splitedDate[2];
 
-  return [day, month, year];
+  user.startDate = `${day}/${month}/${year}`;
 }
 
 function checkText(event) {
   // console.log('input texts');
   if (!event.target.value) {
-    return `${event.target.name} não foi preenchido.`;
+    inputErrors[event.target.name] = `${event.target.name} não foi preenchido.`;
   }
 
   if (event.target.value.length > inputsRules[event.target.name].maxLength){
-    return `${event.target.name} ultrapassou o limite de caracteres.`;
+    inputErrors[event.target.name] = `${event.target.name} ultrapassou o limite de caracteres.`;
   }
 
-  return true;
-}
-
-function getInputRule(inputElement) {
-  return inputsRules[inputElement];
+  user[event.target.name] = event.target.value;
 }
 
 function filterInputRule(event) {
@@ -163,20 +174,17 @@ function lastGet(event) {
   const date = getOne('[type="date"]').value;
 
   if (!state && !date) {
-    return 'Estado e data não preenchidos.'
+    inputErrors.state = 'Estado não selecionado.';
+    inputErrors.startDate = 'Data não preenchida.';
   }
 
   if (!state) {
-    return 'Estado não selecionado.';
+    inputErrors.state = 'Estado não selecionado.';
   }
 
   if (!date) {
-    return 'Data não preenchida.'
+    inputErrors.startDate = 'Data não preenchida.';
   }
-}
-
-function renderErrorMsg() {
-
 }
 
 window.onload = () => {
