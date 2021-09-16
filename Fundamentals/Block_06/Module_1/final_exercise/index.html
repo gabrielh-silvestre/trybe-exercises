@@ -24,14 +24,16 @@
           <input type="text" name="city" id="input-city">
         </label>
         <label for="input-state">Estado: 
-          <select name="state" id="input-state"></select>
+          <select name="state" id="input-state">
+            <option value="">Selecione um estado</option>
+          </select>
         </label>
         <fieldset>
           <label for="input-house">
-            <input type="radio" name="houseType" id="input-house">Casa
+            <input type="radio" name="houseType" id="input-house" value="house" checked>Casa
           </label>
           <label for="input-apartment">
-            <input type="radio" name="houseType" id="input-apartment">Apartamento
+            <input type="radio" name="houseType" id="input-apartment" value="appartment">Apartamento
           </label>
         </fieldset>
       </fieldset>
