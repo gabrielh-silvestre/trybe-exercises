@@ -69,7 +69,7 @@ const inputsRules = {
 };
 
 const staticElement = {
-  allInputText: getAll('[type="text"]'),
+  allInputs: getAll('input'),
   inputState: getOne('#input-state'),
 }
 
@@ -86,10 +86,25 @@ function generateStates(stateInitialsArray, stateArray) {
 }
 
 function getInputTextValues() {
-  addMultiplesListeners(staticElement.allInputText, 'focusout', checkText);
+  addMultiplesListeners(staticElement.allInputs, 'focusout', filterInputRule);
+  getOne('textarea').addEventListener('focusout', filterInputRule);
+  getOne('select').addEventListener('focusout', filterInputRule);
+}
+
+function checkSelected(event) {
+  console.log(event.target.value);
+}
+
+function checkRadio(event) {
+  console.log(event.target.value);
+}
+
+function checkDate(event) {
+  console.log(event.target.value);
 }
 
 function checkText(event) {
+  // console.log('input texts');
   if (!event.target.value) {
     return false;
   }
@@ -105,22 +120,23 @@ function getInputRule(inputElement) {
   return inputsRules[inputElement];
 }
 
-function filterInputRule(inputElement) {
-  switch (getInputRule(inputElement)) {
+function filterInputRule(event) {
+  switch (event.target.name) {
     case ('state'):
-      checkSelected();
+      checkSelected(event);
       break;
-    case ('houseStype'):
-      checkRadio();
+    case ('houseType'):
+      checkRadio(event);
       break;
-    case ('date'):
-      checkDate();
+    case ('startDate'):
+      checkDate(event);
       break;
     default:
-      checkText();
+      checkText(event);
   }
 }
 
 window.onload = () => {
-  generateStates(stateInitials, brazilStates); 
+  generateStates(stateInitials, brazilStates);
+  getInputTextValues();
 };
