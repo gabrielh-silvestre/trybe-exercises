@@ -11,19 +11,19 @@
     <form action="#" method="get">
       <fieldset>
         <legend>Personal Info</legend>
-        <label for="input-name">
+        <label for="input-name">Nome: 
           <input type="text" name="user-name" maxlength="40" id="input-name" required>
         </label>
-        <label for="input-email">
+        <label for="input-email">Email: 
           <input type="email" name="user-email" maxlength="50" id="input-email" required>
         </label>
-        <label for="input-cpf">
+        <label for="input-cpf">CPF: 
           <input type="tel" name="user-cpf" maxlength="11" id="input-cpf" required>
         </label>
-        <label for="input-city">
+        <label for="input-city">Cidade: 
           <input type="text" name="user-city" id="input-city">
         </label>
-        <label for="input-state">
+        <label for="input-state">Estado: 
           <select name="user-state" id="input-state"></select>
         </label>
         <fieldset>
@@ -37,19 +37,19 @@
       </fieldset>
       <fieldset>
         <legend>Professional Info</legend>
-        <label for="input-resume">
+        <label for="input-resume">Resumo profissional: 
           <textarea name="user-resume" maxlength="1000" id="input-resume" cols="30" rows="10" required></textarea>
         </label>
-        <label for="input-job">
+        <label for="input-job">Cargo: 
           <input type="text" name="user-job" maxlength="40" id="input-job" required>
         </label>
-        <label for="input-job-desciption">
+        <label for="input-job-desciption">Descrição do cargo: 
           <input type="text" name="user-job-description" maxlength="500" id="input-job-desciption" required>
         </label>
-        <label for="input-start-date">
-          <input type="datetime" name="user-start-date" id="input-start-date" required>
+        <label for="input-start-date">Data de início: 
+          <input type="date" name="user-start-date" id="input-start-date" required>
         </label>
-        <button type="submit">Enviar</button>
+        <button type="submit" id="submit">Enviar</button>
         <button type="reset">Reset</button>
       </fieldset>
     </form>
