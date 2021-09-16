@@ -126,11 +126,11 @@ function checkDate(event) {
 function checkText(event) {
   // console.log('input texts');
   if (!event.target.value) {
-    return false;
+    return `${event.target.name} não foi preenchido.`;
   }
 
   if (event.target.value.length > inputsRules[event.target.name].maxLength){
-    return false;
+    return `${event.target.name} ultrapassou o limite de caracteres.`;
   }
 
   return true;
