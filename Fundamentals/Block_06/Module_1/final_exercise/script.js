@@ -31,7 +31,6 @@ const brazilStates = ['Acre','Alagoas','Amazonas','Amapa','Bahia','Ceará','Dist
 const stateInitials = ['AC','AL','AM','AP','BA','CE','DF','ES','GO','MA','MG','MS','MT','PA','PB','PE','PI','PR','RJ','RN','RO','RR','RS','SC','SE','SP','TO'];
 
 function generateStates(stateInitialsArray, stateArray) {
-  console.log(stateInitials);
   stateArray.forEach((state, i) => {
     const stateOption = createElement('option');
     stateOption.innerText = state;
@@ -48,6 +47,18 @@ function checkHasContent(inputContent) {
   return inputContent === true;
 }
 
+function getInputData() {
+  const inputData = document.URL.split('?');
+  inputData.shift();
+  return inputData;
+}
+
+function splitData() {
+  const treatedData = getInputData().toString();
+  return treatedData.split('&');
+}
+
 window.onload = () => {
   generateStates(stateInitials, brazilStates);
+  console.log(splitData());
 };
