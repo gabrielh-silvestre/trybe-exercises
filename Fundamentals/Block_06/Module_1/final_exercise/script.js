@@ -92,11 +92,14 @@ function getInputTextValues() {
 }
 
 function checkSelected(event) {
-  console.log(event.target.value);
+  // console.log('state');
+
+  return !event.target.value ? 'Estado não selecionado' : event.target.value;
 }
 
 function checkRadio(event) {
-  console.log(event.target.value);
+  // console.log('radio');
+  return event.target.value;
 }
 
 function checkDate(event) {
