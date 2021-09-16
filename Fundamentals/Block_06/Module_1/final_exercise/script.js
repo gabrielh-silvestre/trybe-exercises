@@ -85,6 +85,22 @@ function generateStates(stateInitialsArray, stateArray) {
   });
 }
 
+function getInputTextValues() {
+  addMultiplesListeners(staticElement.allInputText, 'focusout', checkText);
+}
+
+function checkText(event) {
+  if (!event.target.value) {
+    return false;
+  }
+
+  if (event.target.value.length > inputsRules[event.target.name].maxLength){
+    return false;
+  }
+
+  return true;
+}
+
 function getInputRule(inputElement) {
   return inputsRules[inputElement];
 }
