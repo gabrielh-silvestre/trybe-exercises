@@ -89,6 +89,7 @@ function getInputTextValues() {
   addMultiplesListeners(staticElement.allInputs, 'focusout', filterInputRule);
   getOne('textarea').addEventListener('focusout', filterInputRule);
   getOne('select').addEventListener('focusout', filterInputRule);
+  getOne('#submit').addEventListener('click', lastGet);
 }
 
 function checkSelected(event) {
@@ -154,6 +155,28 @@ function filterInputRule(event) {
     default:
       checkText(event);
   }
+}
+
+function lastGet(event) {
+  event.preventDefault();
+  const state = getOne('select').value;
+  const date = getOne('[type="date"]').value;
+
+  if (!state && !date) {
+    return 'Estado e data não preenchidos.'
+  }
+
+  if (!state) {
+    return 'Estado não selecionado.';
+  }
+
+  if (!date) {
+    return 'Data não preenchida.'
+  }
+}
+
+function renderErrorMsg() {
+
 }
 
 window.onload = () => {
