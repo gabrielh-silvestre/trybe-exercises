@@ -39,26 +39,6 @@ function generateStates(stateInitialsArray, stateArray) {
   });
 }
 
-function checkTextLimit(text , limit) {
-  return text.length <= limit;
-}
-
-function checkHasContent(inputContent) {
-  return inputContent === true;
-}
-
-function getInputData() {
-  const inputData = document.URL.split('?');
-  inputData.shift();
-  return inputData;
-}
-
-function splitData() {
-  const treatedData = getInputData().toString();
-  return treatedData.split('&');
-}
-
 window.onload = () => {
   generateStates(stateInitials, brazilStates);
-  console.log(splitData());
 };
