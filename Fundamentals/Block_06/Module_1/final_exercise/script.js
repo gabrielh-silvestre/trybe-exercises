@@ -104,7 +104,7 @@ function getInputTextValues() {
   addMultiplesListeners(staticElement.allInputs, 'focusout', filterInputRule);
   getOne('textarea').addEventListener('focusout', filterInputRule);
   getOne('select').addEventListener('focusout', filterInputRule);
-  getOne('#submit').addEventListener('click', lastGet);
+  getOne('#submit').addEventListener('click', submitButton);
 }
 
 function checkSelected(event) {
@@ -153,7 +153,9 @@ function checkText(event) {
 }
 
 function filterInputRule(event) {
-  switch (event.target.name) {
+  const inputName = event.target.name;
+
+  switch (inputName) {
     case ('state'):
       checkSelected(event);
       break;
@@ -168,22 +170,27 @@ function filterInputRule(event) {
   }
 }
 
-function lastGet(event) {
-  event.preventDefault();
-  const state = getOne('select').value;
-  const date = getOne('[type="date"]').value;
+function getRenderedErrors() {
+  return getAll('.erro');
+}
 
-  if (!state && !date) {
-    inputErrors.state = 'Estado não selecionado.';
-    inputErrors.startDate = 'Data não preenchida.';
+function resetErrors() {
+  const renderedErrors = getRenderedErrors();
+
+  if (renderedErrors) {
+    renderedErrors.forEach((error) => {error.remove()});
   }
+}
 
-  if (!state) {
-    inputErrors.state = 'Estado não selecionado.';
-  }
+function lastGet() {
+  for (let data in user) {
+    if (!user[data]) {
+      inputErrors[data] = `${data} não foi preenchido.`;
+    }
 
-  if (!date) {
-    inputErrors.startDate = 'Data não preenchida.';
+    if (user[data]) {
+      inputErrors[data] = '';
+    }
   }
 }
 
@@ -202,7 +209,7 @@ function renderErrorMsg() {
 }
 
 function renderUserData() {
-  if (!getAll('.erro')) {
+  if (!getRenderedErrors()) {
     const userDiv = createElement('div');
     plugHtml(staticElement.userSection, userDiv);
 
@@ -214,6 +221,18 @@ function renderUserData() {
       }
     }
   }
+}
+
+function submitForms() {
+  resetErrors();
+  renderErrorMsg();
+  renderUserData();
+}
+
+function submitButton(event) {
+  event.preventDefault();
+  lastGet();
+  submitForms();
 }
 
 window.onload = () => {
