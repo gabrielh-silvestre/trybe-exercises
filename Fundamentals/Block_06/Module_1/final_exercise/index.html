@@ -12,42 +12,42 @@
       <fieldset>
         <legend>Personal Info</legend>
         <label for="input-name">Nome: 
-          <input type="text" name="user-name" maxlength="40" id="input-name" required>
+          <input type="text" name="name" maxlength="40" id="input-name" required>
         </label>
         <label for="input-email">Email: 
-          <input type="email" name="user-email" maxlength="50" id="input-email" required>
+          <input type="text" name="email" maxlength="50" id="input-email" required>
         </label>
         <label for="input-cpf">CPF: 
-          <input type="tel" name="user-cpf" maxlength="11" id="input-cpf" required>
+          <input type="tel" name="cpf" maxlength="11" id="input-cpf" required>
         </label>
         <label for="input-city">Cidade: 
-          <input type="text" name="user-city" id="input-city">
+          <input type="text" name="city" id="input-city">
         </label>
         <label for="input-state">Estado: 
-          <select name="user-state" id="input-state"></select>
+          <select name="state" id="input-state"></select>
         </label>
         <fieldset>
           <label for="input-house">
-            <input type="radio" name="user-home" id="input-house">Casa
+            <input type="radio" name="houseType" id="input-house">Casa
           </label>
           <label for="input-apartment">
-            <input type="radio" name="user-home" id="input-apartment">Apartamento
+            <input type="radio" name="houseType" id="input-apartment">Apartamento
           </label>
         </fieldset>
       </fieldset>
       <fieldset>
         <legend>Professional Info</legend>
         <label for="input-resume">Resumo profissional: 
-          <textarea name="user-resume" maxlength="1000" id="input-resume" cols="30" rows="10" required></textarea>
+          <textarea name="resume" maxlength="1000" id="input-resume" cols="30" rows="10" required></textarea>
         </label>
         <label for="input-job">Cargo: 
-          <input type="text" name="user-job" maxlength="40" id="input-job" required>
+          <input type="text" name="role" maxlength="40" id="input-job" required>
         </label>
         <label for="input-job-desciption">Descrição do cargo: 
-          <input type="text" name="user-job-description" maxlength="500" id="input-job-desciption" required>
+          <input type="text" name="roleDescription" maxlength="500" id="input-job-desciption" required>
         </label>
         <label for="input-start-date">Data de início: 
-          <input type="date" name="user-start-date" id="input-start-date" required>
+          <input type="date" name="startDate" id="input-start-date" required>
         </label>
         <button type="submit" id="submit">Enviar</button>
         <button type="reset">Reset</button>
