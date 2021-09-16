@@ -40,6 +40,14 @@ function generateStates(stateInitialsArray, stateArray) {
   });
 }
 
+function checkTextLimit(text , limit) {
+  return text.length <= limit;
+}
+
+function checkHasContent(inputContent) {
+  return inputContent === true;
+}
+
 window.onload = () => {
   generateStates(stateInitials, brazilStates);
 };
