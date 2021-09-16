@@ -187,6 +187,35 @@ function lastGet(event) {
   }
 }
 
+function renderErrorMsg() {
+  const errorDiv = createElement('div');
+  plugHtml(staticElement.errorSection, errorDiv);
+
+  for (let erro in inputErrors) {
+    if (inputErrors[erro]) {
+      const errorParagraph = createElement('p');
+      addClass(errorParagraph, 'erro');
+      errorParagraph.innerText = inputErrors[erro];
+      plugHtml(errorDiv, errorParagraph);
+    }
+  }
+}
+
+function renderUserData() {
+  if (!getAll('.erro')) {
+    const userDiv = createElement('div');
+    plugHtml(staticElement.userSection, userDiv);
+
+    for (let data in user) {
+      if(user[data]) {
+        const userParagraph = createElement('p');
+        userParagraph.innerText = user[data];
+        plugHtml(userDiv, userParagraph);
+      }
+    }
+  }
+}
+
 window.onload = () => {
   generateStates(stateInitials, brazilStates);
   getInputTextValues();
