@@ -16,30 +16,30 @@
 
   <main>
     <div class="container">
-      <form action="#" method="get">
+      <form action="#" method="get" id="main-form">
         <fieldset class="mb-5 px-4 py-3 border border-light border-2 rounded-3">
           <legend>Personal Info</legend>
           <div class="d-flex">
             <div class="input-group flex-column justify-content-center me-5">
               <label class="form-label" for="input-name">Nome: 
-                <input class="form-control" type="text" name="name" maxlength="40" id="input-name" required>
+                <input class="form-control" type="text" name="name" id="input-name" data-validate-field="name">
               </label>
               <label class="form-label" for="input-email">Email: 
-                <input class="form-control" type="text" name="email" maxlength="50" id="input-email" required>
+                <input class="form-control" type="text" name="email" id="input-email" data-validate-field="email">
               </label>
             </div>
             <div class="input-group flex-column justify-content-center">
               <label class="form-label" for="input-cpf">CPF: 
-                <input class="form-control" type="tel" name="cpf" maxlength="11" id="input-cpf" required>
+                <input class="form-control" type="tel" name="cpf" id="input-cpf" data-validate-field="cpf">
               </label>
               <label class="form-label" for="input-city">Cidade: 
-                <input class="form-control" type="text" name="city" id="input-city">
+                <input class="form-control" type="text" name="city" id="input-city" data-validate-field="city">
               </label>
             </div>
           </div>
           <div>
             <label class="form-label" for="input-state">Estado: 
-              <select class="form-select" name="state" id="input-state">
+              <select class="form-select" name="state" id="input-state" data-validate-field="state">
                 <option value="">Selecione um estado</option>
               </select>
             </label>
@@ -50,12 +50,12 @@
           <div class="d-flex justify-content-around w-100">
             <div class="form-check">
               <label class="form-check-label" for="input-house">
-                <input class="form-check-input" type="radio" name="houseType" id="input-house" value="house" checked>Casa
+                <input class="form-check-input" type="radio" name="houseType" id="input-house" value="house" data-validate-field="radio" checked>Casa
               </label>
             </div>
             <div class="form-check">
               <label class="form-check-label" for="input-apartment">
-                <input class="form-check-input" type="radio" name="houseType" id="input-apartment" value="appartment">Apartamento
+                <input class="form-check-input" type="radio" name="houseType" id="input-apartment" value="appartment" data-validate-field="radio">Apartamento
               </label>
             </div>
           </div>
@@ -65,23 +65,23 @@
           <div class="input-group justify-content-between mb-2">
             <div>
               <label class="form-label" for="input-job">Cargo: 
-                <input class="form-control" type="text" name="role" maxlength="40" id="input-job" required>
+                <input class="form-control" type="text" name="role" id="input-job" data-validate-field="role">
               </label>
             </div>
             <div>
               <label class="form-label" for="input-job-desciption">Descrição do cargo: 
-                <input class="form-control" type="text" name="roleDescription" maxlength="500" id="input-job-desciption" required>
+                <input class="form-control" type="text" name="roleDescription" id="input-job-desciption" data-validate-field="text">
               </label>
             </div>
             <div>
               <label class="form-label" for="input-start-date">Data de início: 
-                <input class="form-control" type="date" name="startDate" id="input-start-date" required>
+                <input class="form-control" type="text" name="startDate" id="input-start-date" data-validate-field="date">
               </label>
             </div>  
           </div>
           <div>
             <label class="form-label" for="input-resume">Resumo profissional: 
-              <textarea class="form-control" name="resume" maxlength="1000" id="input-resume" cols="30" rows="10" required></textarea>
+              <textarea class="form-control" name="resume" id="input-resume" cols="30" rows="10" data-validate-field="text"></textarea>
             </label>
           </div>
           <div class="mt-2">
