@@ -14,7 +14,7 @@ const user = {
   cpf: '',
   city: '',
   state: '',
-  houseType: '',
+  houseType: 'house',
   resume: '',
   role: '',
   roleDescription: '',
@@ -182,6 +182,12 @@ function resetErrors() {
   }
 }
 
+function resetUser() {
+  for (let data in user) {
+    user[data] = '';
+  }
+}
+
 function lastGet() {
   for (let data in user) {
     if (!user[data]) {
@@ -195,21 +201,18 @@ function lastGet() {
 }
 
 function renderErrorMsg() {
-  const errorDiv = createElement('div');
-  plugHtml(staticElement.errorSection, errorDiv);
-
   for (let erro in inputErrors) {
     if (inputErrors[erro]) {
       const errorParagraph = createElement('p');
       addClass(errorParagraph, 'erro');
       errorParagraph.innerText = inputErrors[erro];
-      plugHtml(errorDiv, errorParagraph);
+      plugHtml(staticElement.errorSection, errorParagraph);
     }
   }
 }
 
 function renderUserData() {
-  if (!getRenderedErrors()) {
+  if (getAll('.erro').length === 0) {
     const userDiv = createElement('div');
     plugHtml(staticElement.userSection, userDiv);
 
@@ -225,8 +228,9 @@ function renderUserData() {
 
 function submitForms() {
   resetErrors();
-  renderErrorMsg();
   renderUserData();
+  resetUser();
+  renderErrorMsg();
 }
 
 function submitButton(event) {
