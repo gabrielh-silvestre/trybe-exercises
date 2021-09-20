@@ -50,7 +50,9 @@ body {
 
 .movie-container {
   display: flex;
+  flex-basis: 700px;
   flex-direction: column;
+  flex-grow: 10;
 }
 
 .movie-container h2 {
@@ -69,14 +71,19 @@ body {
   background-color: #5C687C;
   border: black solid 1px;
   display: flex;
+  flex-basis: 16%;
+  flex-grow: 1;
   height: 150px;
   justify-content: center;
   margin: 10px;
 }
 
 .aside-container {
+  align-self: center;
   display: flex;
+  flex-basis: 350px;
   flex-direction: column;
+  flex-grow: 1;
   margin: 20px;
 }
 
