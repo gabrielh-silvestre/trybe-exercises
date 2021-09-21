@@ -25,3 +25,24 @@ img {
 figure {
     margin: 2rem 1rem;
 }
+
+@media only screen and (min-width: 760px) {
+  body {
+    font-size: 1.2rem;
+    margin: 0 3rem;
+  }
+  
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  figure {
+    margin: 2rem 1rem;
+    max-width: 40%;
+  }
+}
