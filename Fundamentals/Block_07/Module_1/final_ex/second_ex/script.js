@@ -27,3 +27,15 @@ const greaterWord = (str) => {
   const strArr = str.split(' ').sort((a, b) => a.length - b.length)
   return strArr[strArr.length - 1];
 }
+
+// pt 4
+
+const changeLetter = (str, newStr, letter = 'x') => str.replace(letter, newStr);
+
+const buildFinalPhrase = (sk1, sk2, sk3, sk4, sk5) => `${sk1}\n${sk2}\n${sk3}\n${sk4}\n${sk5}\n`
+
+const addSkills = (str, skills) => `${str} Minhas cinco principais abilidades são:\n${buildFinalPhrase(...skills.sort())}`;
+
+const tempArr = ['HTML', 'CSS', 'JavaScript', 'Python', 'GIT'];
+
+console.log(addSkills(changeLetter('Tryber x aqui!', 'Gabriel'), tempArr));
