@@ -18,4 +18,12 @@
 //   return nFactorial;
 // }
 
+// pt 1
 const factorial = (n) => n === 0 ? 1 : n * factorial(n - 1);
+
+// pt 2
+
+const greaterWord = (str) => {
+  const strArr = str.split(' ').sort((a, b) => a.length - b.length)
+  return strArr[strArr.length - 1];
+}
