@@ -97,3 +97,22 @@
     padding-top: 0;
   }
 }
+
+@media only screen and (max-width: 425px) {
+  * {
+    max-width: 100vw;
+  }
+
+  #aside {
+    display: none;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  #header {
+    position: sticky;
+    top: 0;
+  }
+}
