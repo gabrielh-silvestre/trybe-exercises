@@ -35,7 +35,12 @@ const order = {
 };
 
 const customerInfo = (order) => {
-  
+  const clientAddress = Object.assign({}, order['address']);
+  const clienteOrder= Object.assign({}, order['order']);
+  const deliveryInfo = Object.assign({}, clienteOrder['delivery']);
+  const clientInfo = {name: order['name'], phoneNumber: order['phoneNumber']};
+
+  console.log(`Olá ${deliveryInfo['deliveryPerson']}, entrega para ${clientInfo.name}, Telefone: ${clientInfo.phoneNumber}, ${clientAddress['street']}, Nº ${clientAddress['number']}, AP: ${clientAddress['apartment']}`);
 }
 
 customerInfo(order);
