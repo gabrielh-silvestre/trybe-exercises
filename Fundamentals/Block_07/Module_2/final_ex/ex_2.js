@@ -33,20 +33,20 @@ const listValues = (obj) => {
 }
 // listValues(lesson3);
 
-const compactLessons = (l1, l2, l3) => { 
-  const allLesson = {
+const allLesson = (l1, l2, l3) => { 
+  const compactedLessons = {
     lesson1: {},
     lesson2: {},
     lesson3: {},
   }
 
-  Object.assign(allLesson['lesson1'], l1);
-  Object.assign(allLesson['lesson2'], l2);
-  Object.assign(allLesson['lesson3'], l3);
+  Object.assign(compactedLessons['lesson1'], l1);
+  Object.assign(compactedLessons['lesson2'], l2);
+  Object.assign(compactedLessons['lesson3'], l3);
 
-  return allLesson;
+  return compactedLessons;
 };
-// console.log(compactLessons(lesson1, lesson2, lesson3));
+// console.log(allLesson(lesson1, lesson2, lesson3));
 
 const getTotalStudents = (obj) => {
   const lessonsArr = Object.entries(obj);
@@ -55,7 +55,7 @@ const getTotalStudents = (obj) => {
 
   return numberStudents;
 };
-// console.log(getTotalStudents(compactLessons(lesson1, lesson2, lesson3)));
+// console.log(getTotalStudents(allLesson(lesson1, lesson2, lesson3)));
 
 const getValueIndex = (obj, index) => Object.values(obj)[index];
 // console.log(getValueIndex(lesson1, 0));
