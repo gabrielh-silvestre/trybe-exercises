@@ -34,7 +34,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-4: _JavaScript - Web Storage_
 - [x] 5-5: _[Projeto - Meme Generator](https://github.com/tryber/sd-016-b-project-meme-generator/pull/6)_
 - [x] 5-6: _[Projeto - Arte com Pixels](https://gabrielh-silvestre.github.io/pixel_art/index.html)_
-- [x] 5-7: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-016-b-project-todo-list/pull/21)_
+- [x] 5-7: _[Projeto - Lista de tarefas](https://gabrielh-silvestre.github.io/todo_list/index.html)_
 - [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/tryber/sd-016-b-project-color-guess/pull/4)_
 - [ ] 5-7: _[Projeto - Carta Misteriosa]()_
 
