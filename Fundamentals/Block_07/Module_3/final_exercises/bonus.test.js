@@ -22,6 +22,7 @@ describe('Test for bonus exercise', () => {
   it('Verify if searchEmployee return the info requested', () => {
     expect(typeof searchEmployee('9852-2-2', 'firstName')).toBe('string');
     expect(searchEmployee('9852-2-2', 'firstName')).toBe('Jeff');
+    expect(searchEmployee('9852-2-2', 'specialities')).toBe('Ruby,SQL');
   });
 
   it('Verify if searchEmployee return "Informação indisponível" when the info requested do not exist', () => {

@@ -48,6 +48,9 @@ const searchEmployee = (id, ...detail) => {
   }
 
   if (detail.length !== 0) {
+    if (Array.isArray(employee[0][detail])) {
+      return employee[0][detail].toString();
+    }
     return employee[0][detail] ? employee[0][detail] : 'Informação indisponível';
   }
 
