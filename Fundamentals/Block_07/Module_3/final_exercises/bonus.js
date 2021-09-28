@@ -47,7 +47,11 @@ const searchEmployee = (id, ...detail) => {
     return 'ID não identificada';
   }
 
-  return detail.length !== 0 ? employee[0][detail] : employee;
+  if (detail.length !== 0) {
+    return employee[0][detail] ? employee[0][detail] : 'Informação indisponível';
+  }
+
+  return employee;
 };
 
 module.exports = searchEmployee;

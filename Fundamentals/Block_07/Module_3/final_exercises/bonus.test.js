@@ -24,6 +24,10 @@ describe('Test for bonus exercise', () => {
     expect(searchEmployee('9852-2-2', 'firstName')).toBe('Jeff');
   });
 
+  it('Verify if searchEmployee return "Informação indisponível" when the info requested do not exist', () => {
+    expect(searchEmployee('9852-2-2', 'name')).toBe('Informação indisponível');
+  });
+
 });
 
 // {
