@@ -30,16 +30,3 @@ describe('Test for bonus exercise', () => {
   });
 
 });
-
-// {
-//   id: '9852-2-2',
-//   firstName: 'Jeff',
-//   lastName: 'Cook',
-//   specialities: ['Ruby', 'SQL'],
-// },
-// {
-//   id: '4678-2',
-//   firstName: 'Paul',
-//   lastName: 'Dodds',
-//   specialities: ['Backend'],
-// },
