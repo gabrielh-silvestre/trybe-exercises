@@ -30,4 +30,8 @@ describe('Test for bonus exercise', () => {
     expect(typeof searchEmployee('9852-2-2')).toBe('object');
   });
 
+  it('Verify if searchEmployee return "IdD não identificada" if the id does not exist', () => {
+    expect(searchEmployee('123')).toBe('ID não identificada');
+  });
+
 });

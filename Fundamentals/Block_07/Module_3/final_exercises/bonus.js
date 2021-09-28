@@ -43,7 +43,7 @@ const searchEmployee = (id, ...detail) => {
   const internalData = [...professionalBoard];
   const employee = internalData.filter((e) => e.id === id);
 
-  return employee;
+  return employee.length === 0 ? 'ID não identificada' : employee;
 };
 
 module.exports = searchEmployee;
