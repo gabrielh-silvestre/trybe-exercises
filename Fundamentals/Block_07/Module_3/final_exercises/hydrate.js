@@ -1,22 +1,9 @@
 function hydrate(str) {
-  let cupsArray = str.split('');
-  const numberArray = [];
-  let sum = 0;
+  const cupsArray = str.split('');
+  const numberArray = cupsArray.filter((n) => Number.parseInt(n, 10)).map((n) => Number.parseInt(n, 10));
+  const sum = numberArray.reduce((prevNumber, number) => prevNumber + number)
 
-  for (let i of cupsArray) {
-    if (Number.parseInt(i, 10)) {
-      numberArray.push(Number.parseInt(i, 10));
-    }
-  }
-
-  for (let n of numberArray) {
-    sum += n;
-  }
-
-  if (sum > 1) {
-    return `${sum} copos de água`;
-  }
-  return `${sum} copo de água`;
+  return sum > 1 ? `${sum} copos de água` : `${sum} copo de água`;
 }
 
 module.exports = hydrate;
