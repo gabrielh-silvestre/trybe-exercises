@@ -49,5 +49,3 @@ const checkAnswers = (rightAnswers, studentAnswers) => {
 
   return rightPoints.length - (wrongPoints.length * 0.5);
 };
-
-console.log(countTestAnswers(RIGHT_ANSWERS, STUDENT_ANSWERS, checkAnswers));
