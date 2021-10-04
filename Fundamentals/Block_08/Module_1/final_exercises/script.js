@@ -25,3 +25,29 @@ const giveAWay = (n, callback) => {
 const checkWin = (n, winner) => {
   return n === winner ? 'Parabéns você ganhou' : 'Tente novamente';
 };
+
+// Exercício 3
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const countTestAnswers = (rightAnswers, studentAnswers, callback) => {
+  return callback(rightAnswers, studentAnswers);
+};
+
+const getWrongAnswers = (rightAnswers, studentAnswers) => {
+  return studentAnswers.filter((answer, i) => answer !== rightAnswers[i]).filter((answer) => answer !== 'N.A');
+};
+
+const getRightAnswers = (rightAnswers, studentAnswers) => {
+  return studentAnswers.filter((answer, i) => answer === rightAnswers[i]);
+}
+
+const checkAnswers = (rightAnswers, studentAnswers) => {
+  const rightPoints = getRightAnswers(rightAnswers, studentAnswers);
+  const wrongPoints = getWrongAnswers(rightAnswers, studentAnswers);
+
+  return rightPoints.length - (wrongPoints.length * 0.5);
+};
+
+console.log(countTestAnswers(RIGHT_ANSWERS, STUDENT_ANSWERS, checkAnswers));
