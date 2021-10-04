@@ -20,6 +20,8 @@ const dragon = {
 
 const battleMembers = { mage, warrior, dragon };
 
+// Parte 1
+
 const dragonDamage = () => {
   return Math.round(Math.random() * (dragon.strength - 15) + 15);
 };
@@ -36,3 +38,14 @@ const manaUsage = () => {
   mage.mana -= 15;
   return mage.mana < 15 ? 'Não possui mana suficiente' : mageDamage();
 }
+
+// Parte 2
+
+const gameActions = {
+  warriorAction: (callback) => {
+    const damageDone = callback();
+
+    warrior.damage = damageDone;
+    dragon.healthPoints -= damageDone;
+  },
+};
