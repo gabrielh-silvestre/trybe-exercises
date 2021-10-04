@@ -35,7 +35,6 @@ const mageDamage = () => {
 };
 
 const manaUsage = () => {
-  mage.mana -= 15;
   return mage.mana < 15 ? 'Não possui mana suficiente' : mageDamage();
 }
 
@@ -48,4 +47,12 @@ const gameActions = {
     warrior.damage = damageDone;
     dragon.healthPoints -= damageDone;
   },
+  mageAction: (callback) => {
+    const damageDone = callback();
+
+    mage.damage = damageDone;
+    mage.mana -= 15;
+    dragon.healthPoints -= damageDone;
+  },
+  
 };
