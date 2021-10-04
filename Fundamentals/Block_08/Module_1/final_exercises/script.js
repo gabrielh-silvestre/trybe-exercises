@@ -1,3 +1,5 @@
+// Exercício 1
+
 const newEmployees = (callback) => {
   const employees = {
     id1: callback('Pedro Guerra'), // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
@@ -12,4 +14,14 @@ const newHiredPerson = (name) => {
     nomeCompleto: name,
     email: `${name.toLowerCase().replace(' ', '_')}@betrybe.com`,
   }
+};
+
+// Exercício 2
+
+const giveAWay = (n, callback) => {
+  return callback(n, Math.round(Math.random() * 5));
+};
+
+const checkWin = (n, winner) => {
+  return n === winner ? 'Parabéns você ganhou' : 'Tente novamente';
 };
