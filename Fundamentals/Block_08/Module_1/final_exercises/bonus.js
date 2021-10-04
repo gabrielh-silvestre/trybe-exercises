@@ -54,5 +54,11 @@ const gameActions = {
     mage.mana -= 15;
     dragon.healthPoints -= damageDone;
   },
-  
+  dragonAction: (callback) => {
+    const damageDone = callback();
+
+    dragon.damage = damageDone;
+    mage.healthPoints -= damageDone;
+    warrior.healthPoints -= damageDone;
+  }
 };
