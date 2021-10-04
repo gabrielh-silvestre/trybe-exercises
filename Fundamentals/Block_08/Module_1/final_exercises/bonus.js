@@ -2,20 +2,20 @@ const mage = {
   healthPoints: 130,
   intelligence: 45,
   mana: 125,
-  damage: undefined,
+  damage: 0,
 };
 
 const warrior = {
   healthPoints: 200,
   strength: 30,
   weaponDmg: 2,
-  damage: undefined,
+  damage: 0,
 };
 
 const dragon = {
   healthPoints: 350,
   strength: 50,
-  damage: undefined,
+  damage: 0,
 };
 
 const battleMembers = { mage, warrior, dragon };
@@ -44,21 +44,34 @@ const gameActions = {
   warriorAction: (callback) => {
     const damageDone = callback();
 
-    warrior.damage = damageDone;
+    warrior.damage += damageDone;
     dragon.healthPoints -= damageDone;
   },
   mageAction: (callback) => {
     const damageDone = callback();
 
-    mage.damage = damageDone;
+    mage.damage += damageDone;
     mage.mana -= 15;
     dragon.healthPoints -= damageDone;
   },
   dragonAction: (callback) => {
     const damageDone = callback();
 
-    dragon.damage = damageDone;
+    dragon.damage += damageDone;
     mage.healthPoints -= damageDone;
     warrior.healthPoints -= damageDone;
-  }
+  },
+  attBattleMembers: () => {
+    console.log(battleMembers);
+  },
 };
+
+// gameActions.warriorAction(warriorDamage);
+
+// gameActions.warriorAction(warriorDamage);
+
+// gameActions.dragonAction(dragonDamage);
+
+// gameActions.mageAction(mageDamage);
+
+// gameActions.attBattleMembers();
