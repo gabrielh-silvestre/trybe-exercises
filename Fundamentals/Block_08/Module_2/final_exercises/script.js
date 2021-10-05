@@ -62,3 +62,9 @@ const books = [
     releaseYear: 1928,
   },
 ];
+
+function authorBornIn1947() {
+  return books.find((book) => book.author.birthYear === 1947).author.name;
+}
+
+assert.strictEqual(authorBornIn1947(), 'Stephen King');
