@@ -166,13 +166,14 @@ assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResultBookReleaseOn80s)
 const expectedResultUnique = false;
 
 function authorUnique() {
-  books.forEach((e, i, arr) => {
-    if (arr.some((book) => book.author.birthYear === e.author.birthYear)) {
-      return true;
-    }
+  let control = true;
+
+  books.sort((a, b) => {
+    if (a.author.birthYear - b.author.birthYear === 0) control = false;
+    return a.author.birthYear - b.author.birthYear
   });
 
-  return false;
+  return control;
 }
 
 assert.strictEqual(authorUnique(), expectedResultUnique);
