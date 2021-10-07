@@ -72,3 +72,13 @@ const estudantes = [
     ],
   },
 ];
+
+
+const bestResult = (students) => {
+  return students.map((student) => {
+    return {
+      name: student.nome,
+      materia: student.materias.reduce((prev, curr) => prev.nota > curr.nota ? prev : curr).name,
+    }
+  });
+};
