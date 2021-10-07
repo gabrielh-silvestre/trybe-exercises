@@ -11,5 +11,3 @@ function averageAge(books) {
     .map((book) => getAge(book))
     .reduce((acc, curr) => acc + curr) / books.length;
 }
-
-console.log(averageAge(books));
