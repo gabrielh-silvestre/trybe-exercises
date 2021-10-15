@@ -31,7 +31,14 @@ function getPokemonDetails(filter, callback) {
   }, 2000);
 }
 
-getPokemonDetails();
+const pokeFilter = (pokemon) => pokemon.name === 'Squirtl';
+
+getPokemonDetails(pokeFilter, (error, message) => {
+  if (!error) {
+    console.log(message);
+  }
+  console.log(error);
+});
 
 module.exports = {
   getPokemonDetails,
