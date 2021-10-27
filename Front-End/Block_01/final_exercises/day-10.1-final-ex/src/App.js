@@ -1,12 +1,14 @@
 import './App.css';
-import TaskList from './components/Exercise1/TaskList';
+// import TaskList from './components/Exercise1/TaskList';
+import Header from './components/Exercise2/Header';
 
-const myTasks = ['Task1', 'Task2', 'Task3', 'Task4', 'Task5'];
+// const myTasks = ['Task1', 'Task2', 'Task3', 'Task4', 'Task5'];
 
 function App() {
   return (
     <div className="App">
-      <TaskList tasks={myTasks} />
+      <Header />
+      {/* <TaskList tasks={myTasks} /> */}
     </div>
   );
 }
