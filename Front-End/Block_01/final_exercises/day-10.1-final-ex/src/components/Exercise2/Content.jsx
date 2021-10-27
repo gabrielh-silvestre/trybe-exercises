@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Content extends Component {
   constructor(props) {
     super(props);
 
-    this.state ={
+    this.state = {
       conteudos: [
         {
           conteudo: 'High Order Functions',
           bloco: 8,
-          status: 'Aprendido'
+          status: 'Aprendido',
         },
         {
           conteudo: 'Composicao de Componentes',
@@ -19,36 +19,33 @@ export default class Content extends Component {
         {
           conteudo: 'Composicao de Estados',
           bloco: 12,
-          status: 'Aprenderei'
+          status: 'Aprenderei',
         },
         {
           conteudo: 'Redux',
           bloco: 16,
-          status: 'Aprenderei'
+          status: 'Aprenderei',
         },
-      ]
-    }
+      ],
+    };
 
     this.renderContent = this.renderContent.bind(this);
   }
 
   renderContent() {
-    const { consteudos } = this.state;
+    const { conteudos } = this.state;
 
-    consteudos.map(({ conteudo, bloco, status }) => (
-      <section>
-        <p>O conteúdo é: {conteudo}</p>
-        <p>Status: {status}</p>
-        <p>Bloco: {bloco}</p>
-      </section>
-    ))
+    return conteudos.map(({ conteudo, bloco, status }, i) => (
+        <section key={i}>
+          <p>O conteúdo é: {conteudo}</p>
+          <p>Status: {status}</p>
+          <p>Bloco: {bloco}</p>
+        </section>
+      )
+    );
   }
 
   render() {
-    return (
-      <>
-        {this.renderContent()}
-      </>
-    )
+    return <>{this.renderContent()}</>;
   }
 }
