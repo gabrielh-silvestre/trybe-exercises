@@ -70,3 +70,24 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 9-2: _JavaScript Fetch API e async/await_
 - [X] 9-3: _JavaScript Testes Assíncronos_
 - [X] 9-4: _[Projeto - Carrinho de Compras](https://gabrielh-silvestre.github.io/shopping_cart/index.html)_
+
+
+## Desenvolvimento Front-end :hourglass_flowing_sand:
+ 
+##### Bloco 11: Introdução - React
+ 
+- [X] 11-1: _'Hello, world!' no React!_
+- [X] 11-2: _Componentes React_
+- [X] 11-3: _[Projeto - Sistema Solar](https://github.com/tryber/sd-016-b-project-solar-system/pull/3)_
+ 
+##### Bloco 12: Componentes com Estado, Eventos e Formulários com React
+ 
+- [X] 12-1: _Components com estado e eventos_
+- [ ] 12-2: _Formulários no React_
+- [ ] 12-3: _[Projeto - Tryunfo]()_
+ 
+##### Bloco 13: Ciclo de Vida de Componentes e React Router
+ 
+- [ ] 13-2: _Ciclo de vida de componentes_
+- [ ] 13-3: _React Router_
+- [ ] 13-4: _[Projeto - TrybeTunes]()_
