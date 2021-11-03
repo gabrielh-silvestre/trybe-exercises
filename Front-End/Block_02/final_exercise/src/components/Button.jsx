@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 export default class Button extends Component {
   render() {
-    const { btnText, callback } = this.props;
+    const { btnText, callback, able } = this.props;
 
     return (
       <>
-        <button onClick={callback}>{btnText}</button>
+        <button disabled={able} onClick={callback}>{btnText}</button>
       </>
     );
   }
@@ -15,4 +15,5 @@ export default class Button extends Component {
 Button.propTypes = {
   btnText: PropTypes.string.isRequired,
   callback: PropTypes.func,
+  able: PropTypes.bool,
 };
