@@ -6,6 +6,18 @@ class Pokedex extends React.Component {
     super(props);
 
     this.state = { index: 0 };
+
+    this.nextPokemon = this.nextPokemon.bind(this);
+  }
+
+  nextPokemon() {
+    const { pokemons } = this.props;
+
+    this.setState((prevState) => {
+      return prevState.index === pokemons.length
+        ? { index: 0 }
+        : { index: prevState.index + 1 };
+    });
   }
 
   render() {
