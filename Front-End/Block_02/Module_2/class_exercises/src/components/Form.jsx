@@ -67,6 +67,8 @@ export default class Form extends Component {
   }
 
   render() {
+    const { hasError } = this.state;
+
     return (
       <form onSubmit={this.handleSubmit}>
         <fieldset>
@@ -100,7 +102,7 @@ export default class Form extends Component {
             inputConfig={{ type: 'checkbox', name: 'agreement' }}
             handleChange={this.handleChange}
           />
-          <button type="submit">Enviar</button>
+          <button disabled={hasError} type="submit">Enviar</button>
         </fieldset>
       </form>
     );
