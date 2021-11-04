@@ -49,26 +49,14 @@ export default class Form extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.changeRadio = this.changeRadio.bind(this);
   }
 
-  handleChange({ target: { type, name, value, checked } }) {
-    type !== 'radio'
-      ? this.setState({ [name]: value })
-      : this.changeRadio(value);
-  }
-
-  changeRadio(value) {
-    this.setState({
-      appartment: false,
-      house: false,
-      [value]: true,
-      home: value,
-    });
+  handleChange({ target: { name, value } }) {
+    this.setState({ [name]: value })
   }
 
   render() {
-    const { house, appartment, allStates } = this.state;
+    const { allStates } = this.state;
 
     return (
       <form>
@@ -90,7 +78,7 @@ export default class Form extends Component {
               name="home"
               value="house"
               id="house"
-              checked={house}
+              defaultChecked={true}
               onChange={this.handleChange}
             />
             <label htmlFor="appartment">Appartment</label>
@@ -99,7 +87,6 @@ export default class Form extends Component {
               name="home"
               value="appartment"
               id="appartment"
-              checked={appartment}
               onChange={this.handleChange}
             />
           </div>
