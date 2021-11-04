@@ -12,10 +12,13 @@ export default class Form extends Component {
       userAge: undefined,
       userTech: 'react',
       userDesc: undefined,
-      agreement: undefined,
+      agreement: false,
     };
 
+    this.fileInput = React.createRef();
+
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange({ target }) {
@@ -26,29 +29,48 @@ export default class Form extends Component {
       : this.setState({ [name]: value });
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+
+    console.log(this.fileInput.current.files[0].name);
+  }
+
   render() {
     return (
-      <form>
-        <Input
-          inputConfig={{ type: 'text', name: 'userName' }}
-          handleChange={this.handleChange}
-        />
-        <Input
-          inputConfig={{ type: 'number', name: 'userAge' }}
-          handleChange={this.handleChange}
-        />
-        <Select
-          selectConfig={{
-            name: 'userTech',
-            options: ['react', 'angular', 'vue'],
-          }}
-          handleChange={this.handleChange}
-        />
-        <TextArea name="userDesc" handleChange={this.handleChange} />
-        <Input
-          inputConfig={{ type: 'checkbox', name: 'agreement', id: 'agreement' }}
-          handleChange={this.handleChange}
-        />
+      <form onSubmit={this.handleSubmit}>
+        <fieldset>
+          <Input
+            inputConfig={{ type: 'text', name: 'userName' }}
+            handleChange={this.handleChange}
+          />
+          <Input
+            inputConfig={{ type: 'number', name: 'userAge' }}
+            handleChange={this.handleChange}
+          />
+          <Select
+            selectConfig={{
+              name: 'userTech',
+              options: ['react', 'angular', 'vue'],
+            }}
+            handleChange={this.handleChange}
+          />
+        </fieldset>
+        <fieldset>
+          <TextArea name="userDesc" handleChange={this.handleChange} />
+          <input
+            type="file"
+            name="userImage"
+            id="userImage"
+            ref={this.fileInput}
+          />
+        </fieldset>
+        <fieldset>
+          <Input
+            inputConfig={{ type: 'checkbox', name: 'agreement' }}
+            handleChange={this.handleChange}
+          />
+          <button type="submit">Enviar</button>
+        </fieldset>
       </form>
     );
   }
