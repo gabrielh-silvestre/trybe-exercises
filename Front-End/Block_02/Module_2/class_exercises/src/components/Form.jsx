@@ -10,15 +10,18 @@ export default class Form extends Component {
       userAge: undefined,
       userTech: undefined,
       userDesc: undefined,
+      agreement: undefined,
     };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange({ target }) {
-    this.setState(() => ({
-      [target.name]: target.value,
-    }));
+    const { name, value, type, checked } = target;
+
+    type === 'checkbox'
+      ? this.setState({ [name]: checked })
+      : this.setState({ [name]: value });
   }
 
   render() {
@@ -38,6 +41,10 @@ export default class Form extends Component {
           <option value="vue">Vue</option>
         </select>
         <textarea name="userDesc" id="userDesc" cols="30" rows="10"></textarea>
+        <Input
+          inputConfig={{ type: 'checkbox', name: 'agreement', id: 'agreement' }}
+          handleChange={this.handleChange}
+        />
       </form>
     );
   }
