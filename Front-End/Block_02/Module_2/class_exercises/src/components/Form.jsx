@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from './Input';
+import Select from './Select';
 
 export default class Form extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ export default class Form extends Component {
     this.state = {
       userName: undefined,
       userAge: undefined,
-      userTech: undefined,
+      userTech: 'react',
       userDesc: undefined,
       agreement: undefined,
     };
@@ -28,18 +29,20 @@ export default class Form extends Component {
     return (
       <form>
         <Input
-          inputConfig={{ type: 'text', name: 'userName', id: 'userName' }}
+          inputConfig={{ type: 'text', name: 'userName' }}
           handleChange={this.handleChange}
         />
         <Input
-          inputConfig={{ type: 'number', name: 'userAge', id: 'userAge' }}
+          inputConfig={{ type: 'number', name: 'userAge' }}
           handleChange={this.handleChange}
         />
-        <select name="userTech" id="userTech">
-          <option value="react">React</option>
-          <option value="angular">Angular</option>
-          <option value="vue">Vue</option>
-        </select>
+        <Select
+          selectConfig={{
+            name: 'userTech',
+            options: ['react', 'angular', 'vue'],
+          }}
+          handleChange={this.handleChange}
+        />
         <textarea name="userDesc" id="userDesc" cols="30" rows="10"></textarea>
         <Input
           inputConfig={{ type: 'checkbox', name: 'agreement', id: 'agreement' }}
