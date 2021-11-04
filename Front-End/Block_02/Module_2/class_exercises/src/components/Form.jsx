@@ -13,12 +13,16 @@ export default class Form extends Component {
       userTech: 'react',
       userDesc: undefined,
       agreement: false,
+      hasError: false,
     };
 
     this.fileInput = React.createRef();
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleError = this.handleError.bind(this);
+    this.nameValidator = this.nameValidator.bind(this);
+    this.ageValidator = this.ageValidator.bind(this);
   }
 
   handleChange({ target }) {
@@ -33,6 +37,33 @@ export default class Form extends Component {
     event.preventDefault();
 
     console.log(this.fileInput.current.files[0].name);
+  }
+
+  handleError() {
+    this.nameValidator() && this.ageValidator()
+      ? this.setState({ hasError: false })
+      : this.setState({ hasError: true });
+  }
+
+  nameValidator() {
+    const { userName } = this.state;
+    return (
+      userName !== undefined && userName.length <= 16 && userName.length > 0
+    );
+  }
+
+  ageValidator() {
+    const { userAge } = this.state;
+    return userAge !== undefined && userAge <= 100 && userAge >= 18;
+  }
+
+  componentDidUpdate(_, prevState) {
+    const { userName: prevName, userAge: prevAge } = prevState;
+    const { userName, userAge } = this.state;
+
+    if (prevName !== userName || prevAge !== userAge) {
+      this.handleError();
+    }
   }
 
   render() {
