@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Fieldset from './Fieldset';
 import Input from './Input';
 import Select from './Select';
+import TextArea from './TextArea';
 
 export default class Form extends Component {
   constructor(props) {
@@ -46,6 +47,9 @@ export default class Form extends Component {
       home: 'house',
       house: true,
       appartment: false,
+      resume: undefined,
+      cargo: undefined,
+      description: undefined,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -90,6 +94,11 @@ export default class Form extends Component {
               onChange={this.handleChange}
             />
           </div>
+        </Fieldset>
+        <Fieldset id="last-job">
+          <TextArea name="resume" handleChange={this.handleChange} />
+          <TextArea name="cargo" handleChange={this.handleChange} />
+          <Input type="text" name="description" handleChange={this.handleChange} />
         </Fieldset>
       </form>
     );
