@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Select extends Component {
   render() {
@@ -16,3 +17,9 @@ export default class Select extends Component {
     );
   }
 }
+
+Select.propTypes = {
+  name: PropTypes.string.isRequired,
+  options: PropTypes.array.isRequired,
+  handleChange: PropTypes.func.isRequired,
+};
