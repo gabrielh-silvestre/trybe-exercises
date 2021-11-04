@@ -49,10 +49,22 @@ export default class Form extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.changeRadio = this.changeRadio.bind(this);
   }
 
   handleChange({ target: { type, name, value, checked } }) {
-    this.setState({ [name]: value });
+    type !== 'radio'
+      ? this.setState({ [name]: value })
+      : this.changeRadio(value);
+  }
+
+  changeRadio(value) {
+    this.setState({
+      appartment: false,
+      house: false,
+      [value]: true,
+      home: value,
+    });
   }
 
   render() {
