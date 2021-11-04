@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Input extends Component {
   render() {
@@ -9,6 +9,6 @@ export default class Input extends Component {
       <>
         <input type={type} name={name} id={name} onChange={handleChange} />
       </>
-    )
+    );
   }
 }
