@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Input from './Input';
 import Select from './Select';
+import TextArea from './TextArea';
 
 export default class Form extends Component {
   constructor(props) {
@@ -43,7 +44,7 @@ export default class Form extends Component {
           }}
           handleChange={this.handleChange}
         />
-        <textarea name="userDesc" id="userDesc" cols="30" rows="10"></textarea>
+        <TextArea name="userDesc" handleChange={this.handleChange} />
         <Input
           inputConfig={{ type: 'checkbox', name: 'agreement', id: 'agreement' }}
           handleChange={this.handleChange}
