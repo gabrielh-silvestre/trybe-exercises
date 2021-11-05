@@ -25,7 +25,8 @@ export default class Home extends Component {
   }
 
   handleChange({ target }) {
-    console.log(target);
+    const { name, value } = target;
+    this.setState({ [name]: value });
   }
 
   render() {
