@@ -42,11 +42,11 @@ export default class PersonalForm extends Component {
       <>
         <Form>
           <Fieldset>
-            <Input type="text" name="name" handleChange={handleChange} />
-            <Input type="text" name="email" handleChange={handleChange} />
-            <Input type="text" name="cpf" handleChange={handleChange} />
-            <Input type="text" name="address" handleChange={handleChange} />
-            <Input type="text" name="city" handleChange={handleChange} />
+            <Input type="text" name="name" max={40} handleChange={handleChange} />
+            <Input type="text" name="email" max={50} handleChange={handleChange} />
+            <Input type="text" name="cpf" max={11} handleChange={handleChange} />
+            <Input type="text" name="address" max={200} handleChange={handleChange} />
+            <Input type="text" name="city" max={28} handleChange={handleChange} />
             <Select name="state" options={brazilStates} handleChange={handleChange} />
             <label htmlFor="house">Casa: </label>
             <input type="radio" name="home" value="house" defaultChecked />
