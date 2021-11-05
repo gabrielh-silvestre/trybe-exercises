@@ -7,7 +7,7 @@ export default class Select extends Component {
     return (
       <>
         <label htmlFor={name}>{name}</label>
-        <select id={name} name={name} onChange={handleChange}>
+        <select id={name} name={name} required onChange={handleChange}>
           {options.map(({ key, value }) => (
             <option key={key} value={value}>
               {key}
