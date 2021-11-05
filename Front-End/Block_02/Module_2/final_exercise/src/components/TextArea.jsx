@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default class TextArea extends Component {
   render() {
-    const { name, handleChange } = this.props;
+    const { name, max, handleChange } = this.props;
 
     return (
       <>
@@ -12,6 +12,8 @@ export default class TextArea extends Component {
           id={name}
           cols="30"
           rows="10"
+          required
+          maxLength={max}
           onChange={handleChange}
         ></textarea>
       </>
