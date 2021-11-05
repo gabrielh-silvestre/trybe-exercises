@@ -7,7 +7,7 @@ export default class Input extends Component {
     return (
       <>
         <label htmlFor={name}>{name}</label>
-        <input type={type} name={name} id={name} onChange={handleChange} />
+        <input type={type} name={name} id={name} required onChange={handleChange} />
       </>
     );
   }
