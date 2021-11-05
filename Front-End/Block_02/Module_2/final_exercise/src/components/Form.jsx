@@ -20,11 +20,12 @@ export default class Form extends Component {
       resume: undefined,
       cargo: undefined,
       description: undefined,
-      display: 'none',
+      submited: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.printResume = this.printResume.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   handleChange({ target: { name, value } }) {
@@ -34,7 +35,13 @@ export default class Form extends Component {
   printResume(event) {
     event.preventDefault();
 
-    this.setState({ display: 'block' });
+    this.setState({ submited: true });
+  }
+
+  reset(event) {
+    event.preventDefault();
+
+    this.setState({ submited: false });
   }
 
   render() {
@@ -67,7 +74,17 @@ export default class Form extends Component {
       'SE',
       'TO',
     ];
-    const { display } = this.state;
+    const {
+      name,
+      email,
+      cpf,
+      addres,
+      city,
+      resume,
+      cargo,
+      description,
+      submited,
+    } = this.state;
 
     return (
       <>
@@ -113,8 +130,22 @@ export default class Form extends Component {
             />
           </Fieldset>
           <button onClick={this.printResume}>Print resume</button>
+          <button onClick={this.reset}>Reset</button>
         </form>
-        <Resume userInfo={this.state} display={display} />
+        {submited && (
+          <Resume
+            userInfo={{
+              name,
+              email,
+              cpf,
+              addres,
+              city,
+              resume,
+              cargo,
+              description,
+            }}
+          />
+        )}
       </>
     );
   }
