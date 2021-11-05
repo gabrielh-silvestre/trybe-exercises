@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PersonalForm from '../components/PersonalForm';
+import ProfessionalForm from '../components/ProfessionalForm';
 
 const initialState = {
   name: '',
@@ -33,6 +34,7 @@ export default class Home extends Component {
     return (
       <div>
         <PersonalForm handleChange={this.handleChange} />
+        <ProfessionalForm handleChange={this.handleChange} />
       </div>
     );
   }
