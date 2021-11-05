@@ -10,17 +10,18 @@ export default class Form extends Component {
     super(props);
 
     this.state = {
-      name: undefined,
-      email: undefined,
-      cpf: undefined,
-      addres: undefined,
-      city: undefined,
+      name: '',
+      email: '',
+      cpf: '',
+      addres: '',
+      city: '',
       state: 'AC',
       home: 'house',
-      resume: undefined,
-      cargo: undefined,
-      description: undefined,
+      resume: '',
+      cargo: '',
+      description: '',
       submited: false,
+      error: true,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -29,7 +30,7 @@ export default class Form extends Component {
   }
 
   handleChange({ target: { name, value } }) {
-    this.setState({ [name]: value });
+    this.setState({ [name]: value, error: value === '' ? true : false });
   }
 
   printResume(event) {
@@ -84,6 +85,7 @@ export default class Form extends Component {
       cargo,
       description,
       submited,
+      error,
     } = this.state;
 
     return (
@@ -129,7 +131,9 @@ export default class Form extends Component {
               handleChange={this.handleChange}
             />
           </Fieldset>
-          <button onClick={this.printResume}>Print resume</button>
+          <button disabled={error} onClick={this.printResume}>
+            Print resume
+          </button>
           <button onClick={this.reset}>Reset</button>
         </form>
         {submited && (
