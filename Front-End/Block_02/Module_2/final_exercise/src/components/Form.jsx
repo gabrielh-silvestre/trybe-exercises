@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Form extends Component {
   render() {
-    const { children } = this.props
+    const { children, handleClick } = this.props;
 
-    return (
-      <form>
-        {children}
-      </form>
-    )
+    return <form onClick={handleClick}>{children}</form>;
   }
 }

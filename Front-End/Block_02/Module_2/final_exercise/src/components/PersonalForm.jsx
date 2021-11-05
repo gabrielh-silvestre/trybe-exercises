@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Fieldset from './Fieldset';
-import Form from './Form';
 import Input from './Input';
 import Select from './Select';
 
@@ -39,22 +38,38 @@ export default class PersonalForm extends Component {
     const { handleChange } = this.props;
 
     return (
-      <>
-        <Form>
-          <Fieldset>
-            <Input type="text" name="name" max={40} handleChange={handleChange} />
-            <Input type="text" name="email" max={50} handleChange={handleChange} />
-            <Input type="text" name="cpf" max={11} handleChange={handleChange} />
-            <Input type="text" name="address" max={200} handleChange={handleChange} />
-            <Input type="text" name="city" max={28} handleChange={handleChange} />
-            <Select name="state" options={brazilStates} handleChange={handleChange} />
-            <label htmlFor="house">Casa: </label>
-            <input type="radio" name="home" value="house" defaultChecked />
-            <label htmlFor="house">Apartamento: </label>
-            <input type="radio" name="home" value="appartment" />
-          </Fieldset>
-        </Form>
-      </>
+      <Fieldset>
+        <Input type="text" name="name" max={40} handleChange={handleChange} />
+        <Input type="text" name="email" max={50} handleChange={handleChange} />
+        <Input type="text" name="cpf" max={11} handleChange={handleChange} />
+        <Input
+          type="text"
+          name="address"
+          max={200}
+          handleChange={handleChange}
+        />
+        <Input type="text" name="city" max={28} handleChange={handleChange} />
+        <Select
+          name="state"
+          options={brazilStates}
+          handleChange={handleChange}
+        />
+        <label htmlFor="house">Casa: </label>
+        <input
+          type="radio"
+          name="home"
+          value="house"
+          onClick={handleChange}
+          defaultChecked
+        />
+        <label htmlFor="house">Apartamento: </label>
+        <input
+          type="radio"
+          name="home"
+          onClick={handleChange}
+          value="appartment"
+        />
+      </Fieldset>
     );
   }
 }
