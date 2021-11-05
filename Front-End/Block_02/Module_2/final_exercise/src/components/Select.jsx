@@ -8,9 +8,9 @@ export default class Select extends Component {
       <>
         <label htmlFor={name}>{name}</label>
         <select id={name} name={name} onChange={handleChange}>
-          {options.map((opt) => (
-            <option key={opt} value={opt}>
-              {opt}
+          {options.map(({ key, value }) => (
+            <option key={key} value={value}>
+              {key}
             </option>
           ))}
         </select>
