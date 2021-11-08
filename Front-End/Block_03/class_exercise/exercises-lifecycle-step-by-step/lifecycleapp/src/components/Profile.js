@@ -12,11 +12,21 @@ class Profile extends React.Component {
   }
 
   async componentDidMount() {
-
+    const myUser = 'gabrielh-silvestre'; // Preencha myUser com o seu user do GitHub.
+    try {
+      const url = `https://api.github.com/users/${myUser}`;
+      const response = await fetch(url);
+      const dataJson = await response.json();
+      // eslint-disable-next-line react/no-did-mount-set-state
+      this.setState({ api: dataJson });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   componentWillUnmount() {
-
+    // eslint-disable-next-line no-alert
+    alert('Você ocultou seu perfil');
   }
 
   changeDataJson(dataJson) {
@@ -30,16 +40,16 @@ class Profile extends React.Component {
 
     const card = (
       <div className="d-flex h-100 flex-column justify-content-center align-items-center">
-        <h1>{ name }</h1>
-        <span>{ email }</span>
+        <h1>{name}</h1>
+        <span>{email}</span>
         <img className="myPicture" src={ api.avatar_url } alt="Avatar" />
-        <p>{ bio }</p>
+        <p>{bio}</p>
       </div>
     );
 
     return (
       <div className="git d-flex flex-column justify-content-center align-items-center">
-        { card }
+        {card}
       </div>
     );
   }

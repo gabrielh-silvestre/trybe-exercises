@@ -20,11 +20,22 @@ class Connections extends React.Component {
   }
 
   shouldComponentUpdate(_nextProps, { list }) {
+    const maxContactsNumber = 3;
 
+    return list.length <= maxContactsNumber;
+    // A quantidade de contatos não pode ser maior que 3, portanto se a lista é maior que 3, ele deverá retornar false e impedir a atualização.
   }
 
   componentDidUpdate(_prevProps, prevState) {
+    const { list } = this.state;
 
+    if (prevState.list.length < list.length) {
+      this.changeToBlue();
+      // Ao adicionar um contato, a div ficará azul.
+    } else if (prevState.list.length > list.length) {
+      this.changeToCoral();
+      // Ao deletar um contato, a div ficará coral.
+    }
   }
 
   handleChange({ target: { value } }) {
@@ -78,7 +89,7 @@ class Connections extends React.Component {
       <div className="counter">
         <div>
           <h5>Quantidade de contatos:</h5>
-          <span>{ counter }</span>
+          <span>{counter}</span>
         </div>
         <div className="form">
           <form className="input-group justify-content-center">
@@ -104,10 +115,15 @@ class Connections extends React.Component {
   contactList(list) {
     return (
       <div className="card-list d-flex flex-row justify-content-around">
-        { list.map((api) => (
+        {list.map((api) => (
           <div className="card d-flex align-items-center" key={ api.name }>
-            <h5>{ api.name }</h5>
-            <img className="c-img" src={ api.avatar_url } alt="Avatar" width="50%" />
+            <h5>{api.name}</h5>
+            <img
+              className="c-img"
+              src={ api.avatar_url }
+              alt="Avatar"
+              width="50%"
+            />
             <button
               className="c-button btn btn-danger w-25 align-self-center"
               data-login={ api.login }
@@ -116,7 +132,8 @@ class Connections extends React.Component {
             >
               X
             </button>
-          </div>))}
+          </div>
+        ))}
       </div>
     );
   }
@@ -126,8 +143,8 @@ class Connections extends React.Component {
 
     return (
       <div className={ `git-connections ${background}` }>
-        { this.contactAdder(counter) }
-        { this.contactList(list) }
+        {this.contactAdder(counter)}
+        {this.contactList(list)}
       </div>
     );
   }
