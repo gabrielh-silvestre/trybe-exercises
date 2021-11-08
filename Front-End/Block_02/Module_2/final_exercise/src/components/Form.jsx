@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import FormFeedback from './FormFeedback';
 import PersonalFieldset from './PersonalFieldset';
 import ProffesionalFieldSet from './ProfessionalFieldset';
 
@@ -27,14 +28,9 @@ export default function Form() {
 
   return (
     <form>
-      <PersonalFieldset
-        user={form}
-        setPersonalForm={setForm}
-      />
-      <ProffesionalFieldSet
-        user={form}
-        setProfessionalForm={setForm}
-      />
+      <PersonalFieldset user={form} setPersonalForm={setForm} />
+      <ProffesionalFieldSet user={form} setProfessionalForm={setForm} />
+      <FormFeedback user={form} />
     </form>
   );
 }
