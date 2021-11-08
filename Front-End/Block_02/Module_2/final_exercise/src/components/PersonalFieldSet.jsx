@@ -1,18 +1,26 @@
-import React from 'react';
-import brazileanStates from '../data/brazilStates';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-export default function PersonalFieldset(props) {
-  const {
-    userName,
-    userEmail,
-    userCpf,
-    userAddress,
-    userCity,
-    userState,
-  } = props.user;
+import brazileanStates from '../data/brazilStates';
 
-  const { handleChange } = props;
+export default function PersonalFieldset(props) {
+  const personalForm = props.user;
+  const { userName, userEmail, userCpf, userAddress, userCity, userState } =
+    personalForm;
+
+  const { setPersonalForm, setHasError } = props;
+
+  function handleChange({ target: { name, value } }) {
+    personalForm[name] = value;
+
+    setPersonalForm(() => ({ ...personalForm, [name]: value }));
+  }
+
+  useEffect(() => {
+    Object.values(personalForm).some((item) => item === '')
+      ? setHasError(true)
+      : setHasError(false);
+  });
 
   return (
     <fieldset>
@@ -116,5 +124,6 @@ export default function PersonalFieldset(props) {
 
 PersonalFieldset.propTypes = {
   user: PropTypes.object.isRequired,
-  handleChange: PropTypes.func.isRequired,
+  setHasError: PropTypes.func.isRequired,
+  setPersonalForm: PropTypes.func.isRequired,
 };

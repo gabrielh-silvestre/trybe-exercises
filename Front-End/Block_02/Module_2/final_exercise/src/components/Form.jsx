@@ -13,16 +13,15 @@ const initialPersonalForm = {
 
 export default function Form() {
   const [personalForm, setPersonalForm] = useState(initialPersonalForm);
-
-  function handleChange({ target: { type, name, value } }) {
-    personalForm[name] = value;
-
-    setPersonalForm(() => ({...personalForm, [name]: value }));
-  }
+  const [hasError, setHasError] = useState(false);
 
   return (
     <form>
-      <PersonalFieldset user={personalForm} handleChange={handleChange} />
+      <PersonalFieldset
+        user={personalForm}
+        setPersonalForm={setPersonalForm}
+        setHasError={setHasError}
+      />
     </form>
   );
 }
