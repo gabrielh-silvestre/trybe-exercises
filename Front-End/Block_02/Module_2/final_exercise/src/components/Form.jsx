@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PersonalFieldset from './PersonalFieldset';
 import ProffesionalFieldSet from './ProfessionalFieldset';
 
@@ -22,6 +22,13 @@ export default function Form() {
   const [personalForm, setPersonalForm] = useState(initialPersonalForm);
   const [professionalForm, setProfessionalForm] = useState(initialProfessionalForm);
   const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    Object.values(professionalForm).some((item) => item === '')
+    || Object.values(personalForm).some((item) => item === '')
+      ? setHasError(true)
+      : setHasError(false);
+  }, [personalForm, professionalForm]);
 
   return (
     <form>

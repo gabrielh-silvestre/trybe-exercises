@@ -6,17 +6,11 @@ import brazileanStates from '../data/brazilStates';
 export default function PersonalFieldset(props) {
   const personalForm = props.user;
 
-  const { setPersonalForm, setHasError } = props;
+  const { setPersonalForm } = props;
 
   function handleChange({ target: { name, value } }) {
     setPersonalForm(() => ({ ...personalForm, [name]: value }));
   }
-
-  useEffect(() => {
-    Object.values(personalForm).some((item) => item === '')
-      ? setHasError(true)
-      : setHasError(false);
-  });
 
   return (
     <fieldset>

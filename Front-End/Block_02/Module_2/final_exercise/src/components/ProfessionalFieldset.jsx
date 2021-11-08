@@ -3,17 +3,11 @@ import PropTypes from 'prop-types';
 
 export default function ProffesionalFieldSet(props) {
   const professionalForm = props.user;
-  const { setProfessionalForm, setHasError } = props;
+  const { setProfessionalForm } = props;
 
   function handleChange({ target: { name, value } }) {
     setProfessionalForm(() => ({ ...professionalForm, [name]: value }));
   }
-
-  useEffect(() => {
-    Object.values(professionalForm).some((item) => item === '')
-      ? setHasError(true)
-      : setHasError(false);
-  });
 
   return (
     <fieldset>
