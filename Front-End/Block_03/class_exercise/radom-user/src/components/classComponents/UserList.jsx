@@ -7,15 +7,19 @@ export default class UserList extends Component {
 
     this.state = {
       usersData: [],
+      loading: false,
     };
   }
 
-  async componentDidMount() {
-    const res = await fetch('https://randomuser.me/api/?results=20');
-    const data = await res.json();
-    this.setState((prevState) => ({
-      usersData: [...prevState.usersData, ...data.results],
-    }));
+  componentDidMount() {
+    this.setState({ loading: true }, async () => {
+      const res = await fetch('https://randomuser.me/api/?results=20');
+      const data = await res.json();
+      this.setState((prevState) => ({
+        usersData: [...prevState.usersData, ...data.results],
+        loading: false,
+      }));
+    });
   }
 
   shouldComponentUpdate(_, nextState) {
@@ -25,9 +29,11 @@ export default class UserList extends Component {
   }
 
   render() {
-    const { usersData } = this.state;
+    const { usersData, loading } = this.state;
 
-    return (
+    return loading ? (
+      <p>Loading</p>
+    ) : (
       <article>
         {usersData.map((user, i) => (
           <UserCard key={i} user={user} />
