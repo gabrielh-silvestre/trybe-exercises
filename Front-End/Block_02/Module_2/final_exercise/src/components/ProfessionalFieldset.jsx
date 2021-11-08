@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function ProffesionalFieldSet(props) {
@@ -42,6 +42,5 @@ export default function ProffesionalFieldSet(props) {
 
 ProffesionalFieldSet.propTypes = {
   user: PropTypes.object.isRequired,
-  setHasError: PropTypes.func.isRequired,
   setProfessionalForm: PropTypes.func.isRequired,
 };

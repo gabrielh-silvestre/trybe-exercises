@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PersonalFieldset from './PersonalFieldset';
 import ProffesionalFieldSet from './ProfessionalFieldset';
 
-const initialPersonalForm = {
+const initialForm = {
   name: '',
   email: '',
   cpf: '',
@@ -10,37 +10,30 @@ const initialPersonalForm = {
   city: '',
   state: 'Acre',
   homeType: 'house',
-};
-
-const initialProfessionalForm = {
   resume: '',
   role: '',
   roleDescription: '',
 };
 
 export default function Form() {
-  const [personalForm, setPersonalForm] = useState(initialPersonalForm);
-  const [professionalForm, setProfessionalForm] = useState(initialProfessionalForm);
+  const [form, setForm] = useState(initialForm);
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    Object.values(professionalForm).some((item) => item === '')
-    || Object.values(personalForm).some((item) => item === '')
+    Object.values(form).some((item) => item === '')
       ? setHasError(true)
       : setHasError(false);
-  }, [personalForm, professionalForm]);
+  }, [form]);
 
   return (
     <form>
       <PersonalFieldset
-        user={personalForm}
-        setPersonalForm={setPersonalForm}
-        setHasError={setHasError}
+        user={form}
+        setPersonalForm={setForm}
       />
       <ProffesionalFieldSet
-        user={professionalForm}
-        setProfessionalForm={setProfessionalForm}
-        setHasError={setHasError}
+        user={form}
+        setProfessionalForm={setForm}
       />
     </form>
   );

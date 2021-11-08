@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import brazileanStates from '../data/brazilStates';
@@ -108,6 +108,5 @@ export default function PersonalFieldset(props) {
 
 PersonalFieldset.propTypes = {
   user: PropTypes.object.isRequired,
-  setHasError: PropTypes.func.isRequired,
   setPersonalForm: PropTypes.func.isRequired,
 };
