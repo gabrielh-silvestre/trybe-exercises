@@ -2,7 +2,7 @@ import React from 'react';
 import brazileanStates from '../data/brazilStates';
 import PropTypes from 'prop-types';
 
-export default function Fieldset(props) {
+export default function PersonalFieldset(props) {
   const {
     userName,
     userEmail,
@@ -10,8 +10,9 @@ export default function Fieldset(props) {
     userAddress,
     userCity,
     userState,
-    handleChange,
   } = props.user;
+
+  const { handleChange } = props;
 
   return (
     <fieldset>
@@ -70,12 +71,12 @@ export default function Fieldset(props) {
         />
       </label>
 
-      <label htmlFor="State">
+      <label htmlFor="state">
         Estado:
         <select
           type="text"
-          name="State"
-          id="State"
+          name="state"
+          id="state"
           value={userState}
           onChange={handleChange}
         >
@@ -113,11 +114,7 @@ export default function Fieldset(props) {
   );
 }
 
-Fieldset.propTypes = {
-  userAddress: PropTypes.string.isRequired,
-  userCity: PropTypes.string.isRequired,
-  userCpf: PropTypes.string.isRequired,
-  userEmail: PropTypes.string.isRequired,
-  userName: PropTypes.string.isRequired,
-  userState: PropTypes.string.isRequired,
+PersonalFieldset.propTypes = {
+  user: PropTypes.object.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
