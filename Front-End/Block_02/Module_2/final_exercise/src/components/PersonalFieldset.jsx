@@ -5,14 +5,10 @@ import brazileanStates from '../data/brazilStates';
 
 export default function PersonalFieldset(props) {
   const personalForm = props.user;
-  const { userName, userEmail, userCpf, userAddress, userCity, userState } =
-    personalForm;
 
   const { setPersonalForm, setHasError } = props;
 
   function handleChange({ target: { name, value } }) {
-    personalForm[name] = value;
-
     setPersonalForm(() => ({ ...personalForm, [name]: value }));
   }
 
@@ -30,7 +26,6 @@ export default function PersonalFieldset(props) {
           type="text"
           name="name"
           id="name"
-          value={userName}
           onChange={handleChange}
         />
       </label>
@@ -41,7 +36,6 @@ export default function PersonalFieldset(props) {
           type="text"
           name="email"
           id="email"
-          value={userEmail}
           onChange={handleChange}
         />
       </label>
@@ -52,7 +46,6 @@ export default function PersonalFieldset(props) {
           type="text"
           name="cpf"
           id="cpf"
-          value={userCpf}
           onChange={handleChange}
         />
       </label>
@@ -63,7 +56,6 @@ export default function PersonalFieldset(props) {
           type="text"
           name="address"
           id="address"
-          value={userAddress}
           onChange={handleChange}
         />
       </label>
@@ -74,7 +66,6 @@ export default function PersonalFieldset(props) {
           type="text"
           name="city"
           id="city"
-          value={userCity}
           onChange={handleChange}
         />
       </label>
@@ -85,7 +76,6 @@ export default function PersonalFieldset(props) {
           type="text"
           name="state"
           id="state"
-          value={userState}
           onChange={handleChange}
         >
           {brazileanStates.map(({ key, value }) => (
