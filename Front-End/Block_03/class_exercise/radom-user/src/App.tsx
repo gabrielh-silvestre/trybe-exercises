@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import UserList from './components/functionalComponents/UserList';
+import UserListFunc from './components/functionalComponents/UserList';
+import UserListClass from './components/classComponents/UserList';
 
 function App() {
   return (
     <div className="App">
-      <UserList />
+      <UserListFunc />
+      <UserListClass />
     </div>
   );
 }
