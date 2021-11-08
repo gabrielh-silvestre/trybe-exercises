@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PersonalFieldset from './PersonalFieldSet';
+import PersonalFieldset from './PersonalFieldset';
 
 const initialPersonalForm = {
   name: '',
