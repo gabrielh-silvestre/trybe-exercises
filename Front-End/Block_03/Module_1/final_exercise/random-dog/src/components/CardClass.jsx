@@ -15,19 +15,18 @@ export default class CardClass extends Component {
     this.dogContructor = this.dogContructor.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.fetchDog = this.fetchDog.bind(this);
+    this.saveDogs = this.saveDogs.bind(this);
   }
 
   componentDidMount() {
-    this.fetchDog();
+    localStorage.getItem('dogs')
+      ? this.setState({ dogs: JSON.parse(localStorage.getItem('dogs'))})
+      : this.fetchDog();
   }
 
-  shouldComponentUpdate(_, nextState) {
-    return nextState.dogs.every(
-      ({ dogBreed }) => !dogBreed.includes('terrier')
-    );
+  componentDidUpdate() {
+    this.saveDogs();
   }
-
-  componentDidUpdate(_, prevState) {}
 
   handleClick() {
     this.fetchDog();
@@ -46,6 +45,11 @@ export default class CardClass extends Component {
 
       this.setState({ loading: false });
     });
+  }
+
+  saveDogs() {
+    const { dogs } = this.state;
+    localStorage.setItem('dogs', JSON.stringify(dogs));
   }
 
   dogContructor(data) {
