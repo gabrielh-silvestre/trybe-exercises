@@ -53,9 +53,11 @@ export default class CardClass extends Component {
   }
 
   dogContructor(data) {
+    const { dogName } = this.props;
     return {
       dogImage: data,
       dogBreed: data.match(dogBreedRegex)[0],
+      dogName,
     };
   }
 
@@ -67,7 +69,7 @@ export default class CardClass extends Component {
     ) : (
       <section>
         <Button callback={this.handleClick} btnText="Mais doguinhos" />
-        {dogs.map(({ dogImage, dogBreed }) => (
+        {dogs.map(({ dogImage, dogBreed, dogName }) => (
           <div key={dogImage}>
             <div>
               <img
@@ -78,7 +80,7 @@ export default class CardClass extends Component {
             </div>
             <div>
               <h2>{dogBreed}</h2>
-              <p>Dog Name</p>
+              <p>{dogName}</p>
             </div>
           </div>
         ))}
