@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Digimon from './Digimon';
 import App from './App';
 import data from './data';
 import userEvent from '@testing-library/user-event';
