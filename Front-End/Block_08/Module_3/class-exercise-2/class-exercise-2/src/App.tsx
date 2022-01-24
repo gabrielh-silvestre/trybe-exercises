@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
+
+import useArray from './hooks/useArray';
+
 import './App.css';
 
 function App() {
+  const [newTask, setNewTask] = useState('');
+  const { myArray } = useArray();
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    myArray.addItem(newTask);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          onChange={({ target: { value } }) => setNewTask(value)}
+        />
+        <button type="submit">Criar</button>
+      </form>
+
+      <ol>
+        {myArray.array.map((item, i) => (
+          <li key={i}>
+            {item}
+            <button onClick={() => myArray.removeItem(item)}>Delete</button>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }
