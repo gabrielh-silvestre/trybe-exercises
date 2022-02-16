@@ -28,3 +28,8 @@ services:
       - /var/lib/mysql
     networks:
       - my-networks
+  react:
+    build: ./exercise5
+    restart: "no"
+    ports:
+      - 8080:3000
