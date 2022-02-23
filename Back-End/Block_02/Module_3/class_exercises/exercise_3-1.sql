@@ -4,21 +4,21 @@
 -- 4. Mostre o título, ano de lançamento e duração do empréstimo de todos os filmes com a duração de empréstimo de 3 a 6 . Os resultados devem ser classificados em filmes com maior duração de empréstimo primeiro. Em caso de empate, ordene em ordem alfabética pelo título.
 -- 5. Monte um relatório que exiba o título e classificação dos 500 primeiros filmes direcionados para as classificações indicativas G, PG e PG-13 . Os resultados devem estar ordenados por título.
 
-SELECT first_name, last_name, email FROM sakila.customer
+/* 1 */ SELECT first_name, last_name, email FROM sakila.customer
 WHERE last_name IN ('hicks', 'crawford', 'henry', 'boyd', 'mason', 'morales', 'kennedy')
 ORDER BY first_name, last_name;
 
-SELECT email FROM sakila.customer
+/* 1 */ SELECT email FROM sakila.customer
 WHERE address_id BETWEEN (172) AND (176);
 
-SELECT COUNT(*) FROM sakila.payment
+/* 1 */ SELECT COUNT(*) FROM sakila.payment
 WHERE payment_date BETWEEN '2005-05-01' AND '2005-08-01';
 
-SELECT title, release_year, rental_duration FROM sakila.film
+/* 1 */ SELECT title, release_year, rental_duration FROM sakila.film
 WHERE rental_duration BETWEEN 3 AND 6
 ORDER BY rental_duration DESC, title;
 
-SELECT title, rating FROM sakila.film
+/* 1 */ SELECT title, rating FROM sakila.film
 WHERE rating IN ('G', 'PG', 'PG-13')
 ORDER BY title
 LIMIT 500;
