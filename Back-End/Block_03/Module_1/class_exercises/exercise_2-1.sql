@@ -9,10 +9,10 @@
   - Se não cair em nenhuma das classificações anteriores: "Proibido para menores de idade".
 */
 
-SELECT film_id, title, IF (title = 'ACE GOLDFINGER', 'Já assisti a esse filme', 'Não conheço o filme') AS 'conheço o filme?'
+/* 1 */ SELECT film_id, title, IF (title = 'ACE GOLDFINGER', 'Já assisti a esse filme', 'Não conheço o filme') AS 'conheço o filme?'
 FROM sakila.film;
 
-SELECT title, rating,
+/* 2 */ SELECT title, rating,
   CASE
     WHEN rating = 'G' THEN 'Livre para todos'
     WHEN rating = 'PG' THEN 'Não recomendado para menores de 10 anos'
