@@ -1,0 +1,21 @@
+{
+  "name": "module_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "imc": "node imc.js",
+    "velocidade": "node speed.js",
+    "sorteio": "node guessGame.js",
+    "factorial": "node factorial.js",
+    "fibonacci": "node fibonacci.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
