@@ -8,6 +8,7 @@
     "imc": "node imc.js",
     "velocidade": "node speed.js",
     "sorteio": "node guessGame.js",
+    "factorial": "node factorial.js",
     "start": "node index.js"
   },
   "keywords": [],
