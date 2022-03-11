@@ -103,3 +103,64 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 14-2: _RTL - Mocks e Inputs_
 - [X] 14-3: _RTL - Testando React Router_
 - [X] 14-4: _[Projeto - Testes em React]()_
+
+##### Bloco 15: Gerenciamento de estado com Redux
+
+- [x] 15-1: _Introdução ao Redux - O estado global da aplicação_
+- [x] 15-2: _Usando o Redux no React_
+- [x] 15-3: _Usando o Redux no React - Prática_
+- [x] 15-4: _Usando o Redux no React - Actions Assíncronas_
+- [x] 15-5: _Testes em React-Redux_
+- [x] 15-6: _[Projeto - Trybe Wallet]()_
+
+##### Bloco 16: Projeto Jogo de Trivia
+
+- [x] 16-1: _[Projeto - Jogo de Trivia]()_
+
+##### Bloco 17: Context API e React Hooks
+
+- [x] 17-1: _Context API do React_
+- [x] 17-2: _React Hooks - useState e useContext_
+- [x] 17-3: _React Hooks - useEffect e Hooks customizados_
+- [x] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+
+##### Bloco 18: Projeto App de Receitas
+
+- [x] 18-1: _[Projeto - App de Receitas]()_
+
+
+## Desenvolvimento Back-end :hourglass_flowing_sand:
+
+##### Bloco 19: Docker: Utilizando Containers
+
+- [x] 19-1: _Introdução - Back-end_
+- [x] 19-1: _Utilizando Containers - Docker_
+- [X] 19-2: _Manipulação e Criação de Imagens no Docker_
+- [X] 19-3: _Orquestrando Containers com Docker Compose_
+- [X] 19-4: _[Projeto - Docker Todo-List]()_
+
+##### Bloco 20: Introdução à SQL
+
+- [X] 20-1: _Introdução - Bancos de dados relacionais_
+- [X] 20-1: _Banco de dados SQL_
+- [X] 20-2: _Encontrando dados em um banco de dados_
+- [X] 20-3: _Filtrando dados de forma específica_
+- [X] 20-4: _Manipulando tabelas_
+- [X] 20-5: _[Projeto - All For One]()_
+
+##### Bloco 21: Funções SQL, JOINs e Normalização
+
+- [X] 21-1: _Funções mais usadas no SQL_
+- [X] 21-2: _Descomplicando JOINs_
+- [X] 21-3: _Transformando ideias em um modelo de banco de dados_
+- [X] 21-4: _[Aula ao vivo + Projeto - One For All]()_
+
+##### Bloco 22: Introdução ao desenvolvimento Web com Node.js
+
+- [X] 22-1: _Intro - Node.js_
+- [X] 22-1: _Node.js - Um motor JavaScript_
+- [ ] 22-2: _Node.js - Fluxo Assíncrono_
+- [ ] 22-3: _Mocha, Chai e Sinon - Testes de Back-end com Node.js_
+- [ ] 22-4: _Express - HTTP com Node.js_
+- [ ] 22-5: _Express - Middlewares_
+- [ ] 22-6: _[Projeto - Talker Manager]()_
