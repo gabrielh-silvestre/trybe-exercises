@@ -14,6 +14,7 @@ const servicesFiles = [
   () => require('./speed'),
   () => require('./guessGame'),
   () => require('./factorial'),
+  () => require('./fibonacci')
 ];
 
 console.log(`Você selecionou ${services[selectedService]}`);
