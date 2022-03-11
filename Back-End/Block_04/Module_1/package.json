@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "imc": "node imc.js",
-    "velocidade": "node speed.js"
+    "velocidade": "node speed.js",
+    "sorteio": "node guessGame.js"
   },
   "keywords": [],
   "author": "",
