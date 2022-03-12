@@ -10,7 +10,17 @@ const getUserInfo = () => {
   }
 }
 
-const calcAvgSpeed = (distance, time) => `A velocidade média é de ${distance / time} Km/h`;
+const calcAvgSpeed = (distance, time) => Math.round(distance / time);
 
-const { distance, time } = getUserInfo();
-console.log(calcAvgSpeed(distance, time));
+const executeServiceSpeed = () => {
+  const { distance, time } = getUserInfo();
+  const avgSpeed = calcAvgSpeed(distance, time);
+
+  console.log( `A velocidade média é de ${avgSpeed} Km/h`);
+}
+
+
+module.exports = {
+  calcAvgSpeed,
+  executeServiceSpeed,
+}

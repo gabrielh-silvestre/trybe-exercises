@@ -10,11 +10,11 @@ const services = [
 const selectedService = readlineSync.keyInSelect(services, 'O que quer fazer?');
 
 const servicesFiles = [
-  () => require('./imc'),
-  () => require('./speed'),
+  () => require('./imc').executeServiceIMC(),
+  () => require('./speed').executeServiceSpeed(),
   () => require('./guessGame'),
-  () => require('./factorial'),
-  () => require('./fibonacci')
+  () => require('./factorial').executeServiceFactorial(),
+  () => require('./fibonacci').executeServiceFibonacci(),
 ];
 
 console.log(`Você selecionou ${services[selectedService]}`);

@@ -31,7 +31,14 @@ const getClassificationIMC = (imc) => {
   }
 }
 
-const { weight, height } = getUserInfo();
-const imc = calcIMC(height, weight);
+const executeServiceIMC = () => {
+  const { weight, height } = getUserInfo();
+  const imc = calcIMC(height, weight);
+  console.log(getClassificationIMC(imc));
+}
 
-console.log(getClassificationIMC(imc));
+module.exports = {
+  calcIMC,
+  getClassificationIMC,
+  executeServiceIMC,
+};
