@@ -24,17 +24,8 @@ describe('Test isPositive', () => {
   });
 
   it('4. Function should return right mensage', () => {
-    const NUMBERS = [1, 3, -5, -12, -312, 0];
-
-    NUMBERS.forEach((number) => {
-      switch (true) {
-        case number > 0:
-          expect(isPositive(number)).to.be.equal('positivo');
-        case number < 0:
-          expect(isPositive(number)).to.be.equal('negativo');
-        default:
-          expect(isPositive(number)).to.be.equal('neutro');
-      }
-    });
+    expect(isPositive(50)).to.be.equal('positivo');
+    expect(isPositive(-48)).to.be.equal('negativo');
+    expect(isPositive(0)).to.be.equal('neutro');
   });
 });
