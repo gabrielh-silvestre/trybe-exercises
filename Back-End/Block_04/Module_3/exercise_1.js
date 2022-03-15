@@ -1,8 +1,12 @@
 const isPositive = (n) => {
+  const number = Number(n);
+
+  if (Number.isNaN(number)) return 'o valor deve ser um número';
+
   switch (true) {
-    case n > 0:
+    case number > 0:
       return 'positivo';
-    case n < 0:
+    case number < 0:
       return 'negativo';
     default:
       return 'neutro';
