@@ -20,7 +20,7 @@ const centerInformation = async () => {
 
   const solvedArr = await Promise.all(tempArr);
 
-  await fs.writeFile('./exercise_5/fileAll.txt', solvedArr.join(' '));
+  fs.writeFile('./exercise_5/fileAll.txt', solvedArr.join(' '));
 }
 
 centerInformation();
