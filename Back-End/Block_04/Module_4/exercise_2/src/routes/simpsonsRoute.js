@@ -1,4 +1,6 @@
 const express = require('express');
+
+const { validateToken } = require('../controllers/authController');
 const {
   listAll,
   findOne,
@@ -28,7 +30,7 @@ simpsonsRoute.get('/:id', async (req, res) => {
   return res.status(200).json(simpson);
 });
 
-simpsonsRoute.post('/', async (req, res) => {
+simpsonsRoute.post('/', validateToken, async (req, res) => {
   const { id, name } = req.body;
   const { message, status } = await createCharacter(id, name);
 
