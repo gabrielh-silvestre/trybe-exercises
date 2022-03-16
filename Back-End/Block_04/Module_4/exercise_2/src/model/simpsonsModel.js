@@ -9,6 +9,15 @@ const getSimpsons = async () => {
   }
 };
 
+const addSimpson = async (newData) => {
+  try {
+    await fs.writeFile('./src/model/simpsons.json', newData);
+  } catch (err) {
+    throw new Error('Failed to create new Simpson character');
+  }
+};
+
 module.exports = {
   getSimpsons,
+  addSimpson,
 };
