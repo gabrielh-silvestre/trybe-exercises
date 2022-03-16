@@ -7,4 +7,4 @@ pingRoute.get('/', (_req, res) => {
 
 module.exports = {
   pingRoute,
-}
+};
