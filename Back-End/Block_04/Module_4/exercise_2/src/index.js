@@ -4,6 +4,7 @@ const { simpsonsRoute } = require('./routes/simpsonsRoute');
 const api = express();
 const PORT = 3001;
 
+api.use(express.json());
 api.use('/simpsons', simpsonsRoute);
 
 api.listen(PORT, () => {
