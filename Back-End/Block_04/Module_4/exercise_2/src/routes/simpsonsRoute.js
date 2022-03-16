@@ -1,5 +1,9 @@
 const express = require('express');
-const { listAll, findOne } = require('../services/simpsonsServices');
+const {
+  listAll,
+  findOne,
+  createCharacter,
+} = require('../services/simpsonsServices');
 
 const simpsonsRoute = express.Router();
 
@@ -22,6 +26,17 @@ simpsonsRoute.get('/:id', async (req, res) => {
   }
 
   return res.status(200).json(simpson);
+});
+
+simpsonsRoute.post('/', async (req, res) => {
+  const { id, name } = req.body;
+  const { message, status } = await createCharacter(id, name);
+
+  if (message) {
+    return res.status(status).json({ message });
+  }
+
+  return res.status(status).send();
 });
 
 module.exports = {
