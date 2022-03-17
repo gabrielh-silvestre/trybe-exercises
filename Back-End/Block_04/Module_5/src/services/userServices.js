@@ -27,7 +27,7 @@ const isEmailValid = (email) => {
   return haveFormat(email, EMAIL_REGEX);
 };
 
-const validData = ({ username, email, password }) => {
+const validRegister = ({ username, email, password }) => {
   const FAIL_STATUS = 400;
   const SUCCES_STATUS = 201;
 
@@ -45,6 +45,23 @@ const validData = ({ username, email, password }) => {
   }
 };
 
+const validLogin = ({ email, password }) => {
+  const FAIL_STATUS = 400;
+  const SUCCES_STATUS = 200;
+
+  switch (false) {
+    case email || password:
+      return { status: FAIL_STATUS, message: 'Invalid email and passsword' };
+    case isEmailValid(email):
+      return { status: FAIL_STATUS, message: 'Invalid email' };
+    case isPasswordValid(password):
+      return { status: FAIL_STATUS, message: 'Invalid passsword' };
+    default:
+      return { status: SUCCES_STATUS, token: '86567349784e' };
+  }
+};
+
 module.exports = {
-  validData,
+  validRegister,
+  validLogin,
 };
