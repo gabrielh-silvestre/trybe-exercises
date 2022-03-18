@@ -1,10 +1,11 @@
 const express = require('express');
 
-const { showPost } = require('../controllers/postController');
+const { showPost, listAllPosts } = require('../controllers/postController');
 
 const postRouter = express.Router();
 
 postRouter.get('/:id', showPost);
+postRouter.get('/', listAllPosts);
 
 module.exports = {
   postRouter,

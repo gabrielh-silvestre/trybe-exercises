@@ -1,4 +1,4 @@
-const { findPost } = require('../services/postsService');
+const { findPost, getAllPosts } = require('../services/postsService');
 
 const showPost = (req, res) => {
   const { id } = req.params;
@@ -11,6 +11,13 @@ const showPost = (req, res) => {
   return res.status(status).json({ post });
 };
 
+const listAllPosts = (_req, res) => {
+  const { status, posts } = getAllPosts();
+
+  return res.status(status).json({ posts });
+};
+
 module.exports = {
   showPost,
+  listAllPosts,
 };
