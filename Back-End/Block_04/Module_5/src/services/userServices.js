@@ -51,7 +51,7 @@ const validLogin = ({ email, password }) => {
   const SUCCES_STATUS = 200;
 
   switch (false) {
-    case email || password:
+    case isDefined(email, password):
       return { status: FAIL_STATUS, message: 'Invalid email and passsword' };
     case isEmailValid(email):
       return { status: FAIL_STATUS, message: 'Invalid email' };
