@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests --exit",
+    "test:coverage": "nyc npm test",
     "dev": "nodemon src/api/server.js"
   },
   "keywords": [],
@@ -20,6 +21,7 @@
     "chai-http": "^4.3.0",
     "mocha": "^9.2.2",
     "nodemon": "^2.0.15",
-    "sinon": "^13.0.1"
+    "sinon": "^13.0.1",
+    "nyc": "^15.1.0"
   }
 }
