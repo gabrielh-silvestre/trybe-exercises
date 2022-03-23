@@ -5,7 +5,7 @@ const auth = (req, res, next) => {
   const { status, message } = validToken(authorization);
 
   if (message) {
-    return res.status(status).json(message);
+    return res.status(status).json({ message });
   }
 
   next();
