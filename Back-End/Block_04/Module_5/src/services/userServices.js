@@ -1,3 +1,4 @@
+const isDefined = (...values) => values.every((v) => v !== undefined);
 const isMoreThenMinLength = (string, minLength) => string.length >= minLength;
 const isLessThenMaxLength = (string, maxLength) => string.length <= maxLength;
 const haveFormat = (string, regexFormat) => regexFormat.test(string);
@@ -32,7 +33,7 @@ const validRegister = ({ username, email, password }) => {
   const SUCCES_STATUS = 201;
 
   switch (false) {
-    case username || email || password:
+    case isDefined(username, email, password):
       return { status: FAIL_STATUS, message: 'Invalid data' };
     case isUsernameValid(username):
       return { status: FAIL_STATUS, message: 'Invalid username' };
