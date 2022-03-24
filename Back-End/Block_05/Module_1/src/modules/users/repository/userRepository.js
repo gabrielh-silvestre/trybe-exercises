@@ -25,5 +25,6 @@ const findByEmail = async (email) => {
 module.exports = {
   userRepository: {
     create,
+    findByEmail,
   },
 };
