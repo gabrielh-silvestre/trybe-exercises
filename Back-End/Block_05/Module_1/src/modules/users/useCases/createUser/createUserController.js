@@ -4,9 +4,13 @@ const createUserController = async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
   const newUser = { firstName, lastName, email, password };
 
-  const createdUser = await createUserUseCase(newUser);
+  const { code, message, data } = await createUserUseCase(newUser);
 
-  return res.status(201).json(createdUser);
+  if (message) {
+    return res.status(code).json({ message });
+  }
+
+  return res.status(code).json(data);
 };
 
 module.exports = { createUserController };
