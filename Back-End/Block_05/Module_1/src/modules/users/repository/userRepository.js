@@ -37,9 +37,19 @@ const findById = async (id) => {
   return user;
 };
 
+const update = async (userToUpdate) => {
+  const { id, firstName, lastName, email, password } = userToUpdate;
+
+  await connection.execute(
+    'UPDATE Users SET first_name = ?, last_name = ?, email = ?, password = ? WHERE id = ?',
+    [firstName, lastName, email, password, id]
+  );
+}
+
 module.exports = {
   userRepository: {
     create,
+    update,
     findAll,
     findByEmail,
     findById,
