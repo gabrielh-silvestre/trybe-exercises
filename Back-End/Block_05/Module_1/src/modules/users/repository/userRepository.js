@@ -3,12 +3,12 @@ const { connection } = require('../../../connection');
 const create = async (newUser) => {
   const { firstName, lastName, email, password } = newUser;
 
-  await connection.execute(
+  const [{ insertId }] = await connection.execute(
     'INSERT INTO Users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)',
     [firstName, lastName, email, password]
   );
 
-  const createdUser = findByEmail(email);
+  const createdUser = { id: insertId, ...newUser };
 
   return createdUser;
 };
