@@ -28,10 +28,20 @@ const findByEmail = async (email) => {
   return user;
 };
 
+const findById = async (id) => {
+  const [user] = await connection.execute(
+    'SELECT * FROM Users WHERE id = ?',
+    [id]
+  );
+
+  return user;
+};
+
 module.exports = {
   userRepository: {
     create,
     findAll,
     findByEmail,
+    findById,
   },
 };
