@@ -13,6 +13,12 @@ const create = async (newUser) => {
   return createdUser;
 };
 
+const findAll = async () => {
+  const [users] = await connection.execute('SELECT * FROM Users');
+
+  return users;
+};
+
 const findByEmail = async (email) => {
   const [user] = await connection.execute(
     'SELECT * FROM Users WHERE email = ?',
@@ -25,6 +31,7 @@ const findByEmail = async (email) => {
 module.exports = {
   userRepository: {
     create,
+    findAll,
     findByEmail,
   },
 };
