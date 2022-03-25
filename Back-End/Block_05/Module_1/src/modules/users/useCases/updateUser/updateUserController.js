@@ -1,17 +1,16 @@
 const { updateUserUseCase } = require('./updateUserUseCase');
 
-const updateUserController = async (req, res) => {
+const updateUserController = async (req, res, next) => {
   const { id } = req.params;
   const { firstName, lastName, email, password } = req.body;
   const userToUpdate = { id, firstName, lastName, email, password };
 
-  const { code, message, data } = await updateUserUseCase(userToUpdate);
-
-  if (message) {
-    return res.status(code).json({ message });
+  try {
+    const { code, data } = await updateUserUseCase(userToUpdate);
+    return res.status(code).json(data);
+  } catch (err) {
+    next(err);
   }
-
-  return res.status(code).json(data);
 };
 
 module.exports = { updateUserController };

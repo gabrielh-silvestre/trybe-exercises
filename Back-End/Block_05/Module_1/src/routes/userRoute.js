@@ -1,5 +1,7 @@
 const express = require('express');
 
+const { validateUserData } = require('../middleware/validData');
+
 const {
   createUserController,
 } = require('../modules/users/useCases/createUser/createUserController');
@@ -15,8 +17,8 @@ const {
 
 const userRoute = express.Router();
 
-userRoute.post('/', createUserController);
-userRoute.put('/:id', updateUserController);
+userRoute.post('/', validateUserData, createUserController);
+userRoute.put('/:id', validateUserData, updateUserController);
 userRoute.get('/:id', findUserByIdController);
 userRoute.get('/', findAllUsersController);
 
