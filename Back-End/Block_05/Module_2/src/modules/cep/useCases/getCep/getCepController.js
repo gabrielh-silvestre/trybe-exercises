@@ -7,7 +7,7 @@ const getCepController = async (req, res, next) => {
     const findedCep = await getCepUseCase(cep);
     return res.status(200).json(findedCep);
   } catch (err) {
-    next({ code: 'notFound', message: 'CEP não encontrado' });
+    next({ code: 'notFound', message: err.message });
   }
 };
 
