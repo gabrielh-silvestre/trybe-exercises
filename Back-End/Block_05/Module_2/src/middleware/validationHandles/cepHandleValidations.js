@@ -1,4 +1,7 @@
-const { isCepValid } = require('../../helpers/validation/cepValidation');
+const {
+  isCepValid,
+  cepAlreadyExists,
+} = require('../../helpers/validation/cepValidation');
 
 const validCep = (req, _res, next) => {
   const { cep } = req.params;
@@ -11,6 +14,17 @@ const validCep = (req, _res, next) => {
   }
 };
 
+const uniqueCep = async (req, _res, next) => {
+  const { cep } = req.params;
+
+  try {
+    cepAlreadyExists(cep);
+  } catch (err) {
+    next({ code: 'invalidData', message: err.message });
+  }
+};
+
 module.exports = {
   validCep,
+  uniqueCep,
 };
