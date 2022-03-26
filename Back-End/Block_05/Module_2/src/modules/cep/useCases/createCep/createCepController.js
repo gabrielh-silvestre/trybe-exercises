@@ -5,10 +5,13 @@ const createCepController = async (req, res, next) => {
   const newCep = { cep, logradouro, bairro, localidade, uf };
 
   try {
-    const createdCep = await createCepUseCase(newCep);
-    return res.status(201).json(createdCep);
+    const { code, message } = await createCepUseCase(newCep);
+
+    if (code) return next({ code, message });
+
+    return res.status(201).json(newCep);
   } catch (err) {
-    next(err);
+    return next({ code: 'internalError', message: err.message });
   }
 };
 

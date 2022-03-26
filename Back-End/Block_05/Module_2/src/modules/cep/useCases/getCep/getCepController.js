@@ -4,10 +4,13 @@ const getCepController = async (req, res, next) => {
   const { cep } = req.params;
 
   try {
-    const findedCep = await getCepUseCase(cep);
+    const { code, message, findedCep } = await getCepUseCase(cep);
+
+    if (code) return next({ code, message });
+
     return res.status(200).json(findedCep);
   } catch (err) {
-    next({ code: 'notFound', message: err.message });
+    return next({ code: 'internalError', message: err.message });
   }
 };
 
