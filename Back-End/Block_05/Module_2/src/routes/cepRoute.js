@@ -2,7 +2,7 @@ const express = require('express');
 
 const {
   validCep,
-  uniqueCep,
+  validateNewCep,
 } = require('../middleware/validationHandles/cepHandleValidations');
 
 const {
@@ -15,7 +15,7 @@ const {
 const cepRouter = express.Router();
 
 cepRouter.get('/:cep', validCep, getCepController);
-cepRouter.post('/', validCep, uniqueCep, createCepController);
+cepRouter.post('/', validCep, validateNewCep, createCepController);
 
 module.exports = {
   cepRouter,

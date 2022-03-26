@@ -3,6 +3,12 @@ const { haveFormat, isDefinied } = require('./genericValidations');
 
 const CEP_FORMAT = new RegExp(/\d{5}-?\d{3}/);
 
+const isAddressValid = async ({ cep, logradouro, bairro, localidade, uf }) => {
+  if (!isDefinied(cep, logradouro, bairro, localidade, uf)) {
+    throw new Error('Todos os campos são obrigatórios');
+  }
+};
+
 const isCepValid = (cep) => {
   if (!isDefinied(cep)) {
     throw new Error('CEP é obrigatório');
@@ -22,6 +28,7 @@ const cepAlreadyExists = async (cep) => {
 };
 
 module.exports = {
+  isAddressValid,
   isCepValid,
   cepAlreadyExists,
 };
