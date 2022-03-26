@@ -1,3 +1,4 @@
+const cepModel = require('../../modules/cep/model/cepModel');
 const { haveFormat, isDefinied } = require('./genericValidations');
 
 const CEP_FORMAT = new RegExp(/\d{5}-?\d{3}/);
@@ -12,6 +13,15 @@ const isCepValid = (cep) => {
   }
 };
 
+const cepAlreadyExists = async (cep) => {
+  const findedCep = await cepModel.findOne(cep);
+
+  if (findedCep) {
+    throw new Error('CEP já cadastrado');
+  }
+};
+
 module.exports = {
   isCepValid,
+  cepAlreadyExists,
 };
