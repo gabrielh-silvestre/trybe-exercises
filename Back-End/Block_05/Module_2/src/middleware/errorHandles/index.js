@@ -18,8 +18,17 @@ const handleNotFound = (err, _req, res, next) => {
   next(err);
 };
 
+const handleConflict = (err, _req, res, next) => {
+  if (err.code === 'conflict') {
+    return res.status(409).json({ message: err.message });
+  }
+
+  next(err);
+};
+
 module.exports = {
   handleIternalError,
   handleInvalidData,
   handleNotFound,
+  handleConflict,
 };
