@@ -78,24 +78,24 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
  
 - [X] 10-1: _'Hello, world!' no React!_
 - [X] 10-2: _Componentes React_
-- [X] 10-3: _[Projeto - Sistema Solar](https://github.com/tryber/sd-016-b-project-solar-system/pull/3)_
+- [X] 10-3: _[Projeto - Sistema Solar](./Front-End/Block_01/Solar_System/)_
  
 ##### Bloco 11: Componentes com Estado, Eventos e Formulários com React
  
 - [X] 11-1: _Components com estado e eventos_
 - [X] 11-2: _Formulários no React_
-- [X] 11-3: _[Projeto - Tryunfo](http://tryunfo.vercel.app)_
+- [X] 11-3: _[Projeto - Tryunfo](./Front-End/Block_02/Tryunfo/)_
  
 ##### Bloco 12: Ciclo de Vida de Componentes e React Router
  
 - [X] 12-2: _Ciclo de vida de componentes_
 - [X] 12-3: _React Router_
-- [X] 12-4: _[Projeto - TrybeTunes]()_
+- [X] 12-4: _[Projeto - TrybeTunes](./Front-End/Block_03/Trybetunes/)_
  
 ##### Bloco 13: Metodologias Ágeis
  
 - [X] 13-1: _Metodologias Ágeis_
-- [X] 13-2: _[Projeto - Frontend Online Store]()_
+- [X] 13-2: _[Projeto - Frontend Online Store](./Front-End/Block_05/Frontend_Online_Store/)_
  
 ##### Bloco 14: Testes em React
  
@@ -111,22 +111,22 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 15-3: _Usando o Redux no React - Prática_
 - [x] 15-4: _Usando o Redux no React - Actions Assíncronas_
 - [x] 15-5: _Testes em React-Redux_
-- [x] 15-6: _[Projeto - Trybe Wallet]()_
+- [x] 15-6: _[Projeto - Trybe Wallet](./Front-End/Block_06/Trybe_Wallet/)_
 
 ##### Bloco 16: Projeto Jogo de Trivia
 
-- [x] 16-1: _[Projeto - Jogo de Trivia]()_
+- [x] 16-1: _[Projeto - Jogo de Trivia](./Front-End/Block_07/Trivia/)_
 
 ##### Bloco 17: Context API e React Hooks
 
 - [x] 17-1: _Context API do React_
 - [x] 17-2: _React Hooks - useState e useContext_
 - [x] 17-3: _React Hooks - useEffect e Hooks customizados_
-- [x] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+- [x] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks](./Front-End/Block_08/StarWars_DataTable/)_
 
 ##### Bloco 18: Projeto App de Receitas
 
-- [x] 18-1: _[Projeto - App de Receitas]()_
+- [x] 18-1: _[Projeto - App de Receitas](./Front-End/Block_09/Recipe_App/)_
 
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
