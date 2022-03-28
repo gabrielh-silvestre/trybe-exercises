@@ -23,7 +23,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 4-2: _JavaScript - Array e loop For_
 - [x] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [x] 4-4: _JavaScript - Objetos e funções_
-- [x] 4-5: _[Projeto - Playground Functions](https://github.com/tryber/sd-016-b-project-playground-functions/pull/15)_
+- [x] 4-5: _[Projeto - Playground Functions](./Fundamentals/Block_04/Playground_Functions/)_
 
 
 ##### Bloco 5: Introdução - JavaScript - Projetos
@@ -32,10 +32,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
 - [x] 5-3: _JavaScript - Eventos_
 - [x] 5-4: _JavaScript - Web Storage_
-- [x] 5-5: _[Projeto - Meme Generator](https://github.com/tryber/sd-016-b-project-meme-generator/pull/6)_
+- [x] 5-5: _[Projeto - Meme Generator](./Fundamentals/Block_05/Meme_Generator/)_
 - [x] 5-6: _[Projeto - Arte com Pixels](https://gabrielh-silvestre.github.io/pixel_art/index.html)_
 - [x] 5-7: _[Projeto - Lista de tarefas](https://gabrielh-silvestre.github.io/todo_list/index.html)_
-- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/tryber/sd-016-b-project-color-guess/pull/4)_
+- [x] 5-7: _[Projeto - Adivinhe a Cor](./Fundamentals/Block_05/Color_Guess/)_
 - [ ] 5-7: _[Projeto - Carta Misteriosa]()_
 
 
@@ -46,7 +46,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 6-3: _CSS Flexbox - Part 1_
 - [X] 6-4: _CSS Flexbox - Part 2_
 - [X] 6-5: _CSS Responsivo - Mobile First_
-- [X] 6-6: _[Projeto - Trybewarts](https://gabrielh-silvestre.github.io/trybewarts/index.html)_
+- [X] 6-6: _[Projeto - Trybewarts](./Fundamentals/Block_06/Trybewarts/)_
  
  
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
@@ -54,7 +54,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [X] 7-2: _JavaScript ES6 - Objects_
 - [X] 7-3: _Testes unitários em JavaScript_
-- [X] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/tryber/sd-016-b-project-js-unit-tests/pull/20)_
+- [X] 7-4: _[Projeto - JavaScript Testes Unitários]()_
 
 ##### Bloco 8: JavaScript ES6
  
@@ -62,14 +62,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
 - [X] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
 - [X] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
-- [X] 8-5: _[Projeto - Zoo functions](https://github.com/tryber/sd-016-b-project-zoo-functions/pull/8)_
+- [X] 8-5: _[Projeto - Zoo functions](./Fundamentals/Block_08/Zoo_Functions/)_
  
 ##### Bloco 9: Assincronicidade & Callbacks
  
 - [X] 9-1: _JavaScript Assíncrono e Callbacks_
 - [X] 9-2: _JavaScript Fetch API e async/await_
 - [X] 9-3: _JavaScript Testes Assíncronos_
-- [X] 9-4: _[Projeto - Carrinho de Compras](https://gabrielh-silvestre.github.io/shopping_cart/index.html)_
+- [X] 9-4: _[Projeto - Carrinho de Compras](./Fundamentals/Block_09/Shopping_Cart/)_
 
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
