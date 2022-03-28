@@ -1,0 +1,54 @@
+.answersContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.answersContainer button {
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 6px;
+  margin: 1rem 0;
+  height: 2rem;
+  padding: 0 2rem;
+  transition: 0.5s;
+}
+
+.answersContainer button:first-of-type {
+  margin-top: 2rem;
+}
+
+.answersContainer button:disabled {
+  font-weight: 600;
+  color: var(--white);
+}
+
+.correctAnswer:disabled {
+  background-color: var(--green);
+}
+
+.wrongAnswer:disabled {
+  background-color: var(--accent);
+}
+
+@media screen and (min-width: 1024px) {
+
+  .answersContainer {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 100%;
+  }
+
+  .answersContainer div:first-of-type {
+    grid-column: span 2 / span 2;
+  }
+
+  .answersContainer button {
+    height: 4rem;
+  }
+
+  .answersContainer button:first-of-type {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,18 @@
+.container {
+  background-color: var(--background);
+  height: 100vh;
+  padding: 1rem;
+}
+
+.container div:last-child {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+
+  .container {
+    padding: 0 14rem;
+  }
+}

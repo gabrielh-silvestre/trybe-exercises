@@ -23,7 +23,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 4-2: _JavaScript - Array e loop For_
 - [x] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [x] 4-4: _JavaScript - Objetos e funções_
-- [x] 4-5: _[Projeto - Playground Functions](https://github.com/tryber/sd-016-b-project-playground-functions/pull/15)_
+- [x] 4-5: _[Projeto - Playground Functions](./Fundamentals/Block_04/Playground_Functions/)_
 
 
 ##### Bloco 5: Introdução - JavaScript - Projetos
@@ -32,10 +32,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
 - [x] 5-3: _JavaScript - Eventos_
 - [x] 5-4: _JavaScript - Web Storage_
-- [x] 5-5: _[Projeto - Meme Generator](https://github.com/tryber/sd-016-b-project-meme-generator/pull/6)_
+- [x] 5-5: _[Projeto - Meme Generator](./Fundamentals/Block_05/Meme_Generator/)_
 - [x] 5-6: _[Projeto - Arte com Pixels](https://gabrielh-silvestre.github.io/pixel_art/index.html)_
 - [x] 5-7: _[Projeto - Lista de tarefas](https://gabrielh-silvestre.github.io/todo_list/index.html)_
-- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/tryber/sd-016-b-project-color-guess/pull/4)_
+- [x] 5-7: _[Projeto - Adivinhe a Cor](./Fundamentals/Block_05/Color_Guess/)_
 - [ ] 5-7: _[Projeto - Carta Misteriosa]()_
 
 
@@ -46,7 +46,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 6-3: _CSS Flexbox - Part 1_
 - [X] 6-4: _CSS Flexbox - Part 2_
 - [X] 6-5: _CSS Responsivo - Mobile First_
-- [X] 6-6: _[Projeto - Trybewarts](https://gabrielh-silvestre.github.io/trybewarts/index.html)_
+- [X] 6-6: _[Projeto - Trybewarts](./Fundamentals/Block_06/Trybewarts/)_
  
  
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
@@ -54,7 +54,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [X] 7-2: _JavaScript ES6 - Objects_
 - [X] 7-3: _Testes unitários em JavaScript_
-- [X] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/tryber/sd-016-b-project-js-unit-tests/pull/20)_
+- [X] 7-4: _[Projeto - JavaScript Testes Unitários]()_
 
 ##### Bloco 8: JavaScript ES6
  
@@ -62,14 +62,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
 - [X] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
 - [X] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
-- [X] 8-5: _[Projeto - Zoo functions](https://github.com/tryber/sd-016-b-project-zoo-functions/pull/8)_
+- [X] 8-5: _[Projeto - Zoo functions](./Fundamentals/Block_08/Zoo_Functions/)_
  
 ##### Bloco 9: Assincronicidade & Callbacks
  
 - [X] 9-1: _JavaScript Assíncrono e Callbacks_
 - [X] 9-2: _JavaScript Fetch API e async/await_
 - [X] 9-3: _JavaScript Testes Assíncronos_
-- [X] 9-4: _[Projeto - Carrinho de Compras](https://gabrielh-silvestre.github.io/shopping_cart/index.html)_
+- [X] 9-4: _[Projeto - Carrinho de Compras](./Fundamentals/Block_09/Shopping_Cart/)_
 
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
@@ -78,24 +78,24 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
  
 - [X] 10-1: _'Hello, world!' no React!_
 - [X] 10-2: _Componentes React_
-- [X] 10-3: _[Projeto - Sistema Solar](https://github.com/tryber/sd-016-b-project-solar-system/pull/3)_
+- [X] 10-3: _[Projeto - Sistema Solar](./Front-End/Block_01/Solar_System/)_
  
 ##### Bloco 11: Componentes com Estado, Eventos e Formulários com React
  
 - [X] 11-1: _Components com estado e eventos_
 - [X] 11-2: _Formulários no React_
-- [X] 11-3: _[Projeto - Tryunfo](http://tryunfo.vercel.app)_
+- [X] 11-3: _[Projeto - Tryunfo](./Front-End/Block_02/Tryunfo/)_
  
 ##### Bloco 12: Ciclo de Vida de Componentes e React Router
  
 - [X] 12-2: _Ciclo de vida de componentes_
 - [X] 12-3: _React Router_
-- [X] 12-4: _[Projeto - TrybeTunes]()_
+- [X] 12-4: _[Projeto - TrybeTunes](./Front-End/Block_03/Trybetunes/)_
  
 ##### Bloco 13: Metodologias Ágeis
  
 - [X] 13-1: _Metodologias Ágeis_
-- [X] 13-2: _[Projeto - Frontend Online Store]()_
+- [X] 13-2: _[Projeto - Frontend Online Store](./Front-End/Block_05/Frontend_Online_Store/)_
  
 ##### Bloco 14: Testes em React
  
@@ -111,22 +111,22 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 15-3: _Usando o Redux no React - Prática_
 - [x] 15-4: _Usando o Redux no React - Actions Assíncronas_
 - [x] 15-5: _Testes em React-Redux_
-- [x] 15-6: _[Projeto - Trybe Wallet]()_
+- [x] 15-6: _[Projeto - Trybe Wallet](./Front-End/Block_06/Trybe_Wallet/)_
 
 ##### Bloco 16: Projeto Jogo de Trivia
 
-- [x] 16-1: _[Projeto - Jogo de Trivia]()_
+- [x] 16-1: _[Projeto - Jogo de Trivia](./Front-End/Block_07/Trivia/)_
 
 ##### Bloco 17: Context API e React Hooks
 
 - [x] 17-1: _Context API do React_
 - [x] 17-2: _React Hooks - useState e useContext_
 - [x] 17-3: _React Hooks - useEffect e Hooks customizados_
-- [x] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+- [x] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks](./Front-End/Block_08/StarWars_DataTable/)_
 
 ##### Bloco 18: Projeto App de Receitas
 
-- [x] 18-1: _[Projeto - App de Receitas]()_
+- [x] 18-1: _[Projeto - App de Receitas](./Front-End/Block_09/Recipe_App/)_
 
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
