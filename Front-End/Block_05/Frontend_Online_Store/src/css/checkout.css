@@ -1,0 +1,116 @@
+.section-productReview-container {
+  border: solid 1px rgb(235, 229, 229);
+  margin: 2%;
+  min-height: 50px;
+}
+
+h3 {
+  margin: 2%;
+}
+
+h4 {
+  margin: 5%;
+}
+
+.itemForReview-container {
+  border-bottom: solid 1px rgb(245, 240, 240);
+  display: flex;
+  margin: 2%;
+}
+
+.thumbnail {
+  margin: 2%;
+}
+
+.product-title {
+  align-items: center;
+  display: flex;
+  margin-left: 2%;
+  max-width: 25%;
+}
+
+.quantity {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-width: 10%;
+}
+
+.price {
+  align-items: center;
+  display: flex;
+  justify-content: right;
+  min-width: 10%;
+}
+
+.total-price {
+  background-color: rgb(247, 242, 242);
+  border: solid 1px rgb(236, 232, 232);
+  margin: 4%;
+  padding: 2%;
+  text-align: center;
+}
+
+.total {
+  margin-right: 3%;
+}
+
+.buyer-information-container {
+  border: solid 1px rgb(235, 229, 229);
+  margin: 2%;
+  min-height: 50px;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form input {
+  flex-grow: 1;
+  height: 1.5em;
+  margin: 0.5% 2%;
+  width: 20%;
+}
+
+form select {
+  flex-grow: 1;
+  height: 1.9em;
+  margin: 0.5% 2%;
+  width: 20.7%;
+}
+
+.formOfPayment-container {
+  border: solid 1px rgb(235, 229, 229);
+  margin: 2%;
+  min-height: 50px;
+}
+
+.formOfPayment-container label {
+  margin: 5%;
+}
+
+.formOfPayment-container label input {
+  margin: 1% 1% 7% 4%;
+}
+
+.button-container {
+  align-items: center;
+  border: solid 1px rgb(235, 229, 229);
+  display: flex;
+  justify-content: center;
+  margin: 2% 2% 10%;
+  min-height: 50px;
+}
+
+.button-container button {
+  background-color: rgb(153, 230, 153);
+  border: solid 1px rgb(177, 175, 175);
+  border-radius: 8px;
+  color: rgb(22, 68, 16);
+  font-size: 1.5em;
+  height: 2em;
+  margin: 4%;
+  width: 20%;
+}

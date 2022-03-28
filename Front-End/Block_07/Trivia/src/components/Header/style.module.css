@@ -1,0 +1,27 @@
+.headerContainer {
+  align-items: center;
+  background-color: var(--background);
+  display: flex;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+
+.headerContainer img {
+  border-radius: 100%;
+}
+
+.userName{
+  max-width: 33%;
+	overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 1024px) {
+
+  .headerContainer {
+    font-size: 3rem;
+    padding: 0 14rem 2rem;
+  }
+}

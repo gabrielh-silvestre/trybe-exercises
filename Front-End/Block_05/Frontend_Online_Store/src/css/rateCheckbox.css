@@ -1,0 +1,22 @@
+.rate-container {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  margin-left: 4%;
+}
+
+.rate-container label {
+  width: 30px;
+}
+
+.rate-container label input {
+  display: none;
+}
+
+.checkedStar {
+  font-size: 1em;
+}
+
+.nocheckedStar {
+  font-size: 1.55em;
+}

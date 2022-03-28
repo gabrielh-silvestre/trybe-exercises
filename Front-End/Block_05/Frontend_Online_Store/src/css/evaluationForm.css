@@ -1,0 +1,46 @@
+.section-backEvaluations-container {
+  border: solid 1px rgb(224, 222, 222);
+  margin: 2%;
+  min-height: 300px;
+}
+
+h3 {
+  margin-left: 4%;
+}
+
+.email-message-button-container {
+  border: solid 1px rgb(224, 222, 222);
+  margin: 2%;
+}
+
+.email-rate-container {
+  align-items: center;
+  display: flex;
+  margin: 2%;
+}
+
+.email-rate-container input {
+  min-width: 20%;
+}
+
+.message-container {
+  display: flex;
+  margin: 2%;
+  min-height: 50px;
+}
+
+.message-container textarea {
+  min-height: 150px;
+  min-width: 40%;
+}
+
+.button-container {
+  margin: 2%;
+}
+
+.backMessage-container {
+  border-bottom: solid 1px rgb(224, 222, 222);
+  display: flex;
+  margin: 2%;
+  min-height: 50px;
+}
