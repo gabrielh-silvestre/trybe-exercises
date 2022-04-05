@@ -32,12 +32,12 @@ const validPassword = (req, res, next) => {
 
 const validAdmin = (req, _res, next) => {
   const { username, password } = req.body;
+  req.body.isAdmin = false;
 
   if (username === 'admin' && password === 's3nh4S3gur4???') {
     req.body.isAdmin = true;
   }
 
-  req.body.isAdmin = false;
   next();
 };
 
