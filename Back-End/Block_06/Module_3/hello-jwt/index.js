@@ -7,6 +7,7 @@ const { PORT } = process.env;
 
 const controllers = require('./controllers');
 const middlewares = require('./middlewares');
+const { loginRouter } = require('./routes/loginRoute');
 
 const app = express();
 
@@ -22,6 +23,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/ping', controllers.ping);
+
+app.use('/login', loginRouter);
 
 app.use(middlewares.error);
 
