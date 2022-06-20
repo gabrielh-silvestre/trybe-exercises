@@ -1,0 +1,21 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// The current database to use.
+use('bios');
+
+// Search for documents in the current collection.
+db.getCollection('bios')
+  .find(
+    {
+      'name.first': 'John',
+    },
+    {
+      /*
+      * Projection
+      * _id: 0, // exclude _id
+      * fieldA: 1 // include field
+      */
+    }
+  )
+  .pretty()
