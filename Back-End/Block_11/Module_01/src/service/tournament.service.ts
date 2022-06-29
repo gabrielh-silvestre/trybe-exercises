@@ -6,8 +6,17 @@ class TournamentService {
   constructor(private readonly tournamentModel = new TournamentModel()) { }
 
   public async findAll(): Promise<ITournament[]> {
-    const tournaments = await this.tournamentModel.findAll();
-    return tournaments;
+    return this.tournamentModel.findAll();
+  }
+
+  public async findByYear(year: number): Promise<ITournament | never> {
+    const tournament = await this.tournamentModel.findByYear(year);
+
+    if (!tournament) {
+      throw new Error(`Tournament with year ${year} not found`);
+    }
+
+    return tournament;
   }
 }
 

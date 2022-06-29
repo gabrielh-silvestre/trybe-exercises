@@ -7,6 +7,10 @@ class TournamentModel {
   public async findAll(): Promise<ITournament[]> {
     return this.tournamentModel.find().exec();
   }
+
+  public async findByYear(year: number): Promise<ITournament | null> {
+    return this.tournamentModel.findOne({ year }).exec();
+  }
 }
 
 export { TournamentModel };

@@ -10,6 +10,14 @@ class TournamentController {
 
     res.status(200).json(tournaments);
   }
+
+  findByYear: Handler = async (req, res) => {
+    const year = Number(req.params.year);
+
+    const tournament = await this.tournamentService.findByYear(year);
+
+    res.status(200).json(tournament);
+  }
 }
 
 export { TournamentController }
