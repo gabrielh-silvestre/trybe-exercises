@@ -12,7 +12,9 @@ MongoConnection.connect();
 const tournamentController = new TournamentController();
 
 app.get("/", tournamentController.findAll);
-app.get('/:year', tournamentController.findByYear);
+app.get("/:year", tournamentController.findByYear);
+
+app.post("/", tournamentController.create);
 
 const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
   console.log(err.message);

@@ -18,6 +18,12 @@ class TournamentController {
 
     res.status(200).json(tournament);
   }
+
+  create: Handler = async (req, res) => {
+    const tournament = await this.tournamentService.create(req.body);
+
+    res.status(201).json(tournament);
+  }
 }
 
 export { TournamentController }

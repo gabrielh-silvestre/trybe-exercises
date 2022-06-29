@@ -18,6 +18,10 @@ class TournamentService {
 
     return tournament;
   }
+
+  public async create(tournament: ITournament): Promise<ITournament> {
+    return this.tournamentModel.create(tournament);
+  }
 }
 
 export { TournamentService };
